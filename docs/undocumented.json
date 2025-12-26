@@ -618,28 +618,42 @@
     },
     {
       "file": "/Users/runner/work/prebid-ios-sdk/prebid-ios-sdk/PrebidMobile/Swift/PrebidMobileRendering/Prebid/Integrations/GAM/BannerView.swift",
-      "line": 300,
+      "line": 79,
+      "symbol": "BannerView.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/prebid-ios-sdk/prebid-ios-sdk/PrebidMobile/Swift/PrebidMobileRendering/Prebid/Integrations/GAM/BannerView.swift",
+      "line": 80,
+      "symbol": "BannerView.videoPlaybackDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/prebid-ios-sdk/prebid-ios-sdk/PrebidMobile/Swift/PrebidMobileRendering/Prebid/Integrations/GAM/BannerView.swift",
+      "line": 312,
       "symbol": "BannerView.willPresentModal()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/prebid-ios-sdk/prebid-ios-sdk/PrebidMobile/Swift/PrebidMobileRendering/Prebid/Integrations/GAM/BannerView.swift",
-      "line": 307,
+      "line": 319,
       "symbol": "BannerView.didDismissModal()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/prebid-ios-sdk/prebid-ios-sdk/PrebidMobile/Swift/PrebidMobileRendering/Prebid/Integrations/GAM/BannerView.swift",
-      "line": 314,
+      "line": 326,
       "symbol": "BannerView.willLeaveApp()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/prebid-ios-sdk/prebid-ios-sdk/PrebidMobile/Swift/PrebidMobileRendering/Prebid/Integrations/GAM/BannerView.swift",
-      "line": 320,
+      "line": 332,
       "symbol": "BannerView.viewControllerForPresentingModal",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NativeAdEventDelegate Protocol Reference</title>
+    <title>BannerViewVideoPlaybackDelegate Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/NativeAdEventDelegate" class="dashAnchor"></a>
-    <a title="NativeAdEventDelegate Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/BannerViewVideoPlaybackDelegate" class="dashAnchor"></a>
+    <a title="BannerViewVideoPlaybackDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">PrebidMobile 0.0.5 Docs</a> (87% documented)</p>
@@ -31,7 +31,7 @@
         <img id="carat" src="../img/carat.png" alt=""/>
         <a href="../Protocols.html">Protocols</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        NativeAdEventDelegate Protocol Reference
+        BannerViewVideoPlaybackDelegate Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -317,18 +317,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>NativeAdEventDelegate</h1>
+            <h1>BannerViewVideoPlaybackDelegate</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NativeAdEventDelegate</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@objc</span><span class="p">(</span><span class="kt">PBMBannerViewVideoPlaybackDelegate</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">BannerViewVideoPlaybackDelegate</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
 
                 </div>
               </div>
-            <p>A protocol for handling events related to native ads.</p>
-
-<p>This protocol defines optional methods that can be implemented to handle various events associated with native ads, such as expiration, clicks, and impressions. Implementing this protocol allows for custom handling of these events within the native ad lifecycle.</p>
+            <p>A protocol for handling events related to banner video playback events.</p>
 
           </section>
           <section class="section task-group-section">
@@ -337,9 +335,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PrebidMobile@objc(pl)NativeAdEventDelegate(im)adDidExpireWithAd:"></a>
-                    <a name="//apple_ref/swift/Method/adDidExpire(ad:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)NativeAdEventDelegate(im)adDidExpireWithAd:">adDidExpire(ad:<wbr>)</a>
+                    <a name="/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackDidPause:"></a>
+                    <a name="//apple_ref/swift/Method/videoPlaybackDidPause(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackDidPause:">videoPlaybackDidPause(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -347,7 +345,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sent when the native ad is expired.</p>
+                        <p>Notifies the delegate that banner video ad has been paused.</p>
 
                       </div>
                       <div class="declaration">
@@ -355,7 +353,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">adDidExpire</span><span class="p">(</span><span class="nv">ad</span><span class="p">:</span> <span class="kt"><a href="../Classes/NativeAd.html">NativeAd</a></span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">videoPlaybackDidPause</span><span class="p">(</span><span class="n">_</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt"><a href="../Classes/BannerView.html">BannerView</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -365,9 +363,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PrebidMobile@objc(pl)NativeAdEventDelegate(im)adWasClickedWithAd:"></a>
-                    <a name="//apple_ref/swift/Method/adWasClicked(ad:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)NativeAdEventDelegate(im)adWasClickedWithAd:">adWasClicked(ad:<wbr>)</a>
+                    <a name="/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackDidResume:"></a>
+                    <a name="//apple_ref/swift/Method/videoPlaybackDidResume(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackDidResume:">videoPlaybackDidResume(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,7 +373,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sent when the native view is clicked by the user.</p>
+                        <p>Notifies the delegate that banner video ad has been resumed.</p>
 
                       </div>
                       <div class="declaration">
@@ -383,7 +381,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">adWasClicked</span><span class="p">(</span><span class="nv">ad</span><span class="p">:</span> <span class="kt"><a href="../Classes/NativeAd.html">NativeAd</a></span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">videoPlaybackDidResume</span><span class="p">(</span><span class="n">_</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt"><a href="../Classes/BannerView.html">BannerView</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -393,9 +391,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@PrebidMobile@objc(pl)NativeAdEventDelegate(im)adDidLogImpressionWithAd:"></a>
-                    <a name="//apple_ref/swift/Method/adDidLogImpression(ad:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)NativeAdEventDelegate(im)adDidLogImpressionWithAd:">adDidLogImpression(ad:<wbr>)</a>
+                    <a name="/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackWasMuted:"></a>
+                    <a name="//apple_ref/swift/Method/videoPlaybackWasMuted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackWasMuted:">videoPlaybackWasMuted(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -403,7 +401,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sent when  an impression is recorded for an native ad</p>
+                        <p>Notifies the delegate that banner video ad has been muted.</p>
 
                       </div>
                       <div class="declaration">
@@ -411,7 +409,63 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">optional</span> <span class="kd">func</span> <span class="nf">adDidLogImpression</span><span class="p">(</span><span class="nv">ad</span><span class="p">:</span> <span class="kt"><a href="../Classes/NativeAd.html">NativeAd</a></span><span class="p">)</span></code></pre>
+<span class="kd">func</span> <span class="nf">videoPlaybackWasMuted</span><span class="p">(</span><span class="n">_</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt"><a href="../Classes/BannerView.html">BannerView</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackWasUnmuted:"></a>
+                    <a name="//apple_ref/swift/Method/videoPlaybackWasUnmuted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackWasUnmuted:">videoPlaybackWasUnmuted(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notifies the delegate that banner video ad has been unmuted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">videoPlaybackWasUnmuted</span><span class="p">(</span><span class="n">_</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt"><a href="../Classes/BannerView.html">BannerView</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackDidComplete:"></a>
+                    <a name="//apple_ref/swift/Method/videoPlaybackDidComplete(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@PrebidMobile@objc(pl)PBMBannerViewVideoPlaybackDelegate(im)videoPlaybackDidComplete:">videoPlaybackDidComplete(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notifies the delegate that banner video ad has completed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">videoPlaybackDidComplete</span><span class="p">(</span><span class="n">_</span> <span class="nv">banner</span><span class="p">:</span> <span class="kt"><a href="../Classes/BannerView.html">BannerView</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
