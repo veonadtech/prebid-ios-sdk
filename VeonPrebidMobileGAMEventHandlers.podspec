@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   s.static_framework = true
 
   s.dependency 'VeonPrebidMobile', '0.1.0'
-  s.dependency 'Google-Mobile-Ads-SDK', '>= 14.0.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '>= 13.0.0'
 
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
