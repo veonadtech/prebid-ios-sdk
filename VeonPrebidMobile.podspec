@@ -32,7 +32,10 @@ Pod::Spec.new do |s|
     s.author                 = { "Veon AdTech" => "veonadtech.com" }
     s.platform     	   = :ios, "13.0"
     s.swift_version 	   = '5.0'
-    s.source      	   = { :git => "https://github.com/veonadtech/prebid-ios-sdk.git", :tag => "#{s.version}" }
+      s.source             = { :git => "https://github.com/veonadtech/prebid-ios-sdk.git",
+                                :branch => "ADT-1543-Interstital-with-width-diplay",
+                                :tag => "#{s.version}" }
+
     s.xcconfig 		   = { :LIBRARY_SEARCH_PATHS => '$(inherited)',
   			       :OTHER_CFLAGS => '$(inherited)',
   			       :OTHER_LDFLAGS => '$(inherited)',
