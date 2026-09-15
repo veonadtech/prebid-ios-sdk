@@ -75,6 +75,31 @@ target 'PrebidMobileMAXAdaptersTests' do
   applovin_pods
 end
 
+
+target 'PrebidRemoteConfig' do
+  event_handlers_project
+  pod 'PrebidMobile'
+end
+
+target 'PrebidMultiAdLoader' do
+  event_handlers_project
+  pod 'PrebidMobile'
+  # PrebidRemoteConfig — локальный таргет, не pod
+end
+
+target 'PrebidMultiAdLoaderGAM' do
+  event_handlers_project
+  gma_pods
+  # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
+end
+
+target 'PrebidMultiAdLoaderYandex' do
+  event_handlers_project
+  pod 'YandexMobileAds'
+  # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
+end
+
+
 target 'PrebidDemoSwift' do
   project 'Example/PrebidDemo/PrebidDemo.xcodeproj'
   

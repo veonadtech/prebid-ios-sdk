@@ -29,31 +29,28 @@ public extension Prebid {
     /// gracefully when nothing has loaded yet.
     ///
     /// - Parameters:
-    ///   - serverURL: The custom Prebid Server URL. Forwarded as-is.
+    ///   - serverURL: The custom Prebid Server URL, used when a user allowed the app to track
     ///   - configURL: URL returning the shared remote config JSON
     ///     (ad priority today, log level later). Pass `nil` to skip.
-    ///   - gadMobileAdsObject: Forwarded as-is to the core initializer.
-    ///   - completion: Forwarded as-is — fires for core SDK init only,
-    ///     independent of the `configURL` fetch.
+    ///   - gadMobileAdsVersion: GADMobileAds version string, use `GADGetStringFromVersionNumber(GADMobileAds.sharedInstance().versionNumber)` to get it
+    ///   - completion: returns initialization status and optional error
     static func initializeSDK(
         serverURL: String,
         configURL: String?,
-        gadMobileAdsObject: AnyObject? = nil,
-        completion: PrebidInitializationCallback? = nil
-    ) throws {
-        if let configURL, !configURL.isEmpty {
-            VeonRemoteConfig.shared.load(from: configURL) { _ in
-                // Intentionally ignored here — a failed/garbled config
-                // just leaves VeonRemoteConfig.shared.rawData nil, and
-                // every consumer already has a defined fallback for that.
-                // If you need to surface load failures (e.g. to logging
-                // once that module exists), observe VeonRemoteConfig
-                // directly rather than adding a completion param here —
-                // that keeps this signature stable as more features
-                // start depending on the same configURL.
+        gadMobileAdsVersion: String? = nil,
+        _ completion: PrebidInitializationCallback? = nil) throws {
+            if let configURL, !configURL.isEmpty {
+                RemoteConfigHolder.shared.load(from: configURL) { _ in
+                    // Intentionally ignored here — a failed/garbled config
+                    // just leaves VeonRemoteConfig.shared.rawData nil, and
+                    // every consumer already has a defined fallback for that.
+                    // If you need to surface load failures (e.g. to logging
+                    // once that module exists), observe VeonRemoteConfig
+                    // directly rather than adding a completion param here —
+                    // that keeps this signature stable as more features
+                    // start depending on the same configURL.
+                }
             }
+            try Prebid.initializeSDK(serverURL: serverURL, gadMobileAdsVersion: gadMobileAdsVersion, completion)
         }
-
-        try Prebid.initializeSDK(serverURL: serverURL, gadMobileAdsObject, completion)
-    }
 }

@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import VeonPrebidRemoteConfig
 
 enum VeonMultiAdLoaderError: LocalizedError {
-    case missingConfigId(sdk: VeonSdkType)
+    case missingConfigId(sdk: SdkType)
 
     var errorDescription: String? {
         switch self {

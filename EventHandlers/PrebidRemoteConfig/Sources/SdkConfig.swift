@@ -7,6 +7,7 @@
 
 import CoreGraphics
 import Foundation
+//import VeonPrebidRemoteConfig
 
 /// Remote configuration describing which SDKs participate in the ad race
 /// and in what priority order.
@@ -25,7 +26,7 @@ import Foundation
 /// - Note: `level` is intentionally **not** modeled here. It relates to a
 ///   logging configuration that is out of scope for this module right now.
 ///   Only `priority` (and `isActive`) drive the actual race logic.
-public struct VeonMultiAdLoaderConfig: Decodable, Equatable {
+public struct SdkConfig: Decodable, Equatable {
 
     /// Master switch. When `false`, `VeonSdkConfigHolder.priorityOrder`
     /// falls back to Prebid-only behavior.
@@ -34,20 +35,20 @@ public struct VeonMultiAdLoaderConfig: Decodable, Equatable {
     /// SDKs that are allowed to participate at all. Currently informational —
     /// `priority` is the list actually raced against, but this is kept
     /// around for parity with the remote schema and future filtering.
-    public let sdkType: [VeonSdkType]
+    public let sdkType: [SdkType]
 
     /// Raw size strings, e.g. `"320x50"`. Use `parsedSizes` to get `CGSize`.
     public let sizes: [String]
 
     /// The order in which SDKs are tried. First loaded ad in this order wins.
-    public let priority: [VeonSdkType]
+    public let priority: [SdkType]
 
     enum CodingKeys: String, CodingKey {
         case isActive, sdkType, sizes, priority
     }
 }
 
-extension VeonMultiAdLoaderConfig {
+extension SdkConfig {
 
     /// Parses `"WxH"` strings from `sizes` into `CGSize` values.
     /// Malformed entries are silently skipped.

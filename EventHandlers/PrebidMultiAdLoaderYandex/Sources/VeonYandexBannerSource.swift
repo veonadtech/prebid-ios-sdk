@@ -22,12 +22,7 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading {
     private let adUnitId: String?
     private let adSize: CGSize
     
-    private lazy var bannerAdView: BannerAdView = {
-        let bannerAdView = BannerAdView(adSize: yandexBannerSize())
-        bannerAdView.delegate = self
-        bannerAdView.translatesAutoresizingMaskIntoConstraints = false
-        return bannerAdView
-    }()
+    private var adView: AdView?
 
     init(adUnitId: String?, adSize: CGSize) {
         self.adUnitId = adUnitId
@@ -37,7 +32,7 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading {
     /// Override point if you need a different CGSize -> BannerAdSize mapping
     /// (mirrors the `open` hook on the Android `MultiBannerLoaderLegacyGam`).
     func yandexBannerSize() -> BannerAdSize {
-        BannerAdSize.inline(width: adSize.width, maxHeight: adSize.height)
+        BannerAdSize.fixedSize(withWidth: adSize.width, height: adSize.height)
     }
 
     func load() {
@@ -46,33 +41,37 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading {
             return
         }
         
-        let request = AdRequest(adUnitID: adUnitId)
-                bannerAdView.loadAd(with: request)
+        adView = AdView(adUnitID: adUnitId, adSize: yandexBannerSize())
+        adView?.delegate = self
+        adView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        let request = MutableAdRequest()
+        adView?.loadAd(with: request)
     }
 
     func destroy() {
-        bannerAdView.delegate = nil
-    }
+        adView?.delegate = nil
+        adView?.removeFromSuperview()
+    }    
 }
 
-extension VeonYandexBannerSource: BannerAdViewDelegate {
-    func bannerAdView(_ bannerAdView: YandexMobileAds.BannerAdView, didTrackImpression impressionData: (any YandexMobileAds.ImpressionData)?) {
+extension VeonYandexBannerSource: AdViewDelegate {
+    
+    func adView(_ adView: AdView, didTrackImpression impressionData: (any ImpressionData)?) {
         print("Yandex didTrackImpression, impressionData: \(impressionData?.rawData ?? "nil")")
     }
     
-    func bannerAdViewDidClick(_ bannerAdView: YandexMobileAds.BannerAdView) {
-        print("Yandex bannerAdViewDidClick")
+    func adViewDidClick(_ adView: AdView) {
+        print("Yandex adViewDidClick")
     }
     
-
-    func bannerAdViewDidLoad(_ bannerAdView: BannerAdView) {
-        onLoaded?(bannerAdView)
+    func adViewDidLoad(_ adView: AdView) {
+        onLoaded?(adView)
     }
     
-    func bannerAdViewDidFailLoading(_ bannerAdView: BannerAdView, error: Error) {
+    func adViewDidFailLoading(_ adView: AdView, error: Error) {
         onFailed?(error)
     }
-    
 }
 
 enum VeonYandexSourceError: LocalizedError {

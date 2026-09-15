@@ -7,17 +7,18 @@
 
 import Foundation
 import UIKit
+import VeonPrebidRemoteConfig
 
 /// Receives events from a `VeonMultiBannerAdLoader` race.
 public protocol VeonMultiBannerAdLoaderDelegate: AnyObject {
     /// The winning source loaded successfully. `view` has not been added
     /// to any view hierarchy yet — the delegate owns that.
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didLoad view: UIView, from sdk: VeonSdkType)
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didLoad view: UIView, from sdk: SdkType)
 
     /// A single source failed and was removed from this race attempt.
     /// This can fire multiple times before `didLoad` or before every
     /// source has failed.
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didFailToLoad sdk: VeonSdkType, error: Error?)
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didFailToLoad sdk: SdkType, error: Error?)
 
     /// Every source failed; no ad will be delivered for this `loadAd()` call.
     func bannerLoaderDidFailAll(_ loader: VeonMultiBannerAdLoader)
@@ -81,7 +82,7 @@ public final class VeonMultiBannerAdLoader {
     public func loadAd() {
         destroy()
 
-        var sources: [VeonSdkType: AnyVeonAdSourceLoading<UIView>] = [:]
+        var sources: [SdkType: AnyVeonAdSourceLoading<UIView>] = [:]
 
         let prebidSource = VeonPrebidBannerSource(configId: configId, adSize: adSize)
         prebidSource.presentingViewController = rootViewController
@@ -99,7 +100,7 @@ public final class VeonMultiBannerAdLoader {
             sources[.yandex] = yandexSource
         }
 
-        let priorityOrder = VeonSdkConfigHolder.priorityOrder
+        let priorityOrder = SdkConfigStore.priorityOrder
         totalCount = priorityOrder.filter { sources[$0] != nil }.count
         failedCount = 0
 

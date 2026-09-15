@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import VeonPrebidRemoteConfig
 
 /// State of a single SDK source within a race, mirroring the
 /// `MultiBannerLoaderLegacyGam.SdkState` enum from the Android SDK.
@@ -42,7 +43,7 @@ public protocol VeonAdSourceLoading: AnyObject {
 }
 
 /// Type-erased wrapper so `VeonAdRace` can hold a heterogeneous
-/// `[VeonSdkType: AnyVeonAdSourceLoading<AdObject>]` dictionary.
+/// `[SdkType: AnyVeonAdSourceLoading<AdObject>]` dictionary.
 ///
 /// Public: optional modules wrap their own `VeonAdSourceLoading`
 /// conformers in this before handing them to `VeonAdSourceRegistry`.
@@ -83,19 +84,19 @@ public final class AnyVeonAdSourceLoading<AdObject>: VeonAdSourceLoading {
 /// does not add its own synchronization.
 final class VeonAdRace<AdObject> {
 
-    private(set) var priorityOrder: [VeonSdkType]
-    private var states: [VeonSdkType: VeonSdkRaceState<AdObject>] = [:]
-    private let sources: [VeonSdkType: AnyVeonAdSourceLoading<AdObject>]
-    private var selectedSDK: VeonSdkType?
+    private(set) var priorityOrder: [SdkType]
+    private var states: [SdkType: VeonSdkRaceState<AdObject>] = [:]
+    private let sources: [SdkType: AnyVeonAdSourceLoading<AdObject>]
+    private var selectedSDK: SdkType?
 
     /// Fired once, when the first source in priority order finishes loading.
-    var onLoaded: ((AdObject, VeonSdkType) -> Void)?
+    var onLoaded: ((AdObject, SdkType) -> Void)?
 
     /// Fired for every source that fails, in the order failures happen
     /// (not necessarily priority order).
-    var onSourceFailed: ((VeonSdkType, Error?) -> Void)?
+    var onSourceFailed: ((SdkType, Error?) -> Void)?
 
-    init(priorityOrder: [VeonSdkType], sources: [VeonSdkType: AnyVeonAdSourceLoading<AdObject>]) {
+    init(priorityOrder: [SdkType], sources: [SdkType: AnyVeonAdSourceLoading<AdObject>]) {
         self.priorityOrder = priorityOrder.filter { sources[$0] != nil }
         self.sources = sources
     }
@@ -134,12 +135,12 @@ final class VeonAdRace<AdObject> {
         }
     }
 
-    private func handleLoaded(sdk: VeonSdkType, adObject: AdObject) {
+    private func handleLoaded(sdk: SdkType, adObject: AdObject) {
         states[sdk] = .loaded(adObject)
         trySelect()
     }
 
-    private func handleFailed(sdk: VeonSdkType, error: Error?) {
+    private func handleFailed(sdk: SdkType, error: Error?) {
         states[sdk] = .failed(error)
         priorityOrder.removeAll { $0 == sdk }
         onSourceFailed?(sdk, error)

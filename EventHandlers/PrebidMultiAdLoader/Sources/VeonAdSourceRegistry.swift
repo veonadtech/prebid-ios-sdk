@@ -9,7 +9,7 @@
 //  GoogleMobileAds or YandexMobileAds, and never hardcodes their source
 //  classes. Instead, the optional PrebidMultiAdLoaderGAM /
 //  PrebidMultiAdLoaderYandex modules register a factory here, once, at
-//  app startup. If a factory for a given VeonSdkType was never
+//  app startup. If a factory for a given SdkType was never
 //  registered (because the app never linked/called that optional
 //  module), VeonMultiBannerAdLoader / VeonMultiInterstitialAdLoader
 //  simply skip that SDK in the race — same as if it had failed to load.
@@ -17,9 +17,10 @@
 
 import Foundation
 import UIKit
+import VeonPrebidRemoteConfig
 
 /// Thread-safe registry of banner/interstitial source factories, keyed
-/// by `VeonSdkType`. Populated by optional feature modules (see
+/// by `SdkType`. Populated by optional feature modules (see
 /// `VeonGAMAdSourceProvider.register()` / `VeonYandexAdSourceProvider.register()`),
 /// read by `VeonMultiBannerAdLoader` / `VeonMultiInterstitialAdLoader`.
 public final class VeonAdSourceRegistry {
@@ -37,27 +38,27 @@ public final class VeonAdSourceRegistry {
     ) -> AnyVeonAdSourceLoading<VeonLoadedInterstitial>
 
     private let lock = NSLock()
-    private var bannerFactories: [VeonSdkType: BannerFactory] = [:]
-    private var interstitialFactories: [VeonSdkType: InterstitialFactory] = [:]
+    private var bannerFactories: [SdkType: BannerFactory] = [:]
+    private var interstitialFactories: [SdkType: InterstitialFactory] = [:]
 
     private init() {}
 
     /// Called by an optional module (e.g. `VeonGAMAdSourceProvider`) to make
     /// itself available to the banner race. Call once, e.g. right next to
     /// `Prebid.initializeSDK(...)` at app startup.
-    public func registerBannerSource(for sdk: VeonSdkType, factory: @escaping BannerFactory) {
+    public func registerBannerSource(for sdk: SdkType, factory: @escaping BannerFactory) {
         lock.lock(); defer { lock.unlock() }
         bannerFactories[sdk] = factory
     }
 
     /// Same as `registerBannerSource`, for interstitials.
-    public func registerInterstitialSource(for sdk: VeonSdkType, factory: @escaping InterstitialFactory) {
+    public func registerInterstitialSource(for sdk: SdkType, factory: @escaping InterstitialFactory) {
         lock.lock(); defer { lock.unlock() }
         interstitialFactories[sdk] = factory
     }
 
     func makeBannerSource(
-        for sdk: VeonSdkType,
+        for sdk: SdkType,
         adUnitId: String?,
         adSize: CGSize,
         rootViewController: UIViewController?
@@ -66,7 +67,7 @@ public final class VeonAdSourceRegistry {
         return factory?(adUnitId, adSize, rootViewController)
     }
 
-    func makeInterstitialSource(for sdk: VeonSdkType, adUnitId: String?) -> AnyVeonAdSourceLoading<VeonLoadedInterstitial>? {
+    func makeInterstitialSource(for sdk: SdkType, adUnitId: String?) -> AnyVeonAdSourceLoading<VeonLoadedInterstitial>? {
         lock.lock(); let factory = interstitialFactories[sdk]; lock.unlock()
         return factory?(adUnitId)
     }

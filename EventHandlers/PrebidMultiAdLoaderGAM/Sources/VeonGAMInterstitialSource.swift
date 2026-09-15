@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 import VeonPrebidMultiAdLoader
+import VeonPrebidRemoteConfig
 
 final class VeonGAMInterstitialSource: NSObject, VeonAdSourceLoading {
 
@@ -55,7 +56,7 @@ final class VeonGAMInterstitialSource: NSObject, VeonAdSourceLoading {
 
 extension VeonGAMInterstitialSource: FullScreenContentDelegate, VeonLoadedInterstitial {
 
-    var sdk: VeonSdkType { .gam }
+    var sdk: SdkType { .gam }
 
     func show(from viewController: UIViewController) {
         interstitialAd?.present(from: viewController)

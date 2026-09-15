@@ -21,9 +21,9 @@ import Foundation
 ///   consider extracting this file into its own small pod so a logging
 ///   module doesn't have to pull in GAM/Yandex as a transitive
 ///   dependency just to read `configURL`.
-public final class VeonRemoteConfig {
+public final class RemoteConfigHolder {
 
-    public static let shared = VeonRemoteConfig()
+    public static let shared = RemoteConfigHolder()
 
     private let lock = NSLock()
     private var _rawData: Data?

@@ -53,6 +53,7 @@ final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading {
 
     func destroy() {
         bannerView?.delegate = nil
+        bannerView?.removeFromSuperview()
         bannerView = nil
     }
 }

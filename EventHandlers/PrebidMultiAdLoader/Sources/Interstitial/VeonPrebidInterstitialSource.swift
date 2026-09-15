@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import PrebidMobile
+import VeonPrebidRemoteConfig
 
 final class VeonPrebidInterstitialSource: NSObject, VeonAdSourceLoading {
 
@@ -44,7 +45,7 @@ final class VeonPrebidInterstitialSource: NSObject, VeonAdSourceLoading {
 
 extension VeonPrebidInterstitialSource: InterstitialAdUnitDelegate, VeonLoadedInterstitial {
 
-    var sdk: VeonSdkType { .prebid }
+    var sdk: SdkType { .prebid }
 
     func show(from viewController: UIViewController) {
         adUnit?.show(from: viewController)
