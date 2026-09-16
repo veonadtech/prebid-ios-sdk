@@ -5,9 +5,9 @@
 //  Copyright © Veon AdTech.
 //
 
-import Foundation
 import UIKit
 import PrebidMobile
+import VeonPrebidRemoteConfig
 
 /// Wraps Prebid's own rendering `BannerView` (no event handler — this is
 /// the "Prebid Only Integration" flavor, so Prebid competes purely on its
@@ -28,11 +28,13 @@ final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading {
 
     private let configId: String?
     private let adSize: CGSize
+    private let refreshInterval: TimeInterval?
     private var bannerView: BannerView?
 
-    init(configId: String?, adSize: CGSize) {
+    init(configId: String?, adSize: CGSize, refreshInterval: TimeInterval?) {
         self.configId = configId
         self.adSize = adSize
+        self.refreshInterval = refreshInterval
     }
 
     func load() {
@@ -46,6 +48,11 @@ final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading {
             configID: configId,
             adSize: adSize
         )
+        
+        if let refreshInterval {
+            banner.refreshInterval = refreshInterval
+        }
+        
         banner.delegate = self
         bannerView = banner
         banner.loadAd()

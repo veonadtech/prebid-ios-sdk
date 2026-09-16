@@ -15,7 +15,6 @@
 //  simply skip that SDK in the race — same as if it had failed to load.
 //
 
-import Foundation
 import UIKit
 import VeonPrebidRemoteConfig
 

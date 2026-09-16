@@ -5,7 +5,6 @@
 //  Copyright © Veon AdTech.
 //
 
-import Foundation
 import VeonPrebidRemoteConfig
 
 /// State of a single SDK source within a race, mirroring the

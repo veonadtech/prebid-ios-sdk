@@ -5,7 +5,6 @@
 //  Copyright © Veon AdTech.
 //
 
-import Foundation
 import UIKit
 import VeonPrebidRemoteConfig
 

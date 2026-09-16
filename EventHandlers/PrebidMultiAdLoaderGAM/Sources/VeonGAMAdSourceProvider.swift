@@ -5,8 +5,8 @@
 //  Copyright © Veon AdTech.
 //
 
-import Foundation
 import VeonPrebidMultiAdLoader
+import VeonPrebidRemoteConfig
 
 /// Call `VeonGAMAdSourceProvider.register()` once at app startup (next to
 /// `Prebid.initializeSDK(...)`) if the app links this optional module and

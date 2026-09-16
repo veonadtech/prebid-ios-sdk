@@ -4,8 +4,6 @@
 //
 //  Copyright © Veon AdTech.
 //
-
-import Foundation
 import UIKit
 import VeonPrebidRemoteConfig
 
@@ -49,6 +47,7 @@ public final class VeonMultiBannerAdLoader {
 
     private let rootViewController: UIViewController?
     private let adSize: CGSize
+    private let refreshInterval: TimeInterval?
     private let configId: String?
     private let gamAdUnitId: String?
     private let yandexAdUnitId: String?
@@ -62,12 +61,14 @@ public final class VeonMultiBannerAdLoader {
     ///     content on click, and passed through to any registered GAM/Yandex
     ///     source as their ad request's root view controller.
     ///   - adSize: Requested banner size, shared across all sources.
+    ///   - refreshInterval: Delay (in seconds) for which to wait before performing an auto refresh.
     ///   - configId: Prebid Server stored impression config id.
     ///   - gamAdUnitId: GAM ad unit id. Ignored if the GAM module isn't registered.
     ///   - yandexAdUnitId: Yandex ad unit id. Ignored if the Yandex module isn't registered.
     public init(
         rootViewController: UIViewController?,
         adSize: CGSize,
+        refreshInterval: TimeInterval?,
         configId: String?,
         gamAdUnitId: String?,
         yandexAdUnitId: String?
@@ -75,6 +76,7 @@ public final class VeonMultiBannerAdLoader {
         self.rootViewController = rootViewController
         self.adSize = adSize
         self.configId = configId
+        self.refreshInterval = refreshInterval
         self.gamAdUnitId = gamAdUnitId
         self.yandexAdUnitId = yandexAdUnitId
     }
@@ -84,16 +86,18 @@ public final class VeonMultiBannerAdLoader {
 
         var sources: [SdkType: AnyVeonAdSourceLoading<UIView>] = [:]
 
-        let prebidSource = VeonPrebidBannerSource(configId: configId, adSize: adSize)
+        let prebidSource = VeonPrebidBannerSource(configId: configId, adSize: adSize, refreshInterval: refreshInterval)
         prebidSource.presentingViewController = rootViewController
         sources[.prebid] = AnyVeonAdSourceLoading(prebidSource)
 
+        // refreshInterval is not used here; it is configured via AdManager.
         if let gamSource = VeonAdSourceRegistry.shared.makeBannerSource(
             for: .gam, adUnitId: gamAdUnitId, adSize: adSize, rootViewController: rootViewController
         ) {
             sources[.gam] = gamSource
         }
 
+        // refreshInterval is not used here;
         if let yandexSource = VeonAdSourceRegistry.shared.makeBannerSource(
             for: .yandex, adUnitId: yandexAdUnitId, adSize: adSize, rootViewController: rootViewController
         ) {

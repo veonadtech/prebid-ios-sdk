@@ -17,9 +17,11 @@ import UIKit
 import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
 
-fileprivate let storedImpMultiAdLoaderBanner = "_prebid-demo-banner-320-50"
-fileprivate let gamAdUnitMultiAdLoaderBanner = "/21775744923/example/fixed-size-banner"
-fileprivate let yandexAdUnitMultiAdLoaderBanner = "demo-banner-yandex"
+private let storedImpMultiAdLoaderBanner = "prebid-demo-banner-320-50"
+private let gamAdUnitMultiAdLoaderBanner = "/21775744923/example/fixed-size-banner"
+private let yandexAdUnitMultiAdLoaderBanner = "demo-banner-yandex"
+private let refreshInterval: TimeInterval = 60
+
 
 /// Same base class as the other banner demo screens (`GAMOriginalAPIDisplayBannerViewController`,
 /// `InAppDisplayBannerViewController`, etc.) — reuses its `adSize` and
@@ -45,6 +47,7 @@ class MultiAdLoaderDisplayBannerViewController: BannerBaseViewController {
         loader = VeonMultiBannerAdLoader(
             rootViewController: self,
             adSize: adSize,
+            refreshInterval: refreshInterval,
             configId: storedImpMultiAdLoaderBanner,
             gamAdUnitId: gamAdUnitMultiAdLoaderBanner,
             yandexAdUnitId: yandexAdUnitMultiAdLoaderBanner
