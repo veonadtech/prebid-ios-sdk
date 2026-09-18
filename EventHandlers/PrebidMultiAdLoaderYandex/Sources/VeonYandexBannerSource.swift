@@ -12,25 +12,33 @@ import VeonPrebidMultiAdLoader
 
 /// Wraps a bare Yandex `BannerAdView` — a direct Yandex ad request,
 /// independent of Prebid/GAM.
-final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading {
+final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceEngagementReporting {
 
     typealias AdObject = UIView
 
+    // MARK: - Loading callbacks
     var onLoaded: ((UIView) -> Void)?
     var onFailed: ((Error?) -> Void)?
 
+    // MARK: - VeonAdSourceEngagementReporting (SDK-agnostic, for Core)
+    var onImpressionRecorded: (() -> Void)?
+    var onClickRecorded: (() -> Void)?
+    var onScreenWillPresent: (() -> Void)?
+    var onScreenWillDismiss: (() -> Void)?   // Yandex has no "will dismiss" event; never fired
+    var onScreenDidDismiss: (() -> Void)?
+    var onWillLeaveApplication: (() -> Void)?
+
     private let adUnitId: String?
     private let adSize: CGSize
-    
     private var adView: AdView?
+
+    weak var presentingViewController: UIViewController?
 
     init(adUnitId: String?, adSize: CGSize) {
         self.adUnitId = adUnitId
         self.adSize = adSize
     }
 
-    /// Override point if you need a different CGSize -> BannerAdSize mapping
-    /// (mirrors the `open` hook on the Android `MultiBannerLoaderLegacyGam`).
     func yandexBannerSize() -> BannerAdSize {
         BannerAdSize.fixedSize(withWidth: adSize.width, height: adSize.height)
     }
@@ -52,25 +60,51 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading {
     func destroy() {
         adView?.delegate = nil
         adView?.removeFromSuperview()
-    }    
+        adView = nil
+
+        onLoaded = nil
+        onFailed = nil
+        onImpressionRecorded = nil
+        onClickRecorded = nil
+        onScreenWillPresent = nil
+        onScreenWillDismiss = nil
+        onScreenDidDismiss = nil
+        onWillLeaveApplication = nil
+    }
 }
 
 extension VeonYandexBannerSource: AdViewDelegate {
-    
-    func adView(_ adView: AdView, didTrackImpression impressionData: (any ImpressionData)?) {
-        print("Yandex didTrackImpression, impressionData: \(impressionData?.rawData ?? "nil")")
+
+    func viewControllerForPresentingModalView() -> UIViewController? {
+        presentingViewController
     }
-    
-    func adViewDidClick(_ adView: AdView) {
-        print("Yandex adViewDidClick")
-    }
-    
+
     func adViewDidLoad(_ adView: AdView) {
         onLoaded?(adView)
     }
-    
+
     func adViewDidFailLoading(_ adView: AdView, error: Error) {
         onFailed?(error)
+    }
+
+    func adViewDidClick(_ adView: AdView) {
+        onClickRecorded?()
+    }
+
+    func adViewWillLeaveApplication(_ adView: AdView) {
+        onWillLeaveApplication?()
+    }
+
+    func adView(_ adView: AdView, willPresentScreen viewController: UIViewController?) {
+        onScreenWillPresent?()
+    }
+
+    func adView(_ adView: AdView, didDismissScreen viewController: UIViewController?) {
+        onScreenDidDismiss?()
+    }
+
+    func adView(_ adView: AdView, didTrackImpression impressionData: (any ImpressionData)?) {
+        onImpressionRecorded?()
     }
 }
 

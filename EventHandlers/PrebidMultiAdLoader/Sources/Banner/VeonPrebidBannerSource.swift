@@ -15,15 +15,22 @@ import VeonPrebidRemoteConfig
 ///
 /// Lives in Core (not an optional module) because Prebid itself is
 /// always a hard dependency of this whole package.
-final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading {
+final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceEngagementReporting {
 
     typealias AdObject = UIView
 
     var onLoaded: ((UIView) -> Void)?
     var onFailed: ((Error?) -> Void)?
 
-    /// Set by `VeonMultiBannerAdLoader` right after `init`; answers
-    /// `bannerViewPresentationController()`.
+    var onWillLeaveApplication: (() -> Void)?
+    var onImpressionRecorded: (() -> Void)?
+
+    // Not exposed by Prebid's delegate; present for protocol conformance only.
+    var onClickRecorded: (() -> Void)?
+    var onScreenWillPresent: (() -> Void)?
+    var onScreenWillDismiss: (() -> Void)?
+    var onScreenDidDismiss: (() -> Void)?
+
     weak var presentingViewController: UIViewController?
 
     private let configId: String?
@@ -62,6 +69,15 @@ final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading {
         bannerView?.delegate = nil
         bannerView?.removeFromSuperview()
         bannerView = nil
+
+        onLoaded = nil
+        onFailed = nil
+        onWillLeaveApplication = nil
+        onImpressionRecorded = nil
+        onClickRecorded = nil
+        onScreenWillPresent = nil
+        onScreenWillDismiss = nil
+        onScreenDidDismiss = nil
     }
 }
 
@@ -77,5 +93,23 @@ extension VeonPrebidBannerSource: BannerViewDelegate {
 
     func bannerView(_ bannerView: BannerView, didFailToReceiveAdWith error: Error) {
         onFailed?(error)
+    }
+
+    func bannerViewWillLeaveApplication(_ bannerView: BannerView) {
+        onWillLeaveApplication?()
+    }
+
+    // Prebid calls this "modal", but semantically it's the same
+    // "screen about to present/dismiss" moment as GAM/Yandex.
+    func bannerViewWillPresentModal(_ bannerView: BannerView) {
+        onScreenWillPresent?()
+    }
+
+    func bannerViewDidDismissModal(_ bannerView: BannerView) {
+        onScreenDidDismiss?()
+    }
+
+    func bannerViewDidDisplay(_ bannerView: BannerView) {
+        onImpressionRecorded?()
     }
 }

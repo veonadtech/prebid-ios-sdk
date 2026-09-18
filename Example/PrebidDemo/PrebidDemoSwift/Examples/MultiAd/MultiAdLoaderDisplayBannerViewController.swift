@@ -18,9 +18,9 @@ import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
 
 private let storedImpMultiAdLoaderBanner = "prebid-demo-banner-320-50"
-private let gamAdUnitMultiAdLoaderBanner = "/21775744923/example/fixed-size-banner"
-private let yandexAdUnitMultiAdLoaderBanner = "demo-banner-yandex"
-private let refreshInterval: TimeInterval = 60
+private let gamAdUnitMultiAdLoaderBanner = "_/21775744923/example/fixed-size-banner"
+private let yandexAdUnitMultiAdLoaderBanner = "_demo-banner-yandex"
+private let refreshInterval: TimeInterval = 30
 
 
 /// Same base class as the other banner demo screens (`GAMOriginalAPIDisplayBannerViewController`,
@@ -62,6 +62,7 @@ class MultiAdLoaderDisplayBannerViewController: BannerBaseViewController {
 
 extension MultiAdLoaderDisplayBannerViewController: VeonMultiBannerAdLoaderDelegate {
 
+    // Fires for all three SDKs (Prebid / GAM / Yandex) — whichever wins the race.
     func bannerLoader(_ loader: VeonMultiBannerAdLoader, didLoad view: UIView, from sdk: SdkType) {
         PrebidDemoLogger.shared.info("Multi Ad Loader banner won by \(sdk.rawValue)")
         
@@ -69,11 +70,55 @@ extension MultiAdLoaderDisplayBannerViewController: VeonMultiBannerAdLoaderDeleg
         bannerView?.addSubview(view)
     }
 
+    // Fires for all three SDKs — any source that fails during the race, win or lose.
     func bannerLoader(_ loader: VeonMultiBannerAdLoader, didFailToLoad sdk: SdkType, error: Error?) {
         PrebidDemoLogger.shared.error("Multi Ad Loader banner did fail for \(sdk.rawValue) with error: \(String(describing: error))")
     }
 
+    // Fires once all registered sources have failed. Not tied to a specific SDK.
     func bannerLoaderDidFailAll(_ loader: VeonMultiBannerAdLoader) {
         PrebidDemoLogger.shared.error("Multi Ad Loader banner: all sources failed")
+    }
+
+    // MARK: - Engagement events (winning source only)
+
+    // All three SDKs: GAM (bannerViewDidRecordImpression), Yandex (didTrackImpression),
+    // Prebid (bannerViewDidDisplay).
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didRecordImpressionFrom sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) recorded impression")
+    }
+
+    // GAM and Yandex only. Prebid's BannerViewDelegate has no click callback,
+    // so this never fires for sdk == .prebid.
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didRecordClickFrom sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) recorded click")
+    }
+    
+    // Yandex (adViewWillLeaveApplication) and Prebid (bannerViewWillLeaveApplication)
+    // only. GAM's BannerViewDelegate has no equivalent event — a GAM click that
+    // opens an external app currently produces no signal here at all beyond
+    // didRecordClickFrom.
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willLeaveApplication sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) will leave application")
+    }
+
+    // All three SDKs, but only when the click opens something in-app (modal /
+    // embedded browser). If the click instead backgrounds the app, this is
+    // skipped in favor of onWillLeaveApplication (not currently forwarded here).
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willPresentScreenFrom sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) will present screen")
+    }
+
+    // GAM only, in case with in-app screen. Yandex's AdViewDelegate has no "will dismiss" event (only
+    // willPresent/didDismiss), and Prebid's BannerViewDelegate has no
+    // equivalent either — so this never fires for sdk == .yandex or .prebid.
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willDismissScreenFrom sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) will dismiss screen")
+    }
+
+    // All three SDKs, mirroring willPresentScreenFrom above — only fires if an
+    // in-app screen was actually presented and then dismissed.
+    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didDismissScreenFrom sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) did dismiss screen")
     }
 }

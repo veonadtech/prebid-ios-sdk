@@ -7,6 +7,7 @@
 
 import Foundation
 import VeonPrebidMultiAdLoader
+import VeonPrebidRemoteConfig
 
 /// Call `VeonYandexAdSourceProvider.register()` once at app startup (next
 /// to `Prebid.initializeSDK(...)`) if the app links this optional module

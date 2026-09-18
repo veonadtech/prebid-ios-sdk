@@ -5,9 +5,7 @@
 //  Copyright © Veon AdTech.
 //
 
-import CoreGraphics
 import Foundation
-//import VeonPrebidRemoteConfig
 
 /// Remote configuration describing which SDKs participate in the ad race
 /// and in what priority order.

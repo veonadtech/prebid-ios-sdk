@@ -53,6 +53,11 @@ public final class AnyVeonAdSourceLoading<AdObject>: VeonAdSourceLoading {
     private let _setOnLoaded: (((AdObject) -> Void)?) -> Void
     private let _setOnFailed: (((Error?) -> Void)?) -> Void
 
+    /// The wrapped concrete source, exposed so callers can cast to
+    /// optional capability protocols (e.g. `VeonAdSourceEngagementReporting`)
+    /// without Core needing to know the concrete SDK-specific type.
+    public let underlying: AnyObject
+
     public var onLoaded: ((AdObject) -> Void)? {
         didSet { _setOnLoaded(onLoaded) }
     }
@@ -61,6 +66,7 @@ public final class AnyVeonAdSourceLoading<AdObject>: VeonAdSourceLoading {
     }
 
     public init<Source: VeonAdSourceLoading>(_ source: Source) where Source.AdObject == AdObject {
+        underlying = source
         _load = { source.load() }
         _destroy = { source.destroy() }
         _setOnLoaded = { source.onLoaded = $0 }
@@ -70,7 +76,6 @@ public final class AnyVeonAdSourceLoading<AdObject>: VeonAdSourceLoading {
     public func load() { _load() }
     public func destroy() { _destroy() }
 }
-
 /// Priority-ordered race between multiple ad SDK sources for a single
 /// ad slot. First source (by priority) to report success wins; the
 /// rest are destroyed. Mirrors `MultiBannerLoaderLegacyGam`'s
