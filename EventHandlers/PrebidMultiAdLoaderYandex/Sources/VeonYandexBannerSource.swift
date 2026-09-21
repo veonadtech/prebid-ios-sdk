@@ -5,28 +5,24 @@
 //  Copyright © Veon AdTech.
 //
 
-import Foundation
 import UIKit
 import YandexMobileAds
 import VeonPrebidMultiAdLoader
+import VeonPrebidRemoteConfig
 
 /// Wraps a bare Yandex `BannerAdView` — a direct Yandex ad request,
 /// independent of Prebid/GAM.
-final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceEngagementReporting {
+final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSourceForwardable {
 
     typealias AdObject = UIView
 
     // MARK: - Loading callbacks
     var onLoaded: ((UIView) -> Void)?
     var onFailed: ((Error?) -> Void)?
+    
+    var sdk: SdkType { .yandex }
+    weak var bannerDelegateForwarder: VeonBannerEventForwarding?
 
-    // MARK: - VeonAdSourceEngagementReporting (SDK-agnostic, for Core)
-    var onImpressionRecorded: (() -> Void)?
-    var onClickRecorded: (() -> Void)?
-    var onScreenWillPresent: (() -> Void)?
-    var onScreenWillDismiss: (() -> Void)?   // Yandex has no "will dismiss" event; never fired
-    var onScreenDidDismiss: (() -> Void)?
-    var onWillLeaveApplication: (() -> Void)?
 
     private let adUnitId: String?
     private let adSize: CGSize
@@ -64,12 +60,6 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceE
 
         onLoaded = nil
         onFailed = nil
-        onImpressionRecorded = nil
-        onClickRecorded = nil
-        onScreenWillPresent = nil
-        onScreenWillDismiss = nil
-        onScreenDidDismiss = nil
-        onWillLeaveApplication = nil
     }
 }
 
@@ -88,23 +78,23 @@ extension VeonYandexBannerSource: AdViewDelegate {
     }
 
     func adViewDidClick(_ adView: AdView) {
-        onClickRecorded?()
+        bannerDelegateForwarder?.bannerSourceDidRecordClick(sdk)
     }
 
     func adViewWillLeaveApplication(_ adView: AdView) {
-        onWillLeaveApplication?()
+        bannerDelegateForwarder?.bannerSourceWillLeaveApplication(sdk)
     }
 
     func adView(_ adView: AdView, willPresentScreen viewController: UIViewController?) {
-        onScreenWillPresent?()
+        bannerDelegateForwarder?.bannerSourceWillPresentScreen(sdk)
     }
 
     func adView(_ adView: AdView, didDismissScreen viewController: UIViewController?) {
-        onScreenDidDismiss?()
+        bannerDelegateForwarder?.bannerSourceDidDismissScreen(sdk)
     }
 
     func adView(_ adView: AdView, didTrackImpression impressionData: (any ImpressionData)?) {
-        onImpressionRecorded?()
+        bannerDelegateForwarder?.bannerSourceDidRecordImpression(sdk)
     }
 }
 

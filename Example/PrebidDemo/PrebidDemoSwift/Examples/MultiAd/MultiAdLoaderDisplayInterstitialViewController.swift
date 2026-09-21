@@ -52,21 +52,62 @@ class MultiAdLoaderDisplayInterstitialViewController: UIViewController {
 }
 
 extension MultiAdLoaderDisplayInterstitialViewController: VeonMultiInterstitialAdLoaderDelegate {
-    
+
+    // MARK: - Load
+
+    // All three SDKs (Prebid / GAM / Yandex) — fires from VeonAdRace.onLoaded
+    // for whichever source wins the priority race.
     func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didLoadFrom sdk: SdkType) {
         PrebidDemoLogger.shared.info("Multi Ad Loader interstitial won by \(sdk.rawValue)")
         loader.show(from: self)
     }
-    
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didFailToLoad sdk: SdkType, error:  Error?) {
+
+    // All three SDKs — fires for any source that fails during the race.
+    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didFailToLoad sdk: SdkType, error: Error?) {
         PrebidDemoLogger.shared.error("Multi Ad Loader interstitial did fail for \(sdk.rawValue) with error: \(String(describing: error))")
     }
 
+    // Not tied to a specific SDK — fires once every registered source has failed.
     func interstitialLoaderDidFailAll(_ loader: VeonMultiInterstitialAdLoader) {
         PrebidDemoLogger.shared.error("Multi Ad Loader interstitial: all sources failed")
     }
 
+    // MARK: - Show
+
+    // All three SDKs, but note a timing difference: GAM's
+    // adWillPresentFullScreenContent and Prebid's interstitialWillPresentAd
+    // are genuinely "about to present". Yandex maps this from
+    // interstitialAdDidShow — i.e. Yandex fires this AFTER the ad is already
+    // shown, not before. Don't rely on ordering relative to the actual
+    // screen transition for sdk == .yandex.
+    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, willPresent sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader interstitial will present for \(sdk.rawValue)")
+    }
+
+    // All three SDKs.
+    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didDismiss sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader interstitial did dismiss for \(sdk.rawValue)")
+    }
+
+    // All three SDKs: Yandex (interstitialAdDidClick), GAM (adDidRecordClick),
+    // Prebid (interstitialDidClickAd).
+    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didClick sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader interstitial did click for \(sdk.rawValue)")
+    }
+
+    // GAM and Yandex only. VeonPrebidInterstitialSource's InterstitialAdUnitDelegate
+    // conformance never forwards a "did fail to show" event — this never fires
+    // for sdk == .prebid, even though the underlying PrebidMobile SDK does
+    // have such a delegate callback; it's simply not wired here.
     func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didFailToShow sdk: SdkType, error: Error?) {
         PrebidDemoLogger.shared.error("Multi Ad Loader interstitial did fail to show for \(sdk.rawValue) with error: \(String(describing: error))")
+    }
+
+    // MARK: - Impression
+
+    // GAM and Yandex only. VeonPrebidInterstitialSource never forwards an
+    // impression event at all — this never fires for sdk == .prebid.
+    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didTrackImpression sdk: SdkType) {
+        PrebidDemoLogger.shared.info("Multi Ad Loader interstitial did track impression for \(sdk.rawValue)")
     }
 }

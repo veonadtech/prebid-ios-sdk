@@ -8,27 +8,21 @@
 import UIKit
 import GoogleMobileAds
 import VeonPrebidMultiAdLoader
+import VeonPrebidRemoteConfig
 
 /// Wraps a bare `GAMBannerView` — a direct, untargeted GAM ad request.
 /// Deliberately does **not** go through Prebid's GAM event handler /
 /// targeting keywords: this source is a straight competitor in the race,
 /// not a Prebid-rendered line item.
-final class VeonGAMBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceEngagementReporting {
+final class VeonGAMBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSourceForwardable {
 
     typealias AdObject = UIView
 
     var onLoaded: ((UIView) -> Void)?
     var onFailed: ((Error?) -> Void)?
-
-    // MARK: - VeonAdSourceEngagementReporting
-    var onImpressionRecorded: (() -> Void)?
-    var onClickRecorded: (() -> Void)?
-    var onScreenWillPresent: (() -> Void)?
-    var onScreenWillDismiss: (() -> Void)?
-    var onScreenDidDismiss: (() -> Void)?
-    // Required by VeonAdSourceEngagementReporting, but GAM's BannerViewDelegate
-    // has no "will leave application" event — never fired.
-    var onWillLeaveApplication: (() -> Void)?
+    
+    var sdk: SdkType { .gam }
+    weak var bannerDelegateForwarder: VeonBannerEventForwarding?
 
     private let adUnitId: String?
     private let adSize: CGSize
@@ -63,11 +57,6 @@ final class VeonGAMBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceEnga
 
         onLoaded = nil
         onFailed = nil
-        onImpressionRecorded = nil
-        onClickRecorded = nil
-        onScreenWillPresent = nil
-        onScreenWillDismiss = nil
-        onScreenDidDismiss = nil
     }
 }
 
@@ -82,23 +71,23 @@ extension VeonGAMBannerSource: BannerViewDelegate {
     }
 
     func bannerViewDidRecordImpression(_ bannerView: BannerView) {
-        onImpressionRecorded?()
+        bannerDelegateForwarder?.bannerSourceDidRecordImpression(sdk)
     }
 
     func bannerViewDidRecordClick(_ bannerView: BannerView) {
-        onClickRecorded?()
+        bannerDelegateForwarder?.bannerSourceDidRecordClick(sdk)
     }
 
     func bannerViewWillPresentScreen(_ bannerView: BannerView) {
-        onScreenWillPresent?()
+        bannerDelegateForwarder?.bannerSourceWillPresentScreen(sdk)
     }
 
     func bannerViewWillDismissScreen(_ bannerView: BannerView) {
-        onScreenWillDismiss?()
+        bannerDelegateForwarder?.bannerSourceWillDismissScreen(sdk)
     }
 
     func bannerViewDidDismissScreen(_ bannerView: BannerView) {
-        onScreenDidDismiss?()
+        bannerDelegateForwarder?.bannerSourceDidDismissScreen(sdk)
     }
 }
 

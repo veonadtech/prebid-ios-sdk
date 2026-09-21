@@ -1,6 +1,6 @@
 //
 //  VeonPrebidBannerSource.swift
-//  PrebidMultiAdLoader (Core)
+//  PrebidMultiAdLoader (Prebid)
 //
 //  Copyright © Veon AdTech.
 //
@@ -15,21 +15,15 @@ import VeonPrebidRemoteConfig
 ///
 /// Lives in Core (not an optional module) because Prebid itself is
 /// always a hard dependency of this whole package.
-final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceEngagementReporting {
+final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSourceForwardable {
 
     typealias AdObject = UIView
 
     var onLoaded: ((UIView) -> Void)?
     var onFailed: ((Error?) -> Void)?
 
-    var onWillLeaveApplication: (() -> Void)?
-    var onImpressionRecorded: (() -> Void)?
-
-    // Not exposed by Prebid's delegate; present for protocol conformance only.
-    var onClickRecorded: (() -> Void)?
-    var onScreenWillPresent: (() -> Void)?
-    var onScreenWillDismiss: (() -> Void)?
-    var onScreenDidDismiss: (() -> Void)?
+    var sdk: SdkType { .prebid }
+    weak var bannerDelegateForwarder: VeonBannerEventForwarding?
 
     weak var presentingViewController: UIViewController?
 
@@ -55,11 +49,11 @@ final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceE
             configID: configId,
             adSize: adSize
         )
-        
+
         if let refreshInterval {
             banner.refreshInterval = refreshInterval
         }
-        
+
         banner.delegate = self
         bannerView = banner
         banner.loadAd()
@@ -72,12 +66,6 @@ final class VeonPrebidBannerSource: NSObject, VeonAdSourceLoading, VeonAdSourceE
 
         onLoaded = nil
         onFailed = nil
-        onWillLeaveApplication = nil
-        onImpressionRecorded = nil
-        onClickRecorded = nil
-        onScreenWillPresent = nil
-        onScreenWillDismiss = nil
-        onScreenDidDismiss = nil
     }
 }
 
@@ -96,20 +84,20 @@ extension VeonPrebidBannerSource: BannerViewDelegate {
     }
 
     func bannerViewWillLeaveApplication(_ bannerView: BannerView) {
-        onWillLeaveApplication?()
+        bannerDelegateForwarder?.bannerSourceWillLeaveApplication(sdk)
     }
 
     // Prebid calls this "modal", but semantically it's the same
     // "screen about to present/dismiss" moment as GAM/Yandex.
     func bannerViewWillPresentModal(_ bannerView: BannerView) {
-        onScreenWillPresent?()
+        bannerDelegateForwarder?.bannerSourceWillPresentScreen(sdk)
     }
 
     func bannerViewDidDismissModal(_ bannerView: BannerView) {
-        onScreenDidDismiss?()
+        bannerDelegateForwarder?.bannerSourceDidDismissScreen(sdk)
     }
 
     func bannerViewDidDisplay(_ bannerView: BannerView) {
-        onImpressionRecorded?()
+        bannerDelegateForwarder?.bannerSourceDidRecordImpression(sdk)
     }
 }

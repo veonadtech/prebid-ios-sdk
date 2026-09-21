@@ -8,28 +8,6 @@
 import UIKit
 import VeonPrebidRemoteConfig
 
-/// Receives events from a `VeonMultiInterstitialAdLoader` race.
-public protocol VeonMultiInterstitialAdLoaderDelegate: AnyObject {
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didLoadFrom sdk: SdkType)
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didFailToLoad sdk: SdkType, error: Error?)
-    func interstitialLoaderDidFailAll(_ loader: VeonMultiInterstitialAdLoader)
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, willPresent sdk: SdkType)
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didDismiss sdk: SdkType)
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didClick sdk: SdkType)
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didFailToShow sdk: SdkType, error: Error?)
-    /// Not every SDK fires this — see `VeonInterstitialEventForwarding` doc comment.
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didRecordImpression sdk: SdkType)
-}
-
-public extension VeonMultiInterstitialAdLoaderDelegate {
-    func interstitialLoaderDidFailAll(_ loader: VeonMultiInterstitialAdLoader) {}
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, willPresent sdk: SdkType) {}
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didDismiss sdk: SdkType) {}
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didClick sdk: SdkType) {}
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didFailToShow sdk: SdkType, error: Error?) {}
-    func interstitialLoader(_ loader: VeonMultiInterstitialAdLoader, didRecordImpression sdk: SdkType) {}
-}
-
 /// Races Prebid / GAM / Yandex interstitial sources against each other,
 /// in the order defined by `VeonSdkConfigHolder.priorityOrder`.
 ///
@@ -71,15 +49,18 @@ public final class VeonMultiInterstitialAdLoader {
         var sources: [SdkType: AnyVeonAdSourceLoading<VeonLoadedInterstitial>] = [:]
 
         let prebidSource = VeonPrebidInterstitialSource(configId: configId)
-        prebidSource.interstitialDelegateForwarder = self
-        sources[.prebid] = AnyVeonAdSourceLoading(prebidSource)
+        let prebidWrapped = AnyVeonAdSourceLoading(prebidSource)
+        sources[.prebid] = prebidWrapped
+        (prebidWrapped.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = self
 
         if let gamSource = VeonAdSourceRegistry.shared.makeInterstitialSource(for: .gam, adUnitId: gamAdUnitId) {
             sources[.gam] = gamSource
+            (gamSource.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = self
         }
 
         if let yandexSource = VeonAdSourceRegistry.shared.makeInterstitialSource(for: .yandex, adUnitId: yandexAdUnitId) {
             sources[.yandex] = yandexSource
+            (yandexSource.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = self
         }
 
         let priorityOrder = SdkConfigStore.priorityOrder
@@ -135,7 +116,7 @@ extension VeonMultiInterstitialAdLoader: VeonInterstitialEventForwarding {
         winningInterstitial = nil
     }
 
-    public func interstitialSourceDidRecordImpression(_ source: VeonLoadedInterstitial) {
-        delegate?.interstitialLoader(self, didRecordImpression: source.sdk)
+    public func interstitialSourceDidTrackImpression(_ source: VeonLoadedInterstitial) {
+        delegate?.interstitialLoader(self, didTrackImpression: source.sdk)
     }
 }

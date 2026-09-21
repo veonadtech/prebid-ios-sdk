@@ -1,31 +1,94 @@
 {
-  "originHash" : "06fac310b679638e058bcd12a1dec194cd4a25449b07a2e6d1c6c3d02db44a61",
+  "originHash" : "35e904ee70fcf607d512c9a8ff99b5f829a9ebab200b52fe8ea2f506ed96ab44",
   "pins" : [
     {
       "identity" : "applovin-max-swift-package",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
       "state" : {
-        "revision" : "199b14d91a2311b020d8a303c59d93010051d1f9",
-        "version" : "13.6.0"
+        "revision" : "c184b428415a05dcad488c6834e0bd02fe1d8f3e",
+        "version" : "13.3.1"
       }
     },
     {
-      "identity" : "prebid-mobile-ios-adapters",
+      "identity" : "appmetrica-sdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/prebid/prebid-mobile-ios-adapters.git",
+      "location" : "https://github.com/appmetrica/appmetrica-sdk-ios",
       "state" : {
-        "branch" : "main",
-        "revision" : "f95a1026f123b7252a0dace2fe83d2fd962a0a48"
+        "revision" : "0ef47447ea9de9ce4bd78e10d3c6da6219446cb2",
+        "version" : "5.14.0"
       }
     },
     {
-      "identity" : "prebid-mobile-ios-sdk",
+      "identity" : "divkit-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/prebid/prebid-mobile-ios-sdk.git",
+      "location" : "https://github.com/divkit/divkit-ios.git",
       "state" : {
-        "revision" : "ee87fc64a159fca2b6d4ab02545009ade19337d1",
-        "version" : "3.2.1"
+        "revision" : "618f56b22b5bc012444a270760b695a189133aca",
+        "version" : "32.61.0"
+      }
+    },
+    {
+      "identity" : "divkit-ios-facade",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/divkit/divkit-ios-facade",
+      "state" : {
+        "revision" : "d182cd0059edad6dcfced522ae05b7cfff742c24",
+        "version" : "5.2.2"
+      }
+    },
+    {
+      "identity" : "kscrash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kstenerud/KSCrash",
+      "state" : {
+        "revision" : "c0177658fc771ae833b6d3b8f5f3f5a14d59ec03",
+        "version" : "2.1.2"
+      }
+    },
+    {
+      "identity" : "mintegraladsdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package",
+      "state" : {
+        "revision" : "b483374ae72193a547f97055132ac9d0a3a5cb7f",
+        "version" : "7.7.9"
+      }
+    },
+    {
+      "identity" : "mytarget-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/myTargetSDK/mytarget-ios-spm",
+      "state" : {
+        "revision" : "296915bb6b30a253325d6328431700666f96603b",
+        "version" : "5.28.0"
+      }
+    },
+    {
+      "identity" : "mytracker-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/myTrackerSDK/mytracker-ios-spm.git",
+      "state" : {
+        "revision" : "d9899efb20065636544120b23d6084fafd358d69",
+        "version" : "3.2.4"
+      }
+    },
+    {
+      "identity" : "swift-cmark",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-cmark.git",
+      "state" : {
+        "revision" : "924936d0427cb25a61169739a7660230bffa6ea6",
+        "version" : "0.8.0"
+      }
+    },
+    {
+      "identity" : "swift-markdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-markdown.git",
+      "state" : {
+        "revision" : "ea79e83c8744d2b50b0dc2d5bbd1e857e1253bf9",
+        "version" : "0.6.0"
       }
     },
     {
@@ -34,7 +97,7 @@
       "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios.git",
       "state" : {
         "branch" : "main",
-        "revision" : "60c708f077d0d2aa02dfbfdeb60f2be8feb1c548"
+        "revision" : "d988839daa3f52912907611219fd0509c9553c49"
       }
     },
     {
@@ -42,8 +105,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
       "state" : {
-        "revision" : "1239c23464503053c17d37ee5daa70de3455e9c8",
-        "version" : "12.14.0"
+        "revision" : "ab4c3ec7546c7566fe49918fc9461df44e015537",
+        "version" : "12.2.0"
       }
     },
     {
@@ -51,8 +114,35 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
       "state" : {
-        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
-        "version" : "3.1.0"
+        "revision" : "708a282840c2171ee63bd93b87afa49fe507d70e",
+        "version" : "2.7.0"
+      }
+    },
+    {
+      "identity" : "vgsl",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yandex/vgsl.git",
+      "state" : {
+        "revision" : "0d54c083f9b9d74a76b7d9a52000acf07bcd972b",
+        "version" : "7.25.4"
+      }
+    },
+    {
+      "identity" : "vungleadssdk-swiftpackagemanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Vungle/VungleAdsSDK-SwiftPackageManager",
+      "state" : {
+        "revision" : "bdec2a7c83c9ee65c07c7ca9037b6ee72f69edd1",
+        "version" : "7.4.5"
+      }
+    },
+    {
+      "identity" : "yandex-ads-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yandexmobile/yandex-ads-sdk-ios.git",
+      "state" : {
+        "revision" : "baebc5e51b496e691b71403be435cea2d0c9250f",
+        "version" : "7.18.6"
       }
     }
   ],

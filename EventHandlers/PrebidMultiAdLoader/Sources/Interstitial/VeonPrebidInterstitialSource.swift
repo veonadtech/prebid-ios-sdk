@@ -1,6 +1,6 @@
 //
 //  VeonPrebidInterstitialSource.swift
-//  PrebidMultiAdLoader (Core)
+//  PrebidMultiAdLoader (Prebid)
 //
 //  Copyright © Veon AdTech.
 //
@@ -9,7 +9,7 @@ import UIKit
 import PrebidMobile
 import VeonPrebidRemoteConfig
 
-final class VeonPrebidInterstitialSource: NSObject, VeonAdSourceLoading {
+final class VeonPrebidInterstitialSource: NSObject, VeonAdSourceLoading, VeonInterstitialSourceForwardable {
 
     typealias AdObject = VeonLoadedInterstitial
 

@@ -10,7 +10,7 @@ import GoogleMobileAds
 import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
 
-final class VeonGAMInterstitialSource: NSObject, VeonAdSourceLoading {
+final class VeonGAMInterstitialSource: NSObject, VeonAdSourceLoading, VeonInterstitialSourceForwardable {
 
     typealias AdObject = VeonLoadedInterstitial
 
@@ -75,5 +75,9 @@ extension VeonGAMInterstitialSource: FullScreenContentDelegate, VeonLoadedInters
 
     func adDidRecordClick(_ ad: FullScreenPresentingAd) {
         interstitialDelegateForwarder?.interstitialSourceDidClick(self)
+    }
+
+    func adDidRecordImpression(_ ad: FullScreenPresentingAd) {
+        interstitialDelegateForwarder?.interstitialSourceDidTrackImpression(self)
     }
 }

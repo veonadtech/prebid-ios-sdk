@@ -13,7 +13,6 @@
 //  registered (because the app never linked/called that optional
 //  module), VeonMultiBannerAdLoader / VeonMultiInterstitialAdLoader
 //  simply skip that SDK in the race — same as if it had failed to load.
-//
 
 import UIKit
 import VeonPrebidRemoteConfig

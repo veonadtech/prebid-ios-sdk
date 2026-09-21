@@ -7,31 +7,6 @@
 import UIKit
 import VeonPrebidRemoteConfig
 
-/// Receives events from a `VeonMultiBannerAdLoader` race.
-public protocol VeonMultiBannerAdLoaderDelegate: AnyObject {
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didLoad view: UIView, from sdk: SdkType)
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didFailToLoad sdk: SdkType, error: Error?)
-    func bannerLoaderDidFailAll(_ loader: VeonMultiBannerAdLoader)
-
-    // New, all with no-op defaults below so existing conformers don't break.
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didRecordImpressionFrom sdk: SdkType)
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didRecordClickFrom sdk: SdkType)
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willLeaveApplication sdk: SdkType)
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willPresentScreenFrom sdk: SdkType)
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willDismissScreenFrom sdk: SdkType)
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didDismissScreenFrom sdk: SdkType)
-}
-
-public extension VeonMultiBannerAdLoaderDelegate {
-    func bannerLoaderDidFailAll(_ loader: VeonMultiBannerAdLoader) {}
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didRecordImpressionFrom sdk: SdkType) {}
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didRecordClickFrom sdk: SdkType) {}
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willPresentScreenFrom sdk: SdkType) {}
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willLeaveApplication sdk: SdkType) {}
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, willDismissScreenFrom sdk: SdkType) {}
-    func bannerLoader(_ loader: VeonMultiBannerAdLoader, didDismissScreenFrom sdk: SdkType) {}
-}
-
 /// Races Prebid / GAM / Yandex banner sources against each other, in the
 /// order defined by `VeonSdkConfigHolder.priorityOrder`, and surfaces
 /// whichever loads first.
@@ -62,15 +37,6 @@ public final class VeonMultiBannerAdLoader {
     private var failedCount = 0
     private var totalCount = 0
 
-    /// - Parameters:
-    ///   - rootViewController: Used by the Prebid source to present modal
-    ///     content on click, and passed through to any registered GAM/Yandex
-    ///     source as their ad request's root view controller.
-    ///   - adSize: Requested banner size, shared across all sources.
-    ///   - refreshInterval: Delay (in seconds) for which to wait before performing an auto refresh.
-    ///   - configId: Prebid Server stored impression config id.
-    ///   - gamAdUnitId: GAM ad unit id. Ignored if the GAM module isn't registered.
-    ///   - yandexAdUnitId: Yandex ad unit id. Ignored if the Yandex module isn't registered.
     public init(
         rootViewController: UIViewController?,
         adSize: CGSize,
@@ -94,6 +60,7 @@ public final class VeonMultiBannerAdLoader {
 
         let prebidSource = VeonPrebidBannerSource(configId: configId, adSize: adSize, refreshInterval: refreshInterval)
         prebidSource.presentingViewController = rootViewController
+        prebidSource.bannerDelegateForwarder = self
         sources[.prebid] = AnyVeonAdSourceLoading(prebidSource)
 
         // refreshInterval is not used here; it is configured via AdManager.
@@ -101,6 +68,7 @@ public final class VeonMultiBannerAdLoader {
             for: .gam, adUnitId: gamAdUnitId, adSize: adSize, rootViewController: rootViewController
         ) {
             sources[.gam] = gamSource
+            (gamSource.underlying as? VeonBannerSourceForwardable)?.bannerDelegateForwarder = self
         }
 
         // refreshInterval is not used here;
@@ -108,6 +76,7 @@ public final class VeonMultiBannerAdLoader {
             for: .yandex, adUnitId: yandexAdUnitId, adSize: adSize, rootViewController: rootViewController
         ) {
             sources[.yandex] = yandexSource
+            (yandexSource.underlying as? VeonBannerSourceForwardable)?.bannerDelegateForwarder = self
         }
 
         let priorityOrder = SdkConfigStore.priorityOrder
@@ -118,33 +87,6 @@ public final class VeonMultiBannerAdLoader {
         race.onLoaded = { [weak self] view, sdk in
             guard let self else { return }
             self.delegate?.bannerLoader(self, didLoad: view, from: sdk)
-
-            if let engagementSource = sources[sdk]?.underlying as? VeonAdSourceEngagementReporting {
-                engagementSource.onImpressionRecorded = { [weak self] in
-                    guard let self else { return }
-                    self.delegate?.bannerLoader(self, didRecordImpressionFrom: sdk)
-                }
-                engagementSource.onClickRecorded = { [weak self] in
-                    guard let self else { return }
-                    self.delegate?.bannerLoader(self, didRecordClickFrom: sdk)
-                }
-                engagementSource.onScreenWillPresent = { [weak self] in
-                    guard let self else { return }
-                    self.delegate?.bannerLoader(self, willPresentScreenFrom: sdk)
-                }
-                engagementSource.onScreenWillDismiss = { [weak self] in
-                    guard let self else { return }
-                    self.delegate?.bannerLoader(self, willDismissScreenFrom: sdk)
-                }
-                engagementSource.onWillLeaveApplication = { [weak self] in
-                    guard let self else { return }
-                    self.delegate?.bannerLoader(self, willLeaveApplication: sdk)
-                }
-                engagementSource.onScreenDidDismiss = { [weak self] in
-                    guard let self else { return }
-                    self.delegate?.bannerLoader(self, didDismissScreenFrom: sdk)
-                }
-            }
         }
         race.onSourceFailed = { [weak self] sdk, error in
             guard let self else { return }
@@ -161,5 +103,32 @@ public final class VeonMultiBannerAdLoader {
     public func destroy() {
         race?.destroy()
         race = nil
+    }
+}
+
+extension VeonMultiBannerAdLoader: VeonBannerEventForwarding {
+
+    public func bannerSourceDidRecordImpression(_ sdk: SdkType) {
+        delegate?.bannerLoader(self, didRecordImpressionFrom: sdk)
+    }
+
+    public func bannerSourceDidRecordClick(_ sdk: SdkType) {
+        delegate?.bannerLoader(self, didRecordClickFrom: sdk)
+    }
+
+    public func bannerSourceWillLeaveApplication(_ sdk: SdkType) {
+        delegate?.bannerLoader(self, willLeaveApplication: sdk)
+    }
+
+    public func bannerSourceWillPresentScreen(_ sdk: SdkType) {
+        delegate?.bannerLoader(self, willPresentScreenFrom: sdk)
+    }
+
+    public func bannerSourceWillDismissScreen(_ sdk: SdkType) {
+        delegate?.bannerLoader(self, willDismissScreenFrom: sdk)
+    }
+
+    public func bannerSourceDidDismissScreen(_ sdk: SdkType) {
+        delegate?.bannerLoader(self, didDismissScreenFrom: sdk)
     }
 }
