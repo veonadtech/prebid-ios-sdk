@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = "VeonPrebidMultiAdLoaderGAM"
   s.version          = "0.2.0"
   s.summary          = "GAM sources for VeonPrebidMultiAdLoader. Optional — only add if you want GAM in the race."
-  s.module_name      = "PrebidMultiAdLoaderGAM"
+  s.module_name      = "VeonPrebidMultiAdLoaderGAM"
   s.description      = "Registers a GAM banner/interstitial source with VeonAdSourceRegistry. Call " \
                         "VeonGAMAdSourceProvider.register() once at app startup after adding this pod."
   s.homepage         = "https://www.veon.com"

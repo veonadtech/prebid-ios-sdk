@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = "VeonPrebidMultiAdLoader"
   s.version          = "0.2.0"
   s.summary          = "Priority-based ad mediation race engine for Veon Prebid iOS SDK (Prebid-only core)."
-  s.module_name      = "PrebidMultiAdLoader"
+  s.module_name      = "VeonPrebidMultiAdLoader"
   s.description      = "Core race engine + Prebid banner/interstitial source + VeonAdSourceRegistry, the " \
                         "extension point optional VeonPrebidMultiAdLoaderGAM / VeonPrebidMultiAdLoaderYandex " \
                         "pods register into. Depends on neither GAM nor Yandex."

@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "0.2.0"
   s.summary      = "The bridge between PrebidMobile SDK and GMA SDK."
 
-  s.module_name = "PrebidMobileAdMobAdapters"
+  s.module_name = "VeonPrebidMobileAdMobAdapters"
 
   s.description  = "AdMob Adapters manages rendering of Prebid ads in the case of integration with AdMob as a Primary Ad Server."
   s.homepage     = "https://www.veon.com"
