@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
                  :FRAMEWORK_SEARCH_PATHS => '$(inherited)'
                }
 
-  s.source_files = 'PrebidMultiAdLoaderGAM/Sources/**/*.{h,m,swift}'
+  s.source_files = 'EventHandlers/PrebidMultiAdLoaderGAM/Sources/**/*.{h,m,swift}'
   s.static_framework = true
 
   s.dependency 'VeonPrebidMultiAdLoader', '>= 0.2.0'
