@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VeonPrebidMultiAdLoaderGAM"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "GAM sources for VeonPrebidMultiAdLoader. Optional — only add if you want GAM in the race."
   s.module_name      = "PrebidMultiAdLoaderGAM"
   s.description      = "Registers a GAM banner/interstitial source with VeonAdSourceRegistry. Call " \
@@ -19,11 +19,12 @@ Pod::Spec.new do |s|
                  :FRAMEWORK_SEARCH_PATHS => '$(inherited)'
                }
 
-  s.source_files = 'PrebidMultiAdLoaderGAM/Sources/**/*.{h,m,swift}'
+  s.source_files = 'EventHandlers/PrebidMultiAdLoaderGAM/Sources/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMultiAdLoader', '0.1.0'
-  s.dependency 'Google-Mobile-Ads-SDK', '>= 13.0.0'
+  s.dependency 'VeonPrebidMultiAdLoader', '>= 0.2.0'
+  s.dependency 'VeonPrebidRemoteConfig', '>= 0.2.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '< 13.0.0'
 
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',

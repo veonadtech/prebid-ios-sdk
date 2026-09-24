@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VeonPrebidRemoteConfig"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Shared remote config plumbing for Veon Prebid iOS SDK feature modules."
   s.module_name      = "PrebidRemoteConfig"
   s.description      = "Adds a configURL parameter to Prebid.initializeSDK and stores the raw response " \
@@ -20,10 +20,10 @@ Pod::Spec.new do |s|
                  :FRAMEWORK_SEARCH_PATHS => '$(inherited)'
                }
 
-  s.source_files = 'PrebidRemoteConfig/Sources/**/*.{h,m,swift}'
+  s.source_files = 'EventHandlers/PrebidRemoteConfig/Sources/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMobile', '0.1.1'
+  s.dependency 'VeonPrebidMobile', '>= 0.2.0'
 
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
