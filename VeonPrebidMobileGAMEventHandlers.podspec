@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "VeonPrebidMobileGAMEventHandlers"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "The bridge between PrebidMobile SDK and GMA SDK."
 
   s.module_name = "PrebidMobileGAMEventHandlers"
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     }
 
   s.author		= { "Veon AdTech" => "veonadtech.com" }
-  s.platform     	= :ios, "13.0"
+  s.platform     	= :ios, "15.0"
   s.swift_version 	= '5.0'
   s.source       	= { :git => "https://github.com/veonadtech/prebid-ios-sdk.git", :tag => "#{s.version}" }
   s.xcconfig 		= { :LIBRARY_SEARCH_PATHS => '$(inherited)',
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.source_files = 'EventHandlers/PrebidMobileGAMEventHandlers/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMobile', '0.1.1'
+  s.dependency 'VeonPrebidMobile', '0.2.0'
   s.dependency 'Google-Mobile-Ads-SDK', '>= 13.0.0'
 
   s.pod_target_xcconfig = {

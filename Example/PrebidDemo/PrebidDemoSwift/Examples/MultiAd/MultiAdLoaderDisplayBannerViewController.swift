@@ -94,10 +94,7 @@ extension MultiAdLoaderDisplayBannerViewController: VeonMultiBannerAdLoaderDeleg
         PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) recorded click")
     }
     
-    // Yandex (adViewWillLeaveApplication) and Prebid (bannerViewWillLeaveApplication)
-    // only. GAM's BannerViewDelegate has no equivalent event — a GAM click that
-    // opens an external app currently produces no signal here at all beyond
-    // didRecordClickFrom.
+    // Prebid (bannerViewWillLeaveApplication) only.
     func bannerLoader(_ loader: VeonMultiBannerAdLoader, willLeaveApplication sdk: SdkType) {
         PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) will leave application")
     }

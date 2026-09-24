@@ -43,6 +43,7 @@ public final class VeonMultiInterstitialAdLoader {
         winningInterstitial != nil
     }
 
+    @MainActor
     public func loadAd() {
         destroy()
 
