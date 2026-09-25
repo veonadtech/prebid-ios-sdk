@@ -1,6 +1,6 @@
 //
 //  VeonMultiBannerAdLoader.swift
-//  PrebidMultiAdLoader (Core)
+//  VeonPrebidMultiAdLoader
 //
 //  Copyright © Veon AdTech.
 //
@@ -8,7 +8,7 @@ import UIKit
 import VeonPrebidRemoteConfig
 
 /// Races Prebid / GAM / Yandex banner sources against each other, in the
-/// order defined by `VeonSdkConfigHolder.priorityOrder`, and surfaces
+/// order defined by `SdkConfigStore.priorityOrder`, and surfaces
 /// whichever loads first.
 ///
 /// Prebid is always available (Core has a hard dependency on
@@ -37,6 +37,15 @@ public final class VeonMultiBannerAdLoader {
     private var failedCount = 0
     private var totalCount = 0
 
+    /// Handed to every banner source as `bannerDelegateForwarder` instead
+    /// of `self`. `VeonBannerEventForwarding` is a public protocol, and a
+    /// public type conforming to it would be forced to mark every method
+    /// `public` — which would let app code holding a `VeonMultiBannerAdLoader`
+    /// reference call `bannerSourceDidRecordImpression(_:)` etc. directly
+    /// and forge engagement events. Routing through this private
+    /// forwarder keeps those handlers off the public class entirely.
+    private lazy var eventForwarder = BannerEventForwarder(owner: self)
+
     public init(
         rootViewController: UIViewController?,
         adSize: CGSize,
@@ -60,7 +69,7 @@ public final class VeonMultiBannerAdLoader {
 
         let prebidSource = VeonPrebidBannerSource(configId: configId, adSize: adSize, refreshInterval: refreshInterval)
         prebidSource.presentingViewController = rootViewController
-        prebidSource.bannerDelegateForwarder = self
+        prebidSource.bannerDelegateForwarder = eventForwarder
         sources[.prebid] = AnyVeonAdSourceLoading(prebidSource)
 
         // refreshInterval is not used here; it is configured via AdManager.
@@ -68,7 +77,7 @@ public final class VeonMultiBannerAdLoader {
             for: .gam, adUnitId: gamAdUnitId, adSize: adSize, rootViewController: rootViewController
         ) {
             sources[.gam] = gamSource
-            (gamSource.underlying as? VeonBannerSourceForwardable)?.bannerDelegateForwarder = self
+            (gamSource.underlying as? VeonBannerSourceForwardable)?.bannerDelegateForwarder = eventForwarder
         }
 
         // refreshInterval is not used here;
@@ -76,7 +85,7 @@ public final class VeonMultiBannerAdLoader {
             for: .yandex, adUnitId: yandexAdUnitId, adSize: adSize, rootViewController: rootViewController
         ) {
             sources[.yandex] = yandexSource
-            (yandexSource.underlying as? VeonBannerSourceForwardable)?.bannerDelegateForwarder = self
+            (yandexSource.underlying as? VeonBannerSourceForwardable)?.bannerDelegateForwarder = eventForwarder
         }
 
         let priorityOrder = SdkConfigStore.priorityOrder
@@ -104,31 +113,69 @@ public final class VeonMultiBannerAdLoader {
         race?.destroy()
         race = nil
     }
-}
 
-extension VeonMultiBannerAdLoader: VeonBannerEventForwarding {
+    // MARK: - Called only by BannerEventForwarder
 
-    public func bannerSourceDidRecordImpression(_ sdk: SdkType) {
+    fileprivate func handleImpression(_ sdk: SdkType) {
         delegate?.bannerLoader(self, didRecordImpressionFrom: sdk)
     }
 
-    public func bannerSourceDidRecordClick(_ sdk: SdkType) {
+    fileprivate func handleClick(_ sdk: SdkType) {
         delegate?.bannerLoader(self, didRecordClickFrom: sdk)
     }
 
-    public func bannerSourceWillLeaveApplication(_ sdk: SdkType) {
+    fileprivate func handleWillLeaveApplication(_ sdk: SdkType) {
         delegate?.bannerLoader(self, willLeaveApplication: sdk)
     }
 
-    public func bannerSourceWillPresentScreen(_ sdk: SdkType) {
+    fileprivate func handleWillPresentScreen(_ sdk: SdkType) {
         delegate?.bannerLoader(self, willPresentScreenFrom: sdk)
     }
 
-    public func bannerSourceWillDismissScreen(_ sdk: SdkType) {
+    fileprivate func handleWillDismissScreen(_ sdk: SdkType) {
         delegate?.bannerLoader(self, willDismissScreenFrom: sdk)
     }
 
-    public func bannerSourceDidDismissScreen(_ sdk: SdkType) {
+    fileprivate func handleDidDismissScreen(_ sdk: SdkType) {
         delegate?.bannerLoader(self, didDismissScreenFrom: sdk)
+    }
+}
+
+/// Private conformer to `VeonBannerEventForwarding` on behalf of
+/// `VeonMultiBannerAdLoader`. Because this type is `private`, Swift does
+/// not require its protocol witnesses to be `public` even though
+/// `VeonBannerEventForwarding` itself is a public protocol — the
+/// conformance is only usable within this file, which is exactly where
+/// it's assigned (`bannerDelegateForwarder = eventForwarder`).
+private final class BannerEventForwarder: VeonBannerEventForwarding {
+
+    private weak var owner: VeonMultiBannerAdLoader?
+
+    init(owner: VeonMultiBannerAdLoader) {
+        self.owner = owner
+    }
+
+    func bannerSourceDidRecordImpression(_ sdk: SdkType) {
+        owner?.handleImpression(sdk)
+    }
+
+    func bannerSourceDidRecordClick(_ sdk: SdkType) {
+        owner?.handleClick(sdk)
+    }
+
+    func bannerSourceWillLeaveApplication(_ sdk: SdkType) {
+        owner?.handleWillLeaveApplication(sdk)
+    }
+
+    func bannerSourceWillPresentScreen(_ sdk: SdkType) {
+        owner?.handleWillPresentScreen(sdk)
+    }
+
+    func bannerSourceWillDismissScreen(_ sdk: SdkType) {
+        owner?.handleWillDismissScreen(sdk)
+    }
+
+    func bannerSourceDidDismissScreen(_ sdk: SdkType) {
+        owner?.handleDidDismissScreen(sdk)
     }
 }

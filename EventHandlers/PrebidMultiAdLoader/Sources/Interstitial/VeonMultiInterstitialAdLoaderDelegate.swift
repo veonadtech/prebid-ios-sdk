@@ -1,6 +1,6 @@
 //
 //  VeonMultiInterstitialAdLoaderDelegate.swift
-//  VeonPrebidMultiAdLoader (Core)
+//  VeonPrebidMultiAdLoader
 //
 //  Copyright © Veon AdTech.
 //

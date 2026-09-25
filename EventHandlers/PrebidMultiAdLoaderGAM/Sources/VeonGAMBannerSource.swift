@@ -14,6 +14,10 @@ import VeonPrebidRemoteConfig
 /// Deliberately does **not** go through Prebid's GAM event handler /
 /// targeting keywords: this source is a straight competitor in the race,
 /// not a Prebid-rendered line item.
+///
+/// `internal` on purpose: the app never sees this type directly, only
+/// the type-erased `AnyVeonAdSourceLoading<UIView>` returned by the
+/// registered factory in `VeonGAMAdSourceProvider`.
 final class VeonGAMBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSourceForwardable {
 
     typealias AdObject = UIView

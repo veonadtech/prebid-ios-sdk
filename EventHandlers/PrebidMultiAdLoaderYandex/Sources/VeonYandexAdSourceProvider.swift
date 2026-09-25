@@ -15,8 +15,14 @@ import VeonPrebidRemoteConfig
 public enum VeonYandexAdSourceProvider {
 
     public static func register() {
-        VeonAdSourceRegistry.shared.registerBannerSource(for: .yandex) { adUnitId, adSize, _ in
-            AnyVeonAdSourceLoading(VeonYandexBannerSource(adUnitId: adUnitId, adSize: adSize))
+        // rootViewController is threaded through to VeonYandexBannerSource
+        // so it can present modal screens (click-through browser) —
+        // previously discarded here, which left presentingViewController
+        // permanently nil.
+        VeonAdSourceRegistry.shared.registerBannerSource(for: .yandex) { adUnitId, adSize, rootViewController in
+            AnyVeonAdSourceLoading(
+                VeonYandexBannerSource(adUnitId: adUnitId, adSize: adSize, rootViewController: rootViewController)
+            )
         }
         VeonAdSourceRegistry.shared.registerInterstitialSource(for: .yandex) { adUnitId in
             AnyVeonAdSourceLoading(VeonYandexInterstitialSource(adUnitId: adUnitId))

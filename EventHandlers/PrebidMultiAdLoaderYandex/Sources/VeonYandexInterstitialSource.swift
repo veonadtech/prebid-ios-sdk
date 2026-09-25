@@ -11,7 +11,7 @@ import YandexMobileAds
 import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
 
-final class VeonYandexInterstitialSource: NSObject, @MainActor VeonAdSourceLoading, VeonInterstitialSourceForwardable {
+final class VeonYandexInterstitialSource: NSObject, VeonAdSourceLoading, VeonInterstitialSourceForwardable {
 
     typealias AdObject = VeonLoadedInterstitial
 
@@ -39,7 +39,7 @@ final class VeonYandexInterstitialSource: NSObject, @MainActor VeonAdSourceLoadi
         loader.loadAd(with: requestConfiguration)
     }
 
-    @MainActor func destroy() {
+    func destroy() {
         interstitialAd?.delegate = nil
         interstitialAd = nil
     }

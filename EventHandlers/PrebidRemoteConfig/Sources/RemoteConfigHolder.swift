@@ -9,18 +9,13 @@ import Foundation
 
 /// Thread-safe holder for the raw JSON fetched from `configURL` during
 /// `Prebid.initializeSDK(serverURL:configURL:...)` (see
-/// `Prebid+MultiAdLoaderInit.swift`).
+/// `Prebid+RemoteConfig.swift`).
 ///
 /// Deliberately untyped: more than one feature keys off the same
-/// `configURL` — this ad-loader module today (via `VeonSdkConfigHolder`),
-/// a future logging module later (reading the `level` field this module
+/// `configURL` — the ad-mediation module today (via `SdkConfigStore`),
+/// a future logging module later (reading the `level` field that module
 /// ignores). Each decodes only the slice it cares about via `decode(_:)`.
 /// Nothing in this type is specific to ad mediation.
-///
-/// - Note: If a second feature module starts depending on this type,
-///   consider extracting this file into its own small pod so a logging
-///   module doesn't have to pull in GAM/Yandex as a transitive
-///   dependency just to read `configURL`.
 public final class RemoteConfigHolder {
 
     public static let shared = RemoteConfigHolder()
@@ -30,7 +25,15 @@ public final class RemoteConfigHolder {
 
     private init() {}
 
-    public var rawData: Data? {
+    /// The last successfully fetched config body, or `nil` if nothing has
+    /// loaded yet or the last fetch failed.
+    ///
+    /// Read-only from outside this file on purpose: the only place allowed
+    /// to write it is `load(from:)` below. Feature modules must never be
+    /// able to overwrite it directly (that would corrupt the config for
+    /// every other feature reading the same shared instance) — they read
+    /// via `decode(_:)` instead.
+    public private(set) var rawData: Data? {
         get { lock.lock(); defer { lock.unlock() }; return _rawData }
         set { lock.lock(); defer { lock.unlock() }; _rawData = newValue }
     }

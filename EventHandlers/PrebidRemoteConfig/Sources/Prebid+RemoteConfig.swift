@@ -5,6 +5,12 @@
 //  Copyright © Veon AdTech.
 //
 
+//  Prebid+RemoteConfig.swift
+//  VeonPrebidRemoteConfig
+//
+//  Copyright © Veon AdTech.
+//
+
 import Foundation
 import PrebidMobile
 
@@ -14,18 +20,18 @@ import PrebidMobile
 ///
 /// Any feature that keys off the same remote config (today: the ad-mediation
 /// priority order in `VeonPrebidMultiAdLoader`; later: logging verbosity)
-/// reads it back via `VeonRemoteConfig.shared.decode(_:)` — this file only
+/// reads it back via `RemoteConfigHolder.shared.decode(_:)` — this file only
 /// owns *fetching and storing* the raw JSON, not interpreting it.
 public extension Prebid {
 
     /// Same as `Prebid.initializeSDK(serverURL:_:_:)`, plus an optional
     /// `configURL` that is fetched in the background and made available to
-    /// any module reading `VeonRemoteConfig.shared`.
+    /// any module reading `RemoteConfigHolder.shared`.
     ///
     /// The config fetch is fire-and-forget with respect to core
     /// initialization: a slow, missing, or malformed `configURL` never
     /// delays or fails `completion` for the core SDK init. Consumers
-    /// (e.g. `VeonSdkConfigHolder.priorityOrder`) are expected to degrade
+    /// (e.g. `SdkConfigStore.priorityOrder`) are expected to degrade
     /// gracefully when nothing has loaded yet.
     ///
     /// - Parameters:
@@ -42,10 +48,10 @@ public extension Prebid {
             if let configURL, !configURL.isEmpty {
                 RemoteConfigHolder.shared.load(from: configURL) { _ in
                     // Intentionally ignored here — a failed/garbled config
-                    // just leaves VeonRemoteConfig.shared.rawData nil, and
+                    // just leaves RemoteConfigHolder.shared.rawData nil, and
                     // every consumer already has a defined fallback for that.
                     // If you need to surface load failures (e.g. to logging
-                    // once that module exists), observe VeonRemoteConfig
+                    // once that module exists), observe RemoteConfigHolder
                     // directly rather than adding a completion param here —
                     // that keeps this signature stable as more features
                     // start depending on the same configURL.

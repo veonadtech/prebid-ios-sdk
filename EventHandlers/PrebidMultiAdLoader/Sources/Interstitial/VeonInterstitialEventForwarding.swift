@@ -1,6 +1,6 @@
 //
 //  VeonInterstitialEventForwarding.swift
-//  PrebidMultiAdLoader (Core)
+//  VeonPrebidMultiAdLoader
 //
 //  Copyright © Veon AdTech.
 //

@@ -1,6 +1,6 @@
 //
-//  VeonMultiAdLoaderConfig.swift
-//  VeonPrebidMultiAdLoader
+//  SdkConfig.swift
+//  VeonPrebidRemoteConfig
 //
 //  Copyright © Veon AdTech.
 //
@@ -26,7 +26,7 @@ import Foundation
 ///   Only `priority` (and `isActive`) drive the actual race logic.
 public struct SdkConfig: Decodable, Equatable {
 
-    /// Master switch. When `false`, `VeonSdkConfigHolder.priorityOrder`
+    /// Master switch. When `false`, `SdkConfigStore.priorityOrder`
     /// falls back to Prebid-only behavior.
     public let isActive: Bool
 

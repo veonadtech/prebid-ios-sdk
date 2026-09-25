@@ -1,6 +1,6 @@
 //
 //  SdkType.swift
-//  VeonPrebidMultiAdLoader
+//  VeonPrebidRemoteConfig
 //
 //  Copyright © Veon AdTech.
 //
@@ -8,10 +8,11 @@
 import Foundation
 
 /// Identifies which ad SDK is competing in the priority-based ad race
-/// (`VeonMultiBannerAdLoader` / `VeonMultiInterstitialAdLoader`).
+/// (`VeonMultiBannerAdLoader` / `VeonMultiInterstitialAdLoader`, both in
+/// `VeonPrebidMultiAdLoader`).
 ///
 /// Raw values match the strings used in the remote priority config
-/// (see `VeonMultiAdLoaderConfig`), e.g. `"PREBID"`, `"GAM"`, `"YANDEX"`.
+/// (see `SdkConfig`), e.g. `"PREBID"`, `"GAM"`, `"YANDEX"`.
 public enum SdkType: String, Codable, CaseIterable, Hashable {
     case prebid = "PREBID"
     case gam = "GAM"

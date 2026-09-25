@@ -1,6 +1,6 @@
 //
 //  VeonMultiInterstitialAdLoader.swift
-//  PrebidMultiAdLoader (Core)
+//  VeonPrebidMultiAdLoader
 //
 //  Copyright © Veon AdTech.
 //
@@ -9,7 +9,7 @@ import UIKit
 import VeonPrebidRemoteConfig
 
 /// Races Prebid / GAM / Yandex interstitial sources against each other,
-/// in the order defined by `VeonSdkConfigHolder.priorityOrder`.
+/// in the order defined by `SdkConfigStore.priorityOrder`.
 ///
 /// GAM and Yandex only participate if the app has linked the
 /// corresponding optional module and called its `register()` — see
@@ -33,6 +33,11 @@ public final class VeonMultiInterstitialAdLoader {
     private var failedCount = 0
     private var totalCount = 0
 
+    /// Handed to every interstitial source as `interstitialDelegateForwarder`
+    /// instead of `self` — see the identical comment on
+    /// `VeonMultiBannerAdLoader.eventForwarder`.
+    private lazy var eventForwarder = InterstitialEventForwarder(owner: self)
+
     public init(configId: String?, gamAdUnitId: String?, yandexAdUnitId: String?) {
         self.configId = configId
         self.gamAdUnitId = gamAdUnitId
@@ -51,16 +56,16 @@ public final class VeonMultiInterstitialAdLoader {
         let prebidSource = VeonPrebidInterstitialSource(configId: configId)
         let prebidWrapped = AnyVeonAdSourceLoading(prebidSource)
         sources[.prebid] = prebidWrapped
-        (prebidWrapped.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = self
+        (prebidWrapped.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = eventForwarder
 
         if let gamSource = VeonAdSourceRegistry.shared.makeInterstitialSource(for: .gam, adUnitId: gamAdUnitId) {
             sources[.gam] = gamSource
-            (gamSource.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = self
+            (gamSource.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = eventForwarder
         }
 
         if let yandexSource = VeonAdSourceRegistry.shared.makeInterstitialSource(for: .yandex, adUnitId: yandexAdUnitId) {
             sources[.yandex] = yandexSource
-            (yandexSource.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = self
+            (yandexSource.underlying as? VeonInterstitialSourceForwardable)?.interstitialDelegateForwarder = eventForwarder
         }
 
         let priorityOrder = SdkConfigStore.priorityOrder
@@ -94,29 +99,60 @@ public final class VeonMultiInterstitialAdLoader {
         race = nil
         winningInterstitial = nil
     }
+
+    // MARK: - Called only by InterstitialEventForwarder
+
+    fileprivate func handleWillPresent(_ sdk: SdkType) {
+        delegate?.interstitialLoader(self, willPresent: sdk)
+    }
+
+    fileprivate func handleDidDismiss(_ sdk: SdkType) {
+        delegate?.interstitialLoader(self, didDismiss: sdk)
+        winningInterstitial = nil
+    }
+
+    fileprivate func handleDidClick(_ sdk: SdkType) {
+        delegate?.interstitialLoader(self, didClick: sdk)
+    }
+
+    fileprivate func handleDidFailToShow(_ sdk: SdkType, error: Error?) {
+        delegate?.interstitialLoader(self, didFailToShow: sdk, error: error)
+        winningInterstitial = nil
+    }
+
+    fileprivate func handleDidTrackImpression(_ sdk: SdkType) {
+        delegate?.interstitialLoader(self, didTrackImpression: sdk)
+    }
 }
 
-extension VeonMultiInterstitialAdLoader: VeonInterstitialEventForwarding {
+/// Private conformer to `VeonInterstitialEventForwarding` on behalf of
+/// `VeonMultiInterstitialAdLoader` — see `BannerEventForwarder` for why
+/// this indirection exists.
+private final class InterstitialEventForwarder: VeonInterstitialEventForwarding {
 
-    public func interstitialSourceWillPresent(_ source: VeonLoadedInterstitial) {
-        delegate?.interstitialLoader(self, willPresent: source.sdk)
+    private weak var owner: VeonMultiInterstitialAdLoader?
+
+    init(owner: VeonMultiInterstitialAdLoader) {
+        self.owner = owner
     }
 
-    public func interstitialSourceDidDismiss(_ source: VeonLoadedInterstitial) {
-        delegate?.interstitialLoader(self, didDismiss: source.sdk)
-        winningInterstitial = nil
+    func interstitialSourceWillPresent(_ source: VeonLoadedInterstitial) {
+        owner?.handleWillPresent(source.sdk)
     }
 
-    public func interstitialSourceDidClick(_ source: VeonLoadedInterstitial) {
-        delegate?.interstitialLoader(self, didClick: source.sdk)
+    func interstitialSourceDidDismiss(_ source: VeonLoadedInterstitial) {
+        owner?.handleDidDismiss(source.sdk)
     }
 
-    public func interstitialSourceDidFailToShow(_ source: VeonLoadedInterstitial, error: Error?) {
-        delegate?.interstitialLoader(self, didFailToShow: source.sdk, error: error)
-        winningInterstitial = nil
+    func interstitialSourceDidClick(_ source: VeonLoadedInterstitial) {
+        owner?.handleDidClick(source.sdk)
     }
 
-    public func interstitialSourceDidTrackImpression(_ source: VeonLoadedInterstitial) {
-        delegate?.interstitialLoader(self, didTrackImpression: source.sdk)
+    func interstitialSourceDidFailToShow(_ source: VeonLoadedInterstitial, error: Error?) {
+        owner?.handleDidFailToShow(source.sdk, error: error)
+    }
+
+    func interstitialSourceDidTrackImpression(_ source: VeonLoadedInterstitial) {
+        owner?.handleDidTrackImpression(source.sdk)
     }
 }

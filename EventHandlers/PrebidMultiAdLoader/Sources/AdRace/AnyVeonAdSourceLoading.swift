@@ -22,7 +22,21 @@ public final class AnyVeonAdSourceLoading<AdObject>: VeonAdSourceLoading {
     /// (e.g. `VeonBannerSourceForwardable`, `VeonInterstitialSourceForwardable`)
     /// without Core needing to know the concrete SDK-specific type.
     public let underlying: AnyObject
-    
+
+    /// `public var` (not `internal(set)`) because `VeonAdSourceLoading`
+    /// requires `{ get set }` — Swift requires a public protocol's
+    /// requirement to be satisfied by an equally-visible witness, so the
+    /// setter can't be narrowed here.
+    ///
+    /// This is safe in practice even though the setter is technically
+    /// public: an `AnyVeonAdSourceLoading` instance never reaches app
+    /// code. It's only ever created inside this module or an optional
+    /// GAM/Yandex module and immediately handed to `VeonAdRace` (which
+    /// sets these callbacks once, in `start()`) or stored in
+    /// `VeonAdSourceRegistry`'s `internal` factory maps. The integrator's
+    /// only public surface is `VeonMultiBannerAdLoader` /
+    /// `VeonMultiInterstitialAdLoader`, neither of which exposes this
+    /// type or an instance of it.
     public var onLoaded: ((AdObject) -> Void)? {
         didSet { _setOnLoaded(onLoaded) }
     }

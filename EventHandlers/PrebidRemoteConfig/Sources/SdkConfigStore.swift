@@ -1,6 +1,6 @@
 //
-//  VeonSdkConfigHolder.swift
-//  VeonPrebidMultiAdLoader
+//  SdkConfigStore.swift
+//  VeonPrebidRemoteConfig
 //
 //  Copyright © Veon AdTech.
 //
@@ -9,17 +9,15 @@ import Foundation
 
 /// Ad-mediation view onto the shared remote config.
 ///
-/// Fetching and storage live in `VeonRemoteConfig` (module
-/// `VeonPrebidRemoteConfig`), populated by
+/// Fetching and storage live in `RemoteConfigHolder`, populated by
 /// `Prebid.initializeSDK(serverURL:configURL:...)`. This type only
-/// decodes the slice of that JSON this module cares about
-/// (`VeonMultiAdLoaderConfig`) and derives the race's priority order —
-/// it holds no state of its own.
+/// decodes the slice of that JSON this feature cares about
+/// (`SdkConfig`) and derives the race's priority order — it holds no
+/// state of its own.
 public enum SdkConfigStore {
 
     /// The currently decoded ad-loader config, or `nil` if nothing has
-    /// loaded yet, or the JSON doesn't match `VeonMultiAdLoaderConfig`'s
-    /// shape.
+    /// loaded yet, or the JSON doesn't match `SdkConfig`'s shape.
     public static var config: SdkConfig? {
         RemoteConfigHolder.shared.decode(SdkConfig.self)
     }

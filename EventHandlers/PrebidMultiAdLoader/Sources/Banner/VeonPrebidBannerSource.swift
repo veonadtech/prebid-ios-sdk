@@ -1,6 +1,6 @@
 //
 //  VeonPrebidBannerSource.swift
-//  PrebidMultiAdLoader (Prebid)
+//  VeonPrebidMultiAdLoader
 //
 //  Copyright © Veon AdTech.
 //

@@ -23,19 +23,22 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSou
     var sdk: SdkType { .yandex }
     weak var bannerDelegateForwarder: VeonBannerEventForwarding?
 
-
     private let adUnitId: String?
     private let adSize: CGSize
     private var adView: AdView?
 
-    weak var presentingViewController: UIViewController?
+    // Was declared but never assigned — the factory in
+    // VeonYandexAdSourceProvider dropped rootViewController. Now set
+    // at init, same as VeonGAMBannerSource / VeonPrebidBannerSource.
+    private weak var presentingViewController: UIViewController?
 
-    init(adUnitId: String?, adSize: CGSize) {
+    init(adUnitId: String?, adSize: CGSize, rootViewController: UIViewController?) {
         self.adUnitId = adUnitId
         self.adSize = adSize
+        self.presentingViewController = rootViewController
     }
 
-    func yandexBannerSize() -> BannerAdSize {
+    private func yandexBannerSize() -> BannerAdSize {
         BannerAdSize.fixedSize(withWidth: adSize.width, height: adSize.height)
     }
 
