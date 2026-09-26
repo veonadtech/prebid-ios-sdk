@@ -62,6 +62,7 @@ public final class VeonMultiBannerAdLoader {
         self.yandexAdUnitId = yandexAdUnitId
     }
 
+    @MainActor
     public func loadAd() {
         destroy()
 

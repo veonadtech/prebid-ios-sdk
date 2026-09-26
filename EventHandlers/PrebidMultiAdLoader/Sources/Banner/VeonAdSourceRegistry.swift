@@ -55,6 +55,7 @@ public final class VeonAdSourceRegistry {
         interstitialFactories[sdk] = factory
     }
 
+    @MainActor
     func makeBannerSource(
         for sdk: SdkType,
         adUnitId: String?,
@@ -65,6 +66,7 @@ public final class VeonAdSourceRegistry {
         return factory?(adUnitId, adSize, rootViewController)
     }
 
+    @MainActor
     func makeInterstitialSource(for sdk: SdkType, adUnitId: String?) -> AnyVeonAdSourceLoading<VeonLoadedInterstitial>? {
         lock.lock(); let factory = interstitialFactories[sdk]; lock.unlock()
         return factory?(adUnitId)

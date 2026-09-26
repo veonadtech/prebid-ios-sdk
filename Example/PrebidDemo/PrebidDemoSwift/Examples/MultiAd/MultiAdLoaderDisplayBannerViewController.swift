@@ -28,7 +28,7 @@ private let refreshInterval: TimeInterval = 30
 /// `bannerView` container.
 class MultiAdLoaderDisplayBannerViewController: BannerBaseViewController {
 
-    private var loader: VeonMultiBannerAdLoader!
+    private var loader: VeonMultiBannerAdLoader?
 
     override func loadView() {
         super.loadView()
@@ -52,11 +52,11 @@ class MultiAdLoaderDisplayBannerViewController: BannerBaseViewController {
             gamAdUnitId: gamAdUnitMultiAdLoaderBanner,
             yandexAdUnitId: yandexAdUnitMultiAdLoaderBanner
         )
-        loader.delegate = self
+        loader?.delegate = self
 
         // 2. Load — whichever of Prebid/GAM/Yandex is registered and wins
         // by priority order shows up in didLoad below.
-        loader.loadAd()
+        loader?.loadAd()
     }
 }
 
@@ -94,15 +94,12 @@ extension MultiAdLoaderDisplayBannerViewController: VeonMultiBannerAdLoaderDeleg
         PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) recorded click")
     }
     
-    // Yandex (adViewWillLeaveApplication) and Prebid (bannerViewWillLeaveApplication)
-    // only. GAM's BannerViewDelegate has no equivalent event — a GAM click that
-    // opens an external app currently produces no signal here at all beyond
-    // didRecordClickFrom.
+    // Prebid (bannerViewWillLeaveApplication) only.
     func bannerLoader(_ loader: VeonMultiBannerAdLoader, willLeaveApplication sdk: SdkType) {
         PrebidDemoLogger.shared.info("Multi Ad Loader banner (\(sdk.rawValue)) will leave application")
     }
 
-    // All three SDKs, but only when the click opens something in-app (modal /
+    // GAM and Prebid, but only when the click opens something in-app (modal /
     // embedded browser). If the click instead backgrounds the app, this is
     // skipped in favor of onWillLeaveApplication (not currently forwarded here).
     func bannerLoader(_ loader: VeonMultiBannerAdLoader, willPresentScreenFrom sdk: SdkType) {

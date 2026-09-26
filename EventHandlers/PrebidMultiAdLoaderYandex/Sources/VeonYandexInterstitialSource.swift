@@ -11,7 +11,7 @@ import YandexMobileAds
 import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
 
-final class VeonYandexInterstitialSource: NSObject, VeonAdSourceLoading, VeonInterstitialSourceForwardable {
+final class VeonYandexInterstitialSource: NSObject, @MainActor VeonAdSourceLoading, VeonInterstitialSourceForwardable {
 
     typealias AdObject = VeonLoadedInterstitial
 
@@ -21,13 +21,13 @@ final class VeonYandexInterstitialSource: NSObject, VeonAdSourceLoading, VeonInt
     weak var interstitialDelegateForwarder: VeonInterstitialEventForwarding?
 
     private let adUnitId: String?
-    private let loader = InterstitialAdLoader()
+    private lazy var interstitialAdLoader = InterstitialAdLoader()
+
     private var interstitialAd: InterstitialAd?
 
     init(adUnitId: String?) {
         self.adUnitId = adUnitId
         super.init()
-        loader.delegate = self
     }
 
     func load() {
@@ -35,41 +35,41 @@ final class VeonYandexInterstitialSource: NSObject, VeonAdSourceLoading, VeonInt
             onFailed?(VeonYandexSourceError.missingAdUnitId)
             return
         }
-        let requestConfiguration = AdRequestConfiguration(adUnitID: adUnitId)
-        loader.loadAd(with: requestConfiguration)
+        
+        let request = AdRequest(adUnitID: adUnitId)
+        interstitialAdLoader.loadAd(with: request) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success(let ad):
+                self.interstitialAd = ad
+                interstitialAd?.delegate = self
+                self.onLoaded?(self)
+            case .failure(let error):
+                self.onFailed?(error)
+            }
+        }
+
     }
 
+    @MainActor
     func destroy() {
         interstitialAd?.delegate = nil
         interstitialAd = nil
     }
 }
 
-// MARK: - InterstitialAdLoaderDelegate (7.x API)
-extension VeonYandexInterstitialSource: InterstitialAdLoaderDelegate {
-    
-    func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didLoad interstitialAd: InterstitialAd) {
-        interstitialAd.delegate = self
-        self.interstitialAd = interstitialAd
-        self.onLoaded?(self)
-    }
+extension VeonYandexInterstitialSource: InterstitialAdDelegate, @MainActor VeonLoadedInterstitial {
 
-    func interstitialAdLoader(_ adLoader: InterstitialAdLoader, didFailToLoadWithError requestError: AdRequestError) {
-        onFailed?(requestError.error)
-    }
-}
-
-extension VeonYandexInterstitialSource: InterstitialAdDelegate, VeonLoadedInterstitial {
-    
     var sdk: SdkType { .yandex }
     
     func interstitialAd(
         _ interstitialAd: YandexMobileAds.InterstitialAd,
-        didTrackImpressionWith impressionData: (any YandexMobileAds.ImpressionData)?
+        didTrackImpression impressionData: (any YandexMobileAds.ImpressionData)?
     ) {
         interstitialDelegateForwarder?.interstitialSourceDidTrackImpression(self)
     }
 
+    @MainActor
     func show(from viewController: UIViewController) {
         interstitialAd?.show(from: viewController)
     }
@@ -82,7 +82,7 @@ extension VeonYandexInterstitialSource: InterstitialAdDelegate, VeonLoadedInters
         interstitialDelegateForwarder?.interstitialSourceDidDismiss(self)
     }
 
-    func interstitialAd(_ interstitialAd: YandexMobileAds.InterstitialAd, didFailToShowWithError error: any Error) {
+    func interstitialAd(_ interstitialAd: YandexMobileAds.InterstitialAd, didFailToShow error: any Error) {
         interstitialDelegateForwarder?.interstitialSourceDidFailToShow(self, error: error)
     }
 

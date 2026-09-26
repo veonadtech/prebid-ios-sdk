@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        YandexMobileAds.MobileAds.initializeSDK {
+        YandexAds.initializeSDK {
             VeonYandexAdSourceProvider.register()
         }
             

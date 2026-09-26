@@ -25,7 +25,7 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSou
 
     private let adUnitId: String?
     private let adSize: CGSize
-    private var adView: AdView?
+    private var bannerAdView: BannerAdView?
 
     // Was declared but never assigned — the factory in
     // VeonYandexAdSourceProvider dropped rootViewController. Now set
@@ -39,7 +39,7 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSou
     }
 
     private func yandexBannerSize() -> BannerAdSize {
-        BannerAdSize.fixedSize(withWidth: adSize.width, height: adSize.height)
+        BannerAdSize.fixed(width: adSize.width, height: adSize.height)
     }
 
     func load() {
@@ -48,55 +48,47 @@ final class VeonYandexBannerSource: NSObject, VeonAdSourceLoading, VeonBannerSou
             return
         }
         
-        adView = AdView(adUnitID: adUnitId, adSize: yandexBannerSize())
-        adView?.delegate = self
-        adView?.translatesAutoresizingMaskIntoConstraints = false
+        bannerAdView = BannerAdView(adSize: yandexBannerSize())
+        bannerAdView?.delegate = self
+        bannerAdView?.translatesAutoresizingMaskIntoConstraints = false
         
-        let request = MutableAdRequest()
-        adView?.loadAd(with: request)
+        let request = AdRequest(adUnitID: adUnitId)
+        bannerAdView?.loadAd(with: request)
     }
 
     func destroy() {
-        adView?.delegate = nil
-        adView?.removeFromSuperview()
-        adView = nil
+        bannerAdView?.delegate = nil
+        bannerAdView?.removeFromSuperview()
+        bannerAdView = nil
 
         onLoaded = nil
         onFailed = nil
     }
 }
 
-extension VeonYandexBannerSource: AdViewDelegate {
+extension VeonYandexBannerSource: BannerAdViewDelegate {
 
     func viewControllerForPresentingModalView() -> UIViewController? {
         presentingViewController
     }
 
-    func adViewDidLoad(_ adView: AdView) {
-        onLoaded?(adView)
+    func bannerAdViewDidLoad(_ bannerAdView: BannerAdView) {
+        onLoaded?(bannerAdView)
     }
 
-    func adViewDidFailLoading(_ adView: AdView, error: Error) {
+    func bannerAdViewDidFailLoading(_ bannerAdView: BannerAdView, error: Error) {
         onFailed?(error)
     }
 
-    func adViewDidClick(_ adView: AdView) {
+    func bannerAdViewDidClick(_ bannerAdView: BannerAdView) {
         bannerDelegateForwarder?.bannerSourceDidRecordClick(sdk)
     }
-
-    func adViewWillLeaveApplication(_ adView: AdView) {
-        bannerDelegateForwarder?.bannerSourceWillLeaveApplication(sdk)
-    }
-
-    func adView(_ adView: AdView, willPresentScreen viewController: UIViewController?) {
-        bannerDelegateForwarder?.bannerSourceWillPresentScreen(sdk)
-    }
-
-    func adView(_ adView: AdView, didDismissScreen viewController: UIViewController?) {
+    
+    func bannerAdViewDidClose(_ bannerAdView: BannerAdView) {
         bannerDelegateForwarder?.bannerSourceDidDismissScreen(sdk)
     }
 
-    func adView(_ adView: AdView, didTrackImpression impressionData: (any ImpressionData)?) {
+    func bannerAdView(_ bannerAdView: BannerAdView, didTrackImpression impressionData: (any ImpressionData)?) {
         bannerDelegateForwarder?.bannerSourceDidRecordImpression(sdk)
     }
 }
