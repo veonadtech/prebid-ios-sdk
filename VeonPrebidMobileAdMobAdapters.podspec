@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "VeonPrebidMobileAdMobAdapters"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "The bridge between PrebidMobile SDK and GMA SDK."
 
-  s.module_name = "PrebidMobileAdMobAdapters"
+  s.module_name = "VeonPrebidMobileAdMobAdapters"
 
   s.description  = "AdMob Adapters manages rendering of Prebid ads in the case of integration with AdMob as a Primary Ad Server."
   s.homepage     = "https://www.veon.com"
@@ -42,8 +42,8 @@ Pod::Spec.new do |s|
 
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMobile', '0.1.1'
-  s.dependency 'Google-Mobile-Ads-SDK', '>= 13.0.0'
+  s.dependency 'VeonPrebidMobile', '>= 0.2.0'
+  s.dependency 'Google-Mobile-Ads-SDK', '< 13.0.0'
   
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES'
