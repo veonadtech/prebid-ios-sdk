@@ -25,7 +25,7 @@ fileprivate let yandexAdUnitMultiAdLoaderInterstitial = "demo-interstitial-yande
 /// screen push and shows immediately once a source wins the race.
 class MultiAdLoaderDisplayInterstitialViewController: UIViewController {
 
-    private var loader: VeonMultiInterstitialAdLoader!
+    private var loader: VeonMultiInterstitialAdLoader?
 
     override func loadView() {
         super.loadView()
@@ -44,10 +44,10 @@ class MultiAdLoaderDisplayInterstitialViewController: UIViewController {
             gamAdUnitId: gamAdUnitMultiAdLoaderInterstitial,
             yandexAdUnitId: yandexAdUnitMultiAdLoaderInterstitial
         )
-        loader.delegate = self
+        loader?.delegate = self
 
         // 2. Load
-        loader.loadAd()
+        loader?.loadAd()
     }
 }
 
