@@ -11,69 +11,66 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "PrebidMobileAdMobAdapters",
-            targets: ["PrebidMobileAdMobAdapters"]
+            name: "VeonPrebidMobileAdMobAdapters",
+            targets: ["VeonPrebidMobileAdMobAdapters"]
         ),
         .library(
-            name: "PrebidMobileGAMEventHandlers",
-            targets: ["PrebidMobileGAMEventHandlers"]
+            name: "VeonPrebidMobileGAMEventHandlers",
+            targets: ["VeonPrebidMobileGAMEventHandlers"]
         ),
         .library(
-            name: "PrebidMobileMAXAdapters",
-            targets: ["PrebidMobileMAXAdapters"]
+            name: "VeonPrebidMobileMAXAdapters",
+            targets: ["VeonPrebidMobileMAXAdapters"]
         ),
         .library(
-            name: "PrebidRemoteConfig",
-            targets: ["PrebidRemoteConfig"]
+            name: "VeonPrebidRemoteConfig",
+            targets: ["VeonPrebidRemoteConfig"]
         ),
         // Core race engine. No GAM/Yandex dependency — safe to add on its own.
         .library(
-            name: "PrebidMultiAdLoader",
-            targets: ["PrebidMultiAdLoader"]
+            name: "VeonPrebidMultiAdLoader",
+            targets: ["VeonPrebidMultiAdLoader"]
         ),
         // Optional: only add if GAM should participate in the ad race.
         .library(
-            name: "PrebidMultiAdLoaderGAM",
-            targets: ["PrebidMultiAdLoaderGAM"]
+            name: "VeonPrebidMultiAdLoaderGAM",
+            targets: ["VeonPrebidMultiAdLoaderGAM"]
         ),
         // Optional: only add if Yandex should participate in the ad race.
         .library(
-            name: "PrebidMultiAdLoaderYandex",
-            targets: ["PrebidMultiAdLoaderYandex"]
+            name: "VeonPrebidMultiAdLoaderYandex",
+            targets: ["VeonPrebidMultiAdLoaderYandex"]
         ),
     ],
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .upToNextMajor(from: "13.0.0")),
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .upToNextMajor(from: "13.0.0")),
-        .package(url: "https://github.com/prebid/prebid-mobile-ios-sdk.git", .upToNextMajor(from: "3.3.4")),
-        // New — verify exact package/product name against whatever version
-        // you pin elsewhere; Yandex has had naming differences across
-        // major SDK versions.
-        .package(url: "https://github.com/yandexmobile/yandex-ads-sdk-ios.git", .upToNextMajor(from: "8.0.0")),
+        .package(url: "https://github.com/veonadtech/prebid-ios-sdk.git", .upToNextMajor(from: "0.2.0")),
+        .package(url: "https://github.com/yandexmobile/yandex-ads-sdk-ios.git", upToNextMinor(from: "8.4.0")),
     ],
     targets: [
         .target(
-            name: "PrebidMobileAdMobAdapters",
+            name: "VeonPrebidMobileAdMobAdapters",
             dependencies: [
-                .product(name: "PrebidMobile", package: "prebid-mobile-ios-sdk"),
+                .product(name: "VeonPrebidMobile", package: "prebid-ios-sdk"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
             path: "PrebidMobileAdMobAdapters",
             sources: ["Sources"]
         ),
         .target(
-            name: "PrebidMobileGAMEventHandlers",
+            name: "VeonPrebidMobileGAMEventHandlers",
             dependencies: [
-                .product(name: "PrebidMobile", package: "prebid-mobile-ios-sdk"),
+                .product(name: "VeonPrebidMobile", package: "prebid-ios-sdk"),
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
             path: "PrebidMobileGAMEventHandlers",
             sources: ["Sources"]
         ),
         .target(
-            name: "PrebidMobileMAXAdapters",
+            name: "VeonPrebidMobileMAXAdapters",
             dependencies: [
-                .product(name: "PrebidMobile", package: "prebid-mobile-ios-sdk"),
+                .product(name: "VeonPrebidMobile", package: "prebid-ios-sdk"),
                 .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
             ],
             path: "PrebidMobileMAXAdapters",
@@ -81,9 +78,9 @@ let package = Package(
         ),
         // New — shared remote config plumbing. No GAM/Yandex dependency.
         .target(
-            name: "PrebidRemoteConfig",
+            name: "VeonPrebidRemoteConfig",
             dependencies: [
-                .product(name: "PrebidMobile", package: "prebid-mobile-ios-sdk"),
+                .product(name: "VeonPrebidMobile", package: "prebid-ios-sdk"),
             ],
             path: "PrebidRemoteConfig",
             sources: ["Sources"]
@@ -91,19 +88,19 @@ let package = Package(
         // New — core ad-mediation race engine + Prebid source + the
         // VeonAdSourceRegistry extension point. No GAM/Yandex dependency.
         .target(
-            name: "PrebidMultiAdLoader",
+            name: "VeonPrebidMultiAdLoader",
             dependencies: [
-                .product(name: "PrebidMobile", package: "prebid-mobile-ios-sdk"),
-                "PrebidRemoteConfig",
+                .product(name: "VeonPrebidMobile", package: "prebid-ios-sdk"),
+                "VeonPrebidRemoteConfig",
             ],
             path: "PrebidMultiAdLoader",
             sources: ["Sources"]
         ),
         // New, optional — registers a GAM source into VeonAdSourceRegistry.
         .target(
-            name: "PrebidMultiAdLoaderGAM",
+            name: "VeonPrebidMultiAdLoaderGAM",
             dependencies: [
-                "PrebidMultiAdLoader",
+                "VeonPrebidMultiAdLoader",
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
             path: "PrebidMultiAdLoaderGAM",
@@ -111,9 +108,9 @@ let package = Package(
         ),
         // New, optional — registers a Yandex source into VeonAdSourceRegistry.
         .target(
-            name: "PrebidMultiAdLoaderYandex",
+            name: "VeonPrebidMultiAdLoaderYandex",
             dependencies: [
-                "PrebidMultiAdLoader",
+                "VeonPrebidMultiAdLoader",
                 .product(name: "YandexMobileAds", package: "yandex-ads-sdk-ios"),
             ],
             path: "PrebidMultiAdLoaderYandex",

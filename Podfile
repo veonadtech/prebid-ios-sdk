@@ -7,11 +7,15 @@ project 'EventHandlers/EventHandlers.xcodeproj'
 project 'Example/PrebidDemo/PrebidDemo.xcodeproj'
 
 def gma_pods
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK', '>= 13.6.0'
 end
 
 def applovin_pods
   pod 'AppLovinSDK'
+end
+
+def yandex_pods
+  pod 'YandexMobileAds', '8.4.0'
 end
 
 def event_handlers_project
@@ -78,13 +82,19 @@ end
 
 target 'PrebidRemoteConfig' do
   event_handlers_project
-  pod 'PrebidMobile'
+  # PrebidMobile.framework is linked directly from PrebidMobile.xcodeproj
+  # (same workspace) by scripts/addMultiAdLoaderTests.rb — do NOT add
+  # `pod 'PrebidMobile'` here, it would pull the public CocoaPods trunk pod
+  # instead and duplicate every PrebidMobile symbol.
+end
+
+target 'PrebidMultiAdLoaderTests' do
+  event_handlers_project
 end
 
 target 'PrebidMultiAdLoader' do
   event_handlers_project
-  pod 'PrebidMobile'
-  # PrebidRemoteConfig — локальный таргет, не pod
+  # PrebidMobile and PrebidRemoteConfig — local targets, linked directly, not pods.
 end
 
 target 'PrebidMultiAdLoaderGAM' do
@@ -93,10 +103,20 @@ target 'PrebidMultiAdLoaderGAM' do
   # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
 end
 
+target 'PrebidMultiAdLoaderGAMTests' do
+  event_handlers_project
+  gma_pods
+end
+
 target 'PrebidMultiAdLoaderYandex' do
   event_handlers_project
-  pod 'YandexMobileAds'
+  yandex_pods
   # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
+end
+
+target 'PrebidMultiAdLoaderYandexTests' do
+  event_handlers_project
+  yandex_pods
 end
 
 
