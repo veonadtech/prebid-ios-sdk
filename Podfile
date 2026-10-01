@@ -80,7 +80,7 @@ target 'PrebidMobileMAXAdaptersTests' do
 end
 
 
-target 'VeonPrebidRemoteConfig' do
+target 'PrebidRemoteConfig' do
   event_handlers_project
   # PrebidMobile.framework is linked directly from PrebidMobile.xcodeproj
   # (same workspace) by scripts/addMultiAdLoaderTests.rb — do NOT add
@@ -88,33 +88,33 @@ target 'VeonPrebidRemoteConfig' do
   # instead and duplicate every PrebidMobile symbol.
 end
 
-target 'VeonPrebidMultiAdLoaderTests' do
+target 'PrebidMultiAdLoaderTests' do
   event_handlers_project
 end
 
-target 'VeonPrebidMultiAdLoader' do
+target 'PrebidMultiAdLoader' do
   event_handlers_project
-  # PrebidMobile and VeonPrebidRemoteConfig are local targets, linked directly, not pods.
+  # PrebidMobile and PrebidRemoteConfig — local targets, linked directly, not pods.
 end
 
-target 'VeonPrebidMultiAdLoaderGAM' do
-  event_handlers_project
-  gma_pods
-  # VeonPrebidMultiAdLoader and VeonPrebidRemoteConfig are local targets.
-end
-
-target 'VeonPrebidMultiAdLoaderGAMTests' do
+target 'PrebidMultiAdLoaderGAM' do
   event_handlers_project
   gma_pods
+  # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
 end
 
-target 'VeonPrebidMultiAdLoaderYandex' do
+target 'PrebidMultiAdLoaderGAMTests' do
+  event_handlers_project
+  gma_pods
+end
+
+target 'PrebidMultiAdLoaderYandex' do
   event_handlers_project
   yandex_pods
-  # VeonPrebidMultiAdLoader and VeonPrebidRemoteConfig are local targets.
+  # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
 end
 
-target 'VeonPrebidMultiAdLoaderYandexTests' do
+target 'PrebidMultiAdLoaderYandexTests' do
   event_handlers_project
   yandex_pods
 end
@@ -171,8 +171,6 @@ post_install do |installer|
     project.targets.each do |target|
       target.build_configurations.each do |config|
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
-        # Disable Explicit Module Builds to work around the Xcode 26 issue
-        # config.build_settings['SWIFT_ENABLE_EXPLICIT_MODULES'] = 'NO'
       end
     end
   end
