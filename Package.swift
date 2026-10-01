@@ -111,7 +111,7 @@ let package = Package(
             dependencies: [
                 "PrebidMobile",
             ],
-            path: "EventHandlers/PrebidRemoteConfig",
+            path: "EventHandlers/VeonPrebidRemoteConfig",
             sources: ["Sources"]
         ),
         // New — core ad-mediation race engine + Prebid source + the
@@ -122,7 +122,7 @@ let package = Package(
                 "PrebidMobile",
                 "VeonPrebidRemoteConfig",
             ],
-            path: "EventHandlers/PrebidMultiAdLoader",
+            path: "EventHandlers/VeonPrebidMultiAdLoader",
             sources: ["Sources"]
         ),
         // New, optional — registers a GAM source into VeonAdSourceRegistry.
@@ -132,7 +132,7 @@ let package = Package(
                 "VeonPrebidMultiAdLoader",
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
             ],
-            path: "EventHandlers/PrebidMultiAdLoaderGAM",
+            path: "EventHandlers/VeonPrebidMultiAdLoaderGAM",
             sources: ["Sources"]
         ),
         // New, optional — registers a Yandex source into VeonAdSourceRegistry.
@@ -142,7 +142,7 @@ let package = Package(
                 "VeonPrebidMultiAdLoader",
                 .product(name: "YandexMobileAds", package: "yandex-ads-sdk-ios"),
             ],
-            path: "EventHandlers/PrebidMultiAdLoaderYandex",
+            path: "EventHandlers/VeonPrebidMultiAdLoaderYandex",
             sources: ["Sources"]
         ),
     ]
