@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BD99068B290EA3F51FD7656"
-               BuildableName = ".xctest"
+               BuildableName = "PrebidMultiAdLoaderTests.xctest"
                BlueprintName = "PrebidMultiAdLoaderTests"
                ReferencedContainer = "container:EventHandlers.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BD99068B290EA3F51FD7656"
-               BuildableName = ".xctest"
+               BuildableName = "PrebidMultiAdLoaderTests.xctest"
                BlueprintName = "PrebidMultiAdLoaderTests"
                ReferencedContainer = "container:EventHandlers.xcodeproj">
             </BuildableReference>

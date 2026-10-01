@@ -113,6 +113,11 @@ test_targets = TEST_TARGETS.map do |config|
 
   test_target.build_configurations.each do |build_config|
     settings = build_config.build_settings
+    # Explicit on purpose: don't rely on xcodeproj's default for a target that may
+    # already exist from an earlier partial run — an empty PRODUCT_NAME collapses the
+    # test bundle's wrapper AND its linked executable onto the exact same output path
+    # ("Multiple commands produce '.../.xctest'").
+    settings['PRODUCT_NAME'] = '$(TARGET_NAME)'
     settings['PRODUCT_BUNDLE_IDENTIFIER'] = "org.prebid.#{name}"
     settings['GENERATE_INFOPLIST_FILE'] = 'YES'
     settings['SWIFT_VERSION'] = '5.0'

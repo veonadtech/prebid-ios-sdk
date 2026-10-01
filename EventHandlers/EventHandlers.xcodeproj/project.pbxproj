@@ -295,7 +295,7 @@
 		5BF8E780263C363800341EE4 /* GAMRequestWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMRequestWrapper.swift; sourceTree = "<group>"; };
 		5BF8E788263C3B4000341EE4 /* GADNativeAdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeAdWrapper.swift; sourceTree = "<group>"; };
 		5BF8E790263C400F00341EE4 /* GADCustomNativeAdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADCustomNativeAdWrapper.swift; sourceTree = "<group>"; };
-		629584482775F2D6A5DA0A13 /* PrebidMultiAdLoaderGAMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrebidMultiAdLoaderGAMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		629584482775F2D6A5DA0A13 /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639BF605F3B6D6FDA04277C1 /* Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderGAMTests/Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64F3D4872639BF34E66B3B06 /* Pods-PrebidRemoteConfig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidRemoteConfig.release.xcconfig"; path = "Target Support Files/Pods-PrebidRemoteConfig/Pods-PrebidRemoteConfig.release.xcconfig"; sourceTree = "<group>"; };
 		6A49E90EC1DCC4C31A05DCB9 /* Pods_PrebidRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidRemoteConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,7 +359,7 @@
 		A6E3D686EF908BFEAF1DF154 /* Pods_PrebidMobileMAXAdaptersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileMAXAdaptersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27D4CD0EF97F412E4752444 /* VeonAdRaceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonAdRaceTests.swift; sourceTree = "<group>"; };
 		B4BADBAB169E525D7F35EE2A /* Pods_PrebidMultiAdLoaderYandex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMultiAdLoaderYandex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C034887D040FB8978383A8CA /* PrebidMultiAdLoaderYandexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrebidMultiAdLoaderYandexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C034887D040FB8978383A8CA /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A6593B4E69CB74C4BAB04B /* MockAdSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockAdSource.swift; sourceTree = "<group>"; };
 		CD1568567C5E01CF455030F8 /* Pods-PrebidMultiAdLoaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderTests/Pods-PrebidMultiAdLoaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D018605E7CEA3B29DC916A73 /* Pods_PrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,50 +382,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		6CA947303057EF490070F592 /* PrebidRemoteConfig */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = PrebidRemoteConfig;
-			sourceTree = "<group>";
-		};
-		6CA947493057EF8B0070F592 /* PrebidMultiAdLoader */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = PrebidMultiAdLoader;
-			sourceTree = "<group>";
-		};
-		6CA9476A3057EFB20070F592 /* PrebidMultiAdLoaderGAM */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = PrebidMultiAdLoaderGAM;
-			sourceTree = "<group>";
-		};
-		6CA9477F3057F07E0070F592 /* PrebidMultiAdLoaderYandex */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = PrebidMultiAdLoaderYandex;
-			sourceTree = "<group>";
-		};
+		6CA947303057EF490070F592 /* PrebidRemoteConfig */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PrebidRemoteConfig; sourceTree = "<group>"; };
+		6CA947493057EF8B0070F592 /* PrebidMultiAdLoader */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PrebidMultiAdLoader; sourceTree = "<group>"; };
+		6CA9476A3057EFB20070F592 /* PrebidMultiAdLoaderGAM */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PrebidMultiAdLoaderGAM; sourceTree = "<group>"; };
+		6CA9477F3057F07E0070F592 /* PrebidMultiAdLoaderYandex */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = PrebidMultiAdLoaderYandex; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,7 +533,6 @@
 				D83DDBDBB48B695C6E9C10B9 /* VeonGAMInterstitialSourceForwardingTests.swift */,
 				7BCF48A2538579332D86E835 /* VeonGAMInterstitialSourceTests.swift */,
 			);
-			name = PrebidMultiAdLoaderGAMTests;
 			path = PrebidMultiAdLoaderGAMTests;
 			sourceTree = "<group>";
 		};
@@ -679,8 +638,8 @@
 				6CA947693057EFB20070F592 /* PrebidMultiAdLoaderGAM.framework */,
 				6CA9477E3057F07E0070F592 /* PrebidMultiAdLoaderYandex.framework */,
 				3DEA3D3F70FB96ECBA41255A /* PrebidMultiAdLoaderTests.xctest */,
-				629584482775F2D6A5DA0A13 /* PrebidMultiAdLoaderGAMTests.xctest */,
-				C034887D040FB8978383A8CA /* PrebidMultiAdLoaderYandexTests.xctest */,
+				629584482775F2D6A5DA0A13 /* .xctest */,
+				C034887D040FB8978383A8CA /* .xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -823,7 +782,6 @@
 				4E21919CB986AC83F113FAA4 /* VeonMultiInterstitialAdLoaderTests.swift */,
 				DE546C38DF00445F68277AAC /* VeonPrebidSourcesTests.swift */,
 			);
-			name = PrebidMultiAdLoaderTests;
 			path = PrebidMultiAdLoaderTests;
 			sourceTree = "<group>";
 		};
@@ -870,7 +828,6 @@
 				D9E1E9673454C012AF260021 /* VeonYandexBannerSourceTests.swift */,
 				466DAFA6D1E3405CB098FB70 /* VeonYandexInterstitialSourceTests.swift */,
 			);
-			name = PrebidMultiAdLoaderYandexTests;
 			path = PrebidMultiAdLoaderYandexTests;
 			sourceTree = "<group>";
 		};
@@ -1012,7 +969,7 @@
 			);
 			name = PrebidMultiAdLoaderYandexTests;
 			productName = PrebidMultiAdLoaderYandexTests;
-			productReference = C034887D040FB8978383A8CA /* PrebidMultiAdLoaderYandexTests.xctest */;
+			productReference = C034887D040FB8978383A8CA /* .xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		659817A23178EE27E9D01A36 /* PrebidMultiAdLoaderGAMTests */ = {
@@ -1034,7 +991,7 @@
 			);
 			name = PrebidMultiAdLoaderGAMTests;
 			productName = PrebidMultiAdLoaderGAMTests;
-			productReference = 629584482775F2D6A5DA0A13 /* PrebidMultiAdLoaderGAMTests.xctest */;
+			productReference = 629584482775F2D6A5DA0A13 /* .xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		6CA9472E3057EF490070F592 /* PrebidRemoteConfig */ = {
@@ -1391,9 +1348,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderGAM/Pods-PrebidMultiAdLoaderGAM-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderGAM/Pods-PrebidMultiAdLoaderGAM-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1430,9 +1391,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1469,9 +1434,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1486,9 +1455,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1525,9 +1498,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderYandex/Pods-PrebidMultiAdLoaderYandex-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderYandex/Pods-PrebidMultiAdLoaderYandex-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1652,9 +1629,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderYandexTests/Pods-PrebidMultiAdLoaderYandexTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderYandexTests/Pods-PrebidMultiAdLoaderYandexTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1691,9 +1672,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1708,9 +1693,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderGAMTests/Pods-PrebidMultiAdLoaderGAMTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderGAMTests/Pods-PrebidMultiAdLoaderGAMTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1747,9 +1736,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderYandexTests/Pods-PrebidMultiAdLoaderYandexTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMultiAdLoaderYandexTests/Pods-PrebidMultiAdLoaderYandexTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1808,9 +1801,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlersTests/Pods-PrebidMobileGAMEventHandlersTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlersTests/Pods-PrebidMobileGAMEventHandlersTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2376,6 +2373,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.PrebidMultiAdLoaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 			};
@@ -3019,6 +3017,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.PrebidMultiAdLoaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
