@@ -16,23 +16,26 @@ NC='\033[0m' # No Color
 SIMULATOR_NAME="iPhone-16-Pro-PrebidMobile"
 
 # Test schemes of the modules that live in EventHandlers/EventHandlers.xcodeproj.
+# All names carry the "Veon" prefix to match the renamed Xcode targets (see
+# scripts/rename_targets_to_veon.rb) — PrebidMobile/core itself is the only
+# exception and has no test scheme listed here anyway.
 # To cover a new module: add its unit-test scheme here (see scripts/addMultiAdLoaderTests.rb
 # for an example of how a test target for a new module is created).
 #
-#   PrebidMobileGAMEventHandlersTests  - GAM event handlers
-#   PrebidMobileAdMobAdaptersTests     - AdMob mediation adapters
-#   PrebidMobileMAXAdaptersTests       - AppLovin MAX mediation adapters
-#   PrebidMultiAdLoaderTests           - VeonPrebidRemoteConfig + VeonPrebidMultiAdLoader (config parsing, race engine,
-#                                        source registry, banner / interstitial loaders, built-in Prebid sources)
-#   PrebidMultiAdLoaderGAMTests        - VeonPrebidMultiAdLoaderGAM (needs GoogleMobileAds linked via the Podfile)
-#   PrebidMultiAdLoaderYandexTests     - VeonPrebidMultiAdLoaderYandex (needs YandexMobileAds linked via the Podfile)
+#   VeonPrebidMobileGAMEventHandlersTests  - GAM event handlers
+#   VeonPrebidMobileAdMobAdaptersTests     - AdMob mediation adapters
+#   VeonPrebidMobileMAXAdaptersTests       - AppLovin MAX mediation adapters
+#   VeonPrebidMultiAdLoaderTests           - VeonPrebidRemoteConfig + VeonPrebidMultiAdLoader (config parsing, race engine,
+#                                             source registry, banner / interstitial loaders, built-in Prebid sources)
+#   VeonPrebidMultiAdLoaderGAMTests        - VeonPrebidMultiAdLoaderGAM (needs GoogleMobileAds linked via the Podfile)
+#   VeonPrebidMultiAdLoaderYandexTests     - VeonPrebidMultiAdLoaderYandex (needs YandexMobileAds linked via the Podfile)
 test_schemes=(
-    "PrebidMobileGAMEventHandlersTests"
-    "PrebidMobileAdMobAdaptersTests"
-    "PrebidMobileMAXAdaptersTests"
-    "PrebidMultiAdLoaderTests"
-    "PrebidMultiAdLoaderGAMTests"
-    "PrebidMultiAdLoaderYandexTests"
+    "VeonPrebidMobileGAMEventHandlersTests"
+    "VeonPrebidMobileAdMobAdaptersTests"
+    "VeonPrebidMobileMAXAdaptersTests"
+    "VeonPrebidMultiAdLoaderTests"
+    "VeonPrebidMultiAdLoaderGAMTests"
+    "VeonPrebidMultiAdLoaderYandexTests"
 )
 
 echo -e "\n\n${GREEN}INSTALL PODS${NC}\n\n"

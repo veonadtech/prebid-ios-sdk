@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6CA9472E3057EF490070F592"
-               BuildableName = "PrebidRemoteConfig.framework"
-               BlueprintName = "PrebidRemoteConfig"
+               BlueprintIdentifier = "6CA9477D3057F07E0070F592"
+               BuildableName = "VeonPrebidMultiAdLoaderYandex.framework"
+               BlueprintName = "VeonPrebidMultiAdLoaderYandex"
                ReferencedContainer = "container:EventHandlers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

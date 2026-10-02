@@ -48,39 +48,39 @@ def internalTestApp_pods
   applovin_pods
 end
 
-target 'PrebidMobileGAMEventHandlers' do
+target 'VeonPrebidMobileGAMEventHandlers' do
   event_handlers_project
   gma_pods
 end
 
-target 'PrebidMobileGAMEventHandlersTests' do
+target 'VeonPrebidMobileGAMEventHandlersTests' do
   event_handlers_project
   gma_pods
 end
 
-target 'PrebidMobileAdMobAdapters' do
+target 'VeonPrebidMobileAdMobAdapters' do
   event_handlers_project
   gma_pods
   
 end
 
-target 'PrebidMobileAdMobAdaptersTests' do
+target 'VeonPrebidMobileAdMobAdaptersTests' do
   event_handlers_project
   gma_pods
 end
 
-target 'PrebidMobileMAXAdapters' do
+target 'VeonPrebidMobileMAXAdapters' do
   event_handlers_project
   applovin_pods
 end
 
-target 'PrebidMobileMAXAdaptersTests' do
+target 'VeonPrebidMobileMAXAdaptersTests' do
   event_handlers_project
   applovin_pods
 end
 
 
-target 'PrebidRemoteConfig' do
+target 'VeonPrebidRemoteConfig' do
   event_handlers_project
   # PrebidMobile.framework is linked directly from PrebidMobile.xcodeproj
   # (same workspace) by scripts/addMultiAdLoaderTests.rb — do NOT add
@@ -88,33 +88,33 @@ target 'PrebidRemoteConfig' do
   # instead and duplicate every PrebidMobile symbol.
 end
 
-target 'PrebidMultiAdLoaderTests' do
+target 'VeonPrebidMultiAdLoaderTests' do
   event_handlers_project
 end
 
-target 'PrebidMultiAdLoader' do
+target 'VeonPrebidMultiAdLoader' do
   event_handlers_project
-  # PrebidMobile and PrebidRemoteConfig — local targets, linked directly, not pods.
+  # PrebidMobile and VeonPrebidRemoteConfig — local targets, linked directly, not pods.
 end
 
-target 'PrebidMultiAdLoaderGAM' do
-  event_handlers_project
-  gma_pods
-  # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
-end
-
-target 'PrebidMultiAdLoaderGAMTests' do
+target 'VeonPrebidMultiAdLoaderGAM' do
   event_handlers_project
   gma_pods
+  # VeonPrebidMultiAdLoader and VeonPrebidRemoteConfig — локальные таргеты
 end
 
-target 'PrebidMultiAdLoaderYandex' do
+target 'VeonPrebidMultiAdLoaderGAMTests' do
+  event_handlers_project
+  gma_pods
+end
+
+target 'VeonPrebidMultiAdLoaderYandex' do
   event_handlers_project
   yandex_pods
-  # PrebidMultiAdLoader и PrebidRemoteConfig — локальные таргеты
+  # VeonPrebidMultiAdLoader and VeonPrebidRemoteConfig — локальные таргеты
 end
 
-target 'PrebidMultiAdLoaderYandexTests' do
+target 'VeonPrebidMultiAdLoaderYandexTests' do
   event_handlers_project
   yandex_pods
 end

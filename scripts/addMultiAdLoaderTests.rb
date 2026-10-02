@@ -5,17 +5,22 @@
 #
 #     ruby scripts/addMultiAdLoaderTests.rb
 #
+# All names below use the "Veon" prefix to match the renamed Xcode targets
+# (see scripts/rename_targets_to_veon.rb) — run that rename FIRST if you are
+# setting this up on a project that still has unprefixed EventHandlers
+# targets. PrebidMobile/core is the only module without the prefix.
+#
 # What it does to EventHandlers/EventHandlers.xcodeproj (idempotent - safe to run again):
 #   1. wires the missing target dependencies between the new framework targets
-#        PrebidMultiAdLoader       -> PrebidRemoteConfig
-#        PrebidMultiAdLoaderGAM    -> PrebidMultiAdLoader, PrebidRemoteConfig
-#        PrebidMultiAdLoaderYandex -> PrebidMultiAdLoader, PrebidRemoteConfig
-#      and links PrebidMobile.framework into PrebidRemoteConfig / PrebidMultiAdLoader
-#      (the same way the existing PrebidMobile*Adapters targets do);
+#        VeonPrebidMultiAdLoader       -> VeonPrebidRemoteConfig
+#        VeonPrebidMultiAdLoaderGAM    -> VeonPrebidMultiAdLoader, VeonPrebidRemoteConfig
+#        VeonPrebidMultiAdLoaderYandex -> VeonPrebidMultiAdLoader, VeonPrebidRemoteConfig
+#      and links PrebidMobile.framework into VeonPrebidRemoteConfig / VeonPrebidMultiAdLoader
+#      (the same way the existing VeonPrebidMobile*Adapters targets do);
 #   2. creates three unit-test targets from the Swift files next to the project:
-#        PrebidMultiAdLoaderTests        <- EventHandlers/PrebidMultiAdLoaderTests        (core + remote config)
-#        PrebidMultiAdLoaderGAMTests     <- EventHandlers/PrebidMultiAdLoaderGAMTests     (needs GoogleMobileAds)
-#        PrebidMultiAdLoaderYandexTests  <- EventHandlers/PrebidMultiAdLoaderYandexTests  (needs YandexMobileAds)
+#        VeonPrebidMultiAdLoaderTests        <- EventHandlers/PrebidMultiAdLoaderTests        (core + remote config)
+#        VeonPrebidMultiAdLoaderGAMTests     <- EventHandlers/PrebidMultiAdLoaderGAMTests     (needs GoogleMobileAds)
+#        VeonPrebidMultiAdLoaderYandexTests  <- EventHandlers/PrebidMultiAdLoaderYandexTests  (needs YandexMobileAds)
 #   3. creates a shared scheme per test target (used by scripts/testPrebidMobileAdapters.sh).
 #
 # It does NOT touch the Podfile. GoogleMobileAds / YandexMobileAds must still be linked into the
@@ -32,30 +37,33 @@ PROJECT_PATH = File.join(ROOT, 'EventHandlers', 'EventHandlers.xcodeproj')
 DEPLOYMENT_TARGET = '13.0'
 
 FRAMEWORK_DEPENDENCIES = {
-  'PrebidMultiAdLoader' => %w[PrebidRemoteConfig],
-  'PrebidMultiAdLoaderGAM' => %w[PrebidMultiAdLoader PrebidRemoteConfig],
-  'PrebidMultiAdLoaderYandex' => %w[PrebidMultiAdLoader PrebidRemoteConfig]
+  'VeonPrebidMultiAdLoader' => %w[VeonPrebidRemoteConfig],
+  'VeonPrebidMultiAdLoaderGAM' => %w[VeonPrebidMultiAdLoader VeonPrebidRemoteConfig],
+  'VeonPrebidMultiAdLoaderYandex' => %w[VeonPrebidMultiAdLoader VeonPrebidRemoteConfig]
 }.freeze
 
-LINK_PREBID_MOBILE = %w[PrebidRemoteConfig PrebidMultiAdLoader].freeze
+LINK_PREBID_MOBILE = %w[VeonPrebidRemoteConfig VeonPrebidMultiAdLoader].freeze
 
 # name: test target / folder name; framework: the module under test (also the scheme's build target);
 # depends_on: frameworks the tests link against.
 TEST_TARGETS = [
   {
-    name: 'PrebidMultiAdLoaderTests',
-    framework: 'PrebidMultiAdLoader',
-    depends_on: %w[PrebidMultiAdLoader PrebidRemoteConfig]
+    name: 'VeonPrebidMultiAdLoaderTests',
+    source_dir: 'PrebidMultiAdLoaderTests',
+    framework: 'VeonPrebidMultiAdLoader',
+    depends_on: %w[VeonPrebidMultiAdLoader VeonPrebidRemoteConfig]
   },
   {
-    name: 'PrebidMultiAdLoaderGAMTests',
-    framework: 'PrebidMultiAdLoaderGAM',
-    depends_on: %w[PrebidMultiAdLoaderGAM PrebidMultiAdLoader PrebidRemoteConfig]
+    name: 'VeonPrebidMultiAdLoaderGAMTests',
+    source_dir: 'PrebidMultiAdLoaderGAMTests',
+    framework: 'VeonPrebidMultiAdLoaderGAM',
+    depends_on: %w[VeonPrebidMultiAdLoaderGAM VeonPrebidMultiAdLoader VeonPrebidRemoteConfig]
   },
   {
-    name: 'PrebidMultiAdLoaderYandexTests',
-    framework: 'PrebidMultiAdLoaderYandex',
-    depends_on: %w[PrebidMultiAdLoaderYandex PrebidMultiAdLoader PrebidRemoteConfig]
+    name: 'VeonPrebidMultiAdLoaderYandexTests',
+    source_dir: 'PrebidMultiAdLoaderYandexTests',
+    framework: 'VeonPrebidMultiAdLoaderYandex',
+    depends_on: %w[VeonPrebidMultiAdLoaderYandex VeonPrebidMultiAdLoader VeonPrebidRemoteConfig]
   }
 ].freeze
 
@@ -93,7 +101,7 @@ end
 # 2. Unit-test targets
 test_targets = TEST_TARGETS.map do |config|
   name = config[:name]
-  sources_dir = File.join(ROOT, 'EventHandlers', name)
+  sources_dir = File.join(ROOT, 'EventHandlers', config[:source_dir])
   unless File.directory?(sources_dir)
     warn "warning: #{sources_dir} not found, skipping #{name}"
     next nil
@@ -102,8 +110,8 @@ test_targets = TEST_TARGETS.map do |config|
   test_target = project.targets.find { |t| t.name == name }
   test_target ||= project.new_target(:unit_test_bundle, name, :ios, DEPLOYMENT_TARGET, nil, :swift)
 
-  group = project.main_group.children.find { |c| c.display_name == name }
-  group ||= project.main_group.new_group(name, name)
+  group = project.main_group.children.find { |c| c.display_name == config[:source_dir] }
+  group ||= project.main_group.new_group(config[:source_dir], config[:source_dir])
 
   Dir.glob(File.join(sources_dir, '*.swift')).sort.each do |path|
     file_name = File.basename(path)
@@ -149,11 +157,11 @@ puts <<~HINT
     1. GoogleMobileAds / YandexMobileAds must be linked into the GAM / Yandex frameworks and into their test targets.
        With CocoaPods, add to the Podfile (adapt to how the other EventHandlers targets are declared there):
 
-         target 'PrebidMultiAdLoaderGAM'          { pod 'Google-Mobile-Ads-SDK', '>= 13.6.0' }
-         target 'PrebidMultiAdLoaderGAMTests'     { pod 'Google-Mobile-Ads-SDK', '>= 13.6.0' }
-         target 'PrebidMultiAdLoaderYandex'       { pod 'YandexMobileAds', '8.4.0' }
-         target 'PrebidMultiAdLoaderYandexTests'  { pod 'YandexMobileAds', '8.4.0' }
+         target 'VeonPrebidMultiAdLoaderGAM'          { pod 'Google-Mobile-Ads-SDK', '>= 13.6.0' }
+         target 'VeonPrebidMultiAdLoaderGAMTests'     { pod 'Google-Mobile-Ads-SDK', '>= 13.6.0' }
+         target 'VeonPrebidMultiAdLoaderYandex'       { pod 'YandexMobileAds', '~> 8.4.0' }
+         target 'VeonPrebidMultiAdLoaderYandexTests'  { pod 'YandexMobileAds', '~> 8.4.0' }
 
     2. pod install
-    3. xcodebuild -workspace PrebidMobile.xcworkspace -scheme PrebidMultiAdLoaderTests -sdk iphonesimulator test
+    3. xcodebuild -workspace PrebidMobile.xcworkspace -scheme VeonPrebidMultiAdLoaderTests -sdk iphonesimulator test
 HINT

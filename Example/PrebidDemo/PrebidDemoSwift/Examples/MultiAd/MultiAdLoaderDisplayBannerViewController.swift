@@ -17,9 +17,9 @@ import UIKit
 import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
 
-private let storedImpMultiAdLoaderBanner = "_prebid-demo-banner-320-50"
+private let storedImpMultiAdLoaderBanner = "prebid-demo-banner-320-50"
 private let gamAdUnitMultiAdLoaderBanner = "_/21775744923/example/fixed-size-banner"
-private let yandexAdUnitMultiAdLoaderBanner = "demo-banner-yandex"
+private let yandexAdUnitMultiAdLoaderBanner = "_demo-banner-yandex"
 private let refreshInterval: TimeInterval = 30
 
 
