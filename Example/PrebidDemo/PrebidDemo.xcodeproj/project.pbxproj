@@ -110,12 +110,6 @@
 		530D4AB2291A4BC700A2C796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530D4AB0291A4BC700A2C796 /* LaunchScreen.storyboard */; };
 		530E7210292F8DC30025B44D /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F3603F292EACEB001C1183 /* PrebidMobile.framework */; };
 		530E7211292F8DC30025B44D /* PrebidMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53F3603F292EACEB001C1183 /* PrebidMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		530E7213292F8DC40025B44D /* PrebidMobileAdMobAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36043292EACF0001C1183 /* PrebidMobileAdMobAdapters.framework */; };
-		530E7214292F8DC40025B44D /* PrebidMobileAdMobAdapters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36043292EACF0001C1183 /* PrebidMobileAdMobAdapters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		530E7215292F8DC60025B44D /* PrebidMobileGAMEventHandlers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36044292EACF0001C1183 /* PrebidMobileGAMEventHandlers.framework */; };
-		530E7216292F8DC60025B44D /* PrebidMobileGAMEventHandlers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36044292EACF0001C1183 /* PrebidMobileGAMEventHandlers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		530E7217292F8DC70025B44D /* PrebidMobileMAXAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36045292EACF0001C1183 /* PrebidMobileMAXAdapters.framework */; };
-		530E7218292F8DC70025B44D /* PrebidMobileMAXAdapters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36045292EACF0001C1183 /* PrebidMobileMAXAdapters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		533784C82AC2C883009A8650 /* GAMOriginalAPIMultiformatNativeStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533784C72AC2C883009A8650 /* GAMOriginalAPIMultiformatNativeStylesViewController.swift */; };
 		533784CC2AC2CFF5009A8650 /* GAMOriginalAPIMultiformatNativeStylesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 533784CB2AC2CFF5009A8650 /* GAMOriginalAPIMultiformatNativeStylesViewController.m */; };
 		533E0FBE29111B36000CC24F /* PrebidGMASDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533E0FBD29111B36000CC24F /* PrebidGMASDKTests.swift */; };
@@ -244,14 +238,22 @@
 		53F35F512926D702001C1183 /* MAXNativeAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F35F502926D702001C1183 /* MAXNativeAdView.xib */; };
 		53F35F57292792D6001C1183 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F35F56292792D6001C1183 /* SettingsViewController.m */; };
 		53F36047292EACF0001C1183 /* PrebidMobileAdMobAdapters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53F36043292EACF0001C1183 /* PrebidMobileAdMobAdapters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CA2C1E2306E23910068F30C /* PrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E0306E23910068F30C /* PrebidMultiAdLoader.framework */; };
-		6CA2C1E3306E23910068F30C /* PrebidMultiAdLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E0306E23910068F30C /* PrebidMultiAdLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CA2C1E4306E23910068F30C /* PrebidMultiAdLoaderGAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E1306E23910068F30C /* PrebidMultiAdLoaderGAM.framework */; };
-		6CA2C1E5306E23910068F30C /* PrebidMultiAdLoaderGAM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E1306E23910068F30C /* PrebidMultiAdLoaderGAM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CA2C1E7306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E6306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework */; };
-		6CA2C1E8306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E6306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CA2C1EA306E23A50068F30C /* PrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E9306E23A50068F30C /* PrebidRemoteConfig.framework */; };
-		6CA2C1EB306E23A50068F30C /* PrebidRemoteConfig.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA2C1E9306E23A50068F30C /* PrebidRemoteConfig.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2CE30712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2C730712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework */; };
+		6C02B2CF30712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2C730712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2D030712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2C830712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework */; };
+		6C02B2D130712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2C830712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2D230712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2C930712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework */; };
+		6C02B2D330712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2C930712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2D430712E2300470A01 /* VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CA30712E2300470A01 /* VeonPrebidMultiAdLoader.framework */; };
+		6C02B2D530712E2300470A01 /* VeonPrebidMultiAdLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CA30712E2300470A01 /* VeonPrebidMultiAdLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2D630712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CB30712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework */; };
+		6C02B2D730712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CB30712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2D830712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CC30712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework */; };
+		6C02B2D930712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CC30712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B2DA30712E2300470A01 /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CD30712E2300470A01 /* VeonPrebidRemoteConfig.framework */; };
+		6C02B2DB30712E2300470A01 /* VeonPrebidRemoteConfig.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B2CD30712E2300470A01 /* VeonPrebidRemoteConfig.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C02B35D30717D5300470A01 /* YandexMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B35C30717D5300470A01 /* YandexMobileAds.xcframework */; };
+		6C02B35E30717D5300470A01 /* YandexMobileAds.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C02B35C30717D5300470A01 /* YandexMobileAds.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6CC011D0304FEA660085356D /* MultiAdLoaderDisplayBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC011CE304FEA660085356D /* MultiAdLoaderDisplayBannerViewController.swift */; };
 		6CC011D1304FEA660085356D /* MultiAdLoaderDisplayInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC011CF304FEA660085356D /* MultiAdLoaderDisplayInterstitialViewController.swift */; };
 		6CC011D2304FEA660085356D /* MultiAdLoaderDisplayBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC011CE304FEA660085356D /* MultiAdLoaderDisplayBannerViewController.swift */; };
@@ -294,14 +296,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6CA2C1EB306E23A50068F30C /* PrebidRemoteConfig.framework in Embed Frameworks */,
-				530E7214292F8DC40025B44D /* PrebidMobileAdMobAdapters.framework in Embed Frameworks */,
-				6CA2C1E3306E23910068F30C /* PrebidMultiAdLoader.framework in Embed Frameworks */,
-				6CA2C1E8306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework in Embed Frameworks */,
-				6CA2C1E5306E23910068F30C /* PrebidMultiAdLoaderGAM.framework in Embed Frameworks */,
+				6C02B2CF30712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework in Embed Frameworks */,
+				6C02B2D130712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework in Embed Frameworks */,
+				6C02B2D730712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework in Embed Frameworks */,
+				6C02B2D530712E2300470A01 /* VeonPrebidMultiAdLoader.framework in Embed Frameworks */,
+				6C02B2DB30712E2300470A01 /* VeonPrebidRemoteConfig.framework in Embed Frameworks */,
 				530E7211292F8DC30025B44D /* PrebidMobile.framework in Embed Frameworks */,
-				530E7216292F8DC60025B44D /* PrebidMobileGAMEventHandlers.framework in Embed Frameworks */,
-				530E7218292F8DC70025B44D /* PrebidMobileMAXAdapters.framework in Embed Frameworks */,
+				6C02B35E30717D5300470A01 /* YandexMobileAds.xcframework in Embed Frameworks */,
+				6C02B2D330712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework in Embed Frameworks */,
+				6C02B2D930712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +568,14 @@
 		5BD98F0B273EC0D00030ACC3 /* PrebidMobileGAMEventHandlers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrebidMobileGAMEventHandlers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA527E4B4E05598C6D7B462 /* Pods-PrebidDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidDemoTests/Pods-PrebidDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		640E75E2C6EB2A7268230D2A /* Pods-PrebidDemoObjectiveC_Old.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidDemoObjectiveC_Old.release.xcconfig"; path = "Target Support Files/Pods-PrebidDemoObjectiveC_Old/Pods-PrebidDemoObjectiveC_Old.release.xcconfig"; sourceTree = "<group>"; };
+		6C02B2C730712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidMobileAdMobAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B2C830712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidMobileGAMEventHandlers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B2C930712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B2CA30712E2300470A01 /* VeonPrebidMultiAdLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidMultiAdLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B2CB30712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidMultiAdLoaderGAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B2CC30712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidMultiAdLoaderYandex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B2CD30712E2300470A01 /* VeonPrebidRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VeonPrebidRemoteConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C02B35C30717D5300470A01 /* YandexMobileAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = YandexMobileAds.xcframework; path = ../../Pods/YandexMobileAds/YandexMobileAds.xcframework; sourceTree = "<group>"; };
 		6CA2C1E0306E23910068F30C /* PrebidMultiAdLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrebidMultiAdLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA2C1E1306E23910068F30C /* PrebidMultiAdLoaderGAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrebidMultiAdLoaderGAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA2C1E6306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrebidMultiAdLoaderYandex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -615,15 +626,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CA2C1E4306E23910068F30C /* PrebidMultiAdLoaderGAM.framework in Frameworks */,
+				6C02B2DA30712E2300470A01 /* VeonPrebidRemoteConfig.framework in Frameworks */,
 				530E7210292F8DC30025B44D /* PrebidMobile.framework in Frameworks */,
-				530E7215292F8DC60025B44D /* PrebidMobileGAMEventHandlers.framework in Frameworks */,
-				530E7217292F8DC70025B44D /* PrebidMobileMAXAdapters.framework in Frameworks */,
-				530E7213292F8DC40025B44D /* PrebidMobileAdMobAdapters.framework in Frameworks */,
-				6CA2C1E7306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework in Frameworks */,
-				6CA2C1E2306E23910068F30C /* PrebidMultiAdLoader.framework in Frameworks */,
+				6C02B2D630712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework in Frameworks */,
+				6C02B2D830712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework in Frameworks */,
+				6C02B2D030712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework in Frameworks */,
+				6C02B2D230712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework in Frameworks */,
+				6C02B2CE30712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework in Frameworks */,
 				3B91139C2351AB73A1FCAA3D /* Pods_PrebidDemoSwift.framework in Frameworks */,
-				6CA2C1EA306E23A50068F30C /* PrebidRemoteConfig.framework in Frameworks */,
+				6C02B2D430712E2300470A01 /* VeonPrebidMultiAdLoader.framework in Frameworks */,
+				6C02B35D30717D5300470A01 /* YandexMobileAds.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1264,14 @@
 		99D7F73A394177471348CDD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C02B35C30717D5300470A01 /* YandexMobileAds.xcframework */,
+				6C02B2C730712E2300470A01 /* VeonPrebidMobileAdMobAdapters.framework */,
+				6C02B2C830712E2300470A01 /* VeonPrebidMobileGAMEventHandlers.framework */,
+				6C02B2C930712E2300470A01 /* VeonPrebidMobileMAXAdapters.framework */,
+				6C02B2CA30712E2300470A01 /* VeonPrebidMultiAdLoader.framework */,
+				6C02B2CB30712E2300470A01 /* VeonPrebidMultiAdLoaderGAM.framework */,
+				6C02B2CC30712E2300470A01 /* VeonPrebidMultiAdLoaderYandex.framework */,
+				6C02B2CD30712E2300470A01 /* VeonPrebidRemoteConfig.framework */,
 				6CA2C1E9306E23A50068F30C /* PrebidRemoteConfig.framework */,
 				6CA2C1E6306E239E0068F30C /* PrebidMultiAdLoaderYandex.framework */,
 				6CA2C1E0306E23910068F30C /* PrebidMultiAdLoader.framework */,
@@ -2076,7 +2096,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9295BF929;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PrebidDemoSwift/Supporting files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Prebid Demo Swift";
@@ -2109,7 +2129,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L9295BF929;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PrebidDemoSwift/Supporting files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Prebid Demo Swift";

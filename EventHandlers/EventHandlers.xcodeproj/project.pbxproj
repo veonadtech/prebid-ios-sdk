@@ -308,7 +308,7 @@
 		5BF8E790263C400F00341EE4 /* GADCustomNativeAdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADCustomNativeAdWrapper.swift; sourceTree = "<group>"; };
 		5E02545F2E2CBAB214F9C2AC /* Pods_VeonPrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F1E8403594B7E22338F55DF /* Pods_VeonPrebidMultiAdLoaderGAMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoaderGAMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		629584482775F2D6A5DA0A13 /* VeonPrebidMultiAdLoaderGAMTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeonPrebidMultiAdLoaderGAMTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		629584482775F2D6A5DA0A13 /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		639BF605F3B6D6FDA04277C1 /* Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderGAMTests/Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		639F3CC1A03924B3A4269CCF /* Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderGAM/Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig"; sourceTree = "<group>"; };
 		64F3D4872639BF34E66B3B06 /* Pods-PrebidRemoteConfig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidRemoteConfig.release.xcconfig"; path = "Target Support Files/Pods-PrebidRemoteConfig/Pods-PrebidRemoteConfig.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 		B2C141ACE9D01CC30540E568 /* Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileMAXAdapters/Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig"; sourceTree = "<group>"; };
 		B4A84BD6B3A2873920B7EB45 /* Pods-VeonPrebidRemoteConfig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidRemoteConfig.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidRemoteConfig/Pods-VeonPrebidRemoteConfig.debug.xcconfig"; sourceTree = "<group>"; };
 		B5B43E9D40B9C57645421FA1 /* Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderTests/Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
-		C034887D040FB8978383A8CA /* VeonPrebidMultiAdLoaderYandexTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeonPrebidMultiAdLoaderYandexTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		C034887D040FB8978383A8CA /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A6593B4E69CB74C4BAB04B /* MockAdSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockAdSource.swift; sourceTree = "<group>"; };
 		CB0BBEDD89689B1A9D87ADB0 /* Pods_VeonPrebidMobileGAMEventHandlersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileGAMEventHandlersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB97B5783438127CFC911E2E /* Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -704,8 +704,8 @@
 				6CA947693057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM.framework */,
 				6CA9477E3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex.framework */,
 				3DEA3D3F70FB96ECBA41255A /* VeonPrebidMultiAdLoaderTests.xctest */,
-				629584482775F2D6A5DA0A13 /* VeonPrebidMultiAdLoaderGAMTests */,
-				C034887D040FB8978383A8CA /* VeonPrebidMultiAdLoaderYandexTests */,
+				629584482775F2D6A5DA0A13 /* .xctest */,
+				C034887D040FB8978383A8CA /* .xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1061,7 +1061,7 @@
 			);
 			name = VeonPrebidMultiAdLoaderYandexTests;
 			productName = PrebidMultiAdLoaderYandexTests;
-			productReference = C034887D040FB8978383A8CA /* VeonPrebidMultiAdLoaderYandexTests */;
+			productReference = C034887D040FB8978383A8CA /* .xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		659817A23178EE27E9D01A36 /* VeonPrebidMultiAdLoaderGAMTests */ = {
@@ -1083,7 +1083,7 @@
 			);
 			name = VeonPrebidMultiAdLoaderGAMTests;
 			productName = PrebidMultiAdLoaderGAMTests;
-			productReference = 629584482775F2D6A5DA0A13 /* VeonPrebidMultiAdLoaderGAMTests */;
+			productReference = 629584482775F2D6A5DA0A13 /* .xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */ = {
@@ -2473,7 +2473,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2518,7 +2518,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2561,7 +2561,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2606,7 +2606,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2649,7 +2649,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2694,7 +2694,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2737,7 +2737,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
@@ -2782,7 +2782,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
