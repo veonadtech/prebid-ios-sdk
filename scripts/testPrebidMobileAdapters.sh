@@ -13,6 +13,31 @@ set -e
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
+SIMULATOR_NAME="iPhone-16-Pro-PrebidMobile"
+
+# Test schemes of the modules that live in EventHandlers/EventHandlers.xcodeproj.
+# All names carry the "Veon" prefix to match the renamed Xcode targets (see
+# scripts/rename_targets_to_veon.rb) — PrebidMobile/core itself is the only
+# exception and has no test scheme listed here anyway.
+# To cover a new module: add its unit-test scheme here (see scripts/addMultiAdLoaderTests.rb
+# for an example of how a test target for a new module is created).
+#
+#   VeonPrebidMobileGAMEventHandlersTests  - GAM event handlers
+#   VeonPrebidMobileAdMobAdaptersTests     - AdMob mediation adapters
+#   VeonPrebidMobileMAXAdaptersTests       - AppLovin MAX mediation adapters
+#   VeonPrebidMultiAdLoaderTests           - VeonPrebidRemoteConfig + VeonPrebidMultiAdLoader (config parsing, race engine,
+#                                             source registry, banner / interstitial loaders, built-in Prebid sources)
+#   VeonPrebidMultiAdLoaderGAMTests        - VeonPrebidMultiAdLoaderGAM (needs GoogleMobileAds linked via the Podfile)
+#   VeonPrebidMultiAdLoaderYandexTests     - VeonPrebidMultiAdLoaderYandex (needs YandexMobileAds linked via the Podfile)
+test_schemes=(
+    "VeonPrebidMobileGAMEventHandlersTests"
+    "VeonPrebidMobileAdMobAdaptersTests"
+    "VeonPrebidMobileMAXAdaptersTests"
+    "VeonPrebidMultiAdLoaderTests"
+    "VeonPrebidMultiAdLoaderGAMTests"
+    "VeonPrebidMultiAdLoaderYandexTests"
+)
+
 echo -e "\n\n${GREEN}INSTALL PODS${NC}\n\n"
 
 cd ..
@@ -24,7 +49,13 @@ pod install --repo-update
 echo -e "\n\n${GREEN}RUN PREBID MOBILE ADAPTER TESTS${NC}\n\n"
 
 echo -e "\n${GREEN}Creating simulator${NC} \n"
-xcrun simctl create iPhone-16-Pro-PrebidMobile com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro
+xcrun simctl create "${SIMULATOR_NAME}" com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro
+
+# Always remove the simulator, also when a test run fails half way through.
+cleanup_simulator() {
+    xcrun simctl delete "${SIMULATOR_NAME}" >/dev/null 2>&1 || true
+}
+trap cleanup_simulator EXIT
 
 echo -e "\n${GREEN}Clean build\n"
 xcodebuild clean build
@@ -37,51 +68,30 @@ function testAdapters () {
         -scheme "${SCHEME}" \
         -sdk iphonesimulator \
         -configuration Debug \
-        -destination 'platform=iOS Simulator,name=iPhone-16-Pro-PrebidMobile,OS=latest' \
+        -destination "platform=iOS Simulator,name=${SIMULATOR_NAME},OS=latest" \
         -destination-timeout 60 \
-        build-for-testing
+        build-for-testing || return 1
 
     xcodebuild \
         -workspace PrebidMobile.xcworkspace \
         -scheme "${SCHEME}" \
         -sdk iphonesimulator \
-        -destination 'platform=iOS Simulator,name=iPhone-16-Pro-PrebidMobile,OS=latest' \
+        -destination "platform=iOS Simulator,name=${SIMULATOR_NAME},OS=latest" \
         -destination-timeout 60 \
-        test-without-building
+        test-without-building || return 1
 }
 
-echo -e "\n${GREEN}Running PrebidMobileGAMEventHandlers unit tests${NC} \n"
+for scheme in "${test_schemes[@]}"
+do
+    echo -e "\n${GREEN}Running ${scheme} unit tests${NC} \n"
 
-testAdapters "PrebidMobileGAMEventHandlersTests"
-
-if [[ ${PIPESTATUS[0]} == 0 ]]; then
-    echo "✅ PrebidMobileGAMEventHandlers Unit Tests Passed"
-else
-    echo "🔴 PrebidMobileGAMEventHandlers Unit Tests Failed"
-    exit 1
-fi
-
-echo -e "\n${GREEN}Running PrebidMobileAdMobAdapters unit tests${NC} \n"
-
-testAdapters "PrebidMobileAdMobAdaptersTests"
-
-if [[ ${PIPESTATUS[0]} == 0 ]]; then
-    echo "✅ PrebidMobileAdMobAdapters Unit Tests Passed"
-else
-    echo "🔴 PrebidMobileAdMobAdapters Unit Tests Failed"
-    exit 1
-fi
-
-echo -e "\n${GREEN}Running PrebidMobileMAXAdapters unit tests${NC} \n"
-
-testAdapters "PrebidMobileMAXAdaptersTests"
-
-if [[ ${PIPESTATUS[0]} == 0 ]]; then
-    echo "✅ PrebidMobileMAXAdapters Unit Tests Passed"
-else
-    echo "🔴 PrebidMobileMAXAdapters Unit Tests Failed"
-    exit 1
-fi
+    if testAdapters "${scheme}"; then
+        echo "✅ ${scheme} Unit Tests Passed"
+    else
+        echo "🔴 ${scheme} Unit Tests Failed"
+        exit 1
+    fi
+done
 
 echo -e "\n${GREEN}Removing simulator${NC} \n"
-xcrun simctl delete iPhone-16-Pro-PrebidMobile
+cleanup_simulator

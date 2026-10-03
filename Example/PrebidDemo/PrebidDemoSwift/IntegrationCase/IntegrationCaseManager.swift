@@ -420,5 +420,24 @@ struct IntegrationCaseManager {
                 MAXNativeViewController()
             }
         ),
+ 
+        // New — Multi Ad Loader (Prebid / GAM / Yandex priority race)
+        IntegrationCase(
+            title: "Multi Ad Loader Display Banner 320x50",
+            integrationKind: .multiAdLoader,
+            adFormat: .displayBanner,
+            configurationClosure: {
+                MultiAdLoaderDisplayBannerViewController(adSize: CGSize(width: 320, height: 50))
+            }
+        ),
+ 
+        IntegrationCase(
+            title: "Multi Ad Loader Display Interstitial 320x480",
+            integrationKind: .multiAdLoader,
+            adFormat: .displayInterstitial,
+            configurationClosure: {
+                MultiAdLoaderDisplayInterstitialViewController()
+            }
+        ),
     ]
 }

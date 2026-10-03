@@ -22,6 +22,11 @@ import PrebidMobile
 import VeonPrebidMobileGAMEventHandlers
 import VeonPrebidMobileAdMobAdapters
 import VeonPrebidMobileMAXAdapters
+import VeonPrebidMultiAdLoaderGAM
+import VeonPrebidMultiAdLoaderYandex
+import VeonPrebidRemoteConfig
+
+import YandexMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,12 +47,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Prebid SDK
         try! Prebid.initializeSDK(
             serverURL: "https://prebid-server-test-j.prebid.org/openrtb2/auction",
+            configURL: "https://dcdn.kazdsp.com/sdk/kz.beeline.odp/config.json",
             gadMobileAdsVersion: string(for: MobileAds.shared.versionNumber)
         ) { status, error in
             if let error = error {
                 print("Initialization Error: \(error.localizedDescription)")
             }
         }
+        
+        YandexAds.initializeSDK {
+            VeonYandexAdSourceProvider.register()
+        }
+            
+        VeonGAMAdSourceProvider.register()
         
         // ===== CONFIGURE: Prebid
         

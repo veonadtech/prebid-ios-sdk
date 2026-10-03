@@ -121,3 +121,6 @@ CLAUDE.md
 .claude/
 
 EventHandlers/Package.resolved
+Package.resolved
+.idea/
+.swiftpm/

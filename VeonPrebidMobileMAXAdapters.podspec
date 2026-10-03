@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "VeonPrebidMobileMAXAdapters"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "The bridge between PrebidMobile SDK and Applovin MAX SDK."
 
-  s.module_name = "PrebidMobileMAXAdapters"
+  s.module_name = "VeonPrebidMobileMAXAdapters"
 
   s.description  = "MAX Adapters manages rendering of Prebid or MAX ads respectively to the winning bid."
   s.homepage     = "https://www.veon.com"
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.source_files = 'EventHandlers/PrebidMobileMAXAdapters/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMobile', '0.1.1'
+  s.dependency 'VeonPrebidMobile', '>= 0.2.0'
   s.dependency 'AppLovinSDK'
 
   s.pod_target_xcconfig = {

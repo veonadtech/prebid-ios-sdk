@@ -3,18 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12360E4989D626E58508B440 /* Pods_PrebidMobileGAMEventHandlersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39183ECBC4E402BC48B3691D /* Pods_PrebidMobileGAMEventHandlersTests.framework */; };
-		3405F94A250A555800268A77 /* PrebidMobileGAMEventHandlers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B64D5C24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers.framework */; };
+		00FCE7188424910554E04B28 /* VeonPrebidMultiAdLoaderYandex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9477E3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex.framework */; };
+		02FF5650C82914C55917CE64 /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */; };
+		04AB0F4CC0A327E8098EFDB0 /* EventRecorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD349FDAA47614A41267C3 /* EventRecorders.swift */; };
+		06577568DC728D15308B5BA8 /* VeonAdSourceRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B335EDDBD186D7FCB80E71 /* VeonAdSourceRegistryTests.swift */; };
+		0D1BC48DC0A46F747F7A7289 /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92303E7C27FECEA100AC8E5C /* PrebidMobile.framework */; };
+		0E3197FB91C0A3DCC7A5728D /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */; };
+		0E962AE628CFA0627B51F7FD /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */; };
+		101503C29F54609B136C9392 /* VeonPrebidSourcesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE546C38DF00445F68277AAC /* VeonPrebidSourcesTests.swift */; };
+		160C02C37BC7DC3E8A7DADA4 /* Pods_VeonPrebidMultiAdLoaderYandexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBABE371E3BF1A18D0EE7367 /* Pods_VeonPrebidMultiAdLoaderYandexTests.framework */; };
+		19B489BF807F6A7D1B30F521 /* VeonMultiInterstitialAdLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21919CB986AC83F113FAA4 /* VeonMultiInterstitialAdLoaderTests.swift */; };
+		19C46463536454E0F0F10D0C /* Pods_VeonPrebidMobileMAXAdaptersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA39332E6946A137DE39581 /* Pods_VeonPrebidMobileMAXAdaptersTests.framework */; };
+		1EF30541AAC28F345C702345 /* Pods_VeonPrebidMultiAdLoaderGAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0F34BAB20AC296419E0E21 /* Pods_VeonPrebidMultiAdLoaderGAM.framework */; };
+		3024FA94DEC5638D24170573 /* EventRecorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB8290A29A2BC8E3D58381 /* EventRecorders.swift */; };
+		3405F94A250A555800268A77 /* VeonPrebidMobileGAMEventHandlers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B64D5C24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers.framework */; };
 		3405F951250A55AE00268A77 /* GAMBannerViewWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3405F950250A55AE00268A77 /* GAMBannerViewWrapperTest.swift */; };
 		344A7F09250B73FA00743A93 /* PropertyTestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A7F08250B73FA00743A93 /* PropertyTestModels.swift */; };
 		344A7F0C250B744D00743A93 /* GADAdSize+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A7F0B250B744D00743A93 /* GADAdSize+Equatable.swift */; };
 		344A7F0E250B749600743A93 /* GAMRequestWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A7F0D250B749600743A93 /* GAMRequestWrapperTest.swift */; };
 		344A7F14250B823F00743A93 /* GAMInterstitialAdWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A7F13250B823F00743A93 /* GAMInterstitialAdWrapperTest.swift */; };
 		344A7F1A250B8E5400743A93 /* GADRewardedAdWrapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344A7F19250B8E5400743A93 /* GADRewardedAdWrapperTest.swift */; };
+		390838408F46B33452D10CA3 /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92303E7C27FECEA100AC8E5C /* PrebidMobile.framework */; };
+		435261A0F6BBE836506C1B2A /* RemoteConfigHolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D17897A9C401C0182A340 /* RemoteConfigHolderTests.swift */; };
+		4C93838CF3211140178217F8 /* VeonGAMInterstitialSourceForwardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83DDBDBB48B695C6E9C10B9 /* VeonGAMInterstitialSourceForwardingTests.swift */; };
+		51308679FC9395524F30A38A /* VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */; };
 		534C61682CB861930026119A /* PrebidAdMobRewardedAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C61672CB861930026119A /* PrebidAdMobRewardedAdapter.swift */; };
 		53632B24290BC57A00139EF3 /* AdMobGMATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53632B23290BC57A00139EF3 /* AdMobGMATests.swift */; };
 		53632B2C290BE17300139EF3 /* GMATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53632B2B290BE17300139EF3 /* GMATests.swift */; };
@@ -35,8 +51,19 @@
 		5BF8E781263C363800341EE4 /* GAMRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E780263C363800341EE4 /* GAMRequestWrapper.swift */; };
 		5BF8E789263C3B4000341EE4 /* GADNativeAdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E788263C3B4000341EE4 /* GADNativeAdWrapper.swift */; };
 		5BF8E791263C400F00341EE4 /* GADCustomNativeAdWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8E790263C400F00341EE4 /* GADCustomNativeAdWrapper.swift */; };
-		7B5C067F84362A5A09405CED /* Pods_PrebidMobileMAXAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D018605E7CEA3B29DC916A73 /* Pods_PrebidMobileMAXAdapters.framework */; };
-		8B2137FFC451DE1AE4817851 /* Pods_PrebidMobileAdMobAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240AB4FEB77E1AB79E9EC15A /* Pods_PrebidMobileAdMobAdapters.framework */; };
+		5D32D9EFF4E32FECE7FA3780 /* VeonGAMBannerSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454E6D0F4093DB3FE8B0C9E7 /* VeonGAMBannerSourceTests.swift */; };
+		5E44B00A6CC8271FC2DD43A8 /* VeonYandexInterstitialSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466DAFA6D1E3405CB098FB70 /* VeonYandexInterstitialSourceTests.swift */; };
+		5FABC5F867DFA62102369314 /* VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */; };
+		67558FFA5CEFE34F4FB1DCE2 /* VeonPrebidMultiAdLoaderGAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA947693057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM.framework */; };
+		682F011491E4D06DD62120C4 /* VeonGAMAdSourceProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5320847EB7028CAC077682 /* VeonGAMAdSourceProviderTests.swift */; };
+		697FDD5F0D3996DD1673E6D6 /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */; };
+		6DD96ECA11DA763D003C1FBF /* VeonGAMInterstitialSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF48A2538579332D86E835 /* VeonGAMInterstitialSourceTests.swift */; };
+		727418FBC8BCA6328B04BBE9 /* VeonGAMBannerSourceForwardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EF0762CE4A948F42A9B401 /* VeonGAMBannerSourceForwardingTests.swift */; };
+		72BEE7C0E5831417EC35DC80 /* VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */; };
+		7D49F1016D6068B130157276 /* VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */; };
+		853DA147DA7729F85B3187DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB87FA6E4E496579B399C0B /* Foundation.framework */; };
+		86646B3F72DFBC9678C5A968 /* Pods_VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7C5FECF49CB4A0C21A8A92 /* Pods_VeonPrebidRemoteConfig.framework */; };
+		8F2DE68D95F33A999918B336 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB87FA6E4E496579B399C0B /* Foundation.framework */; };
 		92221CDD2804A0C3005DF671 /* PrebidMAXMediationAdapter+MAInterstitialAdapter+MARewardedAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92221CDC2804A0C3005DF671 /* PrebidMAXMediationAdapter+MAInterstitialAdapter+MARewardedAdapter.swift */; };
 		92221CE32804B113005DF671 /* MAXMediationInterstitialUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92221CE22804B113005DF671 /* MAXMediationInterstitialUtils.swift */; };
 		92221CE72804BC0B005DF671 /* MAXMediationRewardedlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92221CE62804BC0B005DF671 /* MAXMediationRewardedlUtils.swift */; };
@@ -56,7 +83,7 @@
 		9298652B280601F8007A2F34 /* MAXMediationNativeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9298652A280601F8007A2F34 /* MAXMediationNativeUtils.swift */; };
 		929D2639280450D300C61E8D /* PrebidMAXMediationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D2638280450D300C61E8D /* PrebidMAXMediationAdapter.swift */; };
 		92A2380D27731B48000157AA /* AdMobUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2380C27731B48000157AA /* AdMobUtils.swift */; };
-		92C1346327FC6B4900F96387 /* PrebidMobileMAXAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C1345B27FC6B4900F96387 /* PrebidMobileMAXAdapters.framework */; };
+		92C1346327FC6B4900F96387 /* VeonPrebidMobileMAXAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C1345B27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters.framework */; };
 		92C1346927FC6B4900F96387 /* PrebidMobileMAXAdapters.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C1345D27FC6B4900F96387 /* PrebidMobileMAXAdapters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92C474ED2795B57F00C26E27 /* AdMobMediationRewardedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C474EC2795B57E00C26E27 /* AdMobMediationRewardedUtils.swift */; };
 		92C474F52795E1A600C26E27 /* PrebidAdMobMediationBaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C474F42795E1A600C26E27 /* PrebidAdMobMediationBaseAdapter.swift */; };
@@ -65,22 +92,96 @@
 		92E924FD276A0FD8002B57F3 /* AdMobMediationBannerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E924FC276A0FD8002B57F3 /* AdMobMediationBannerUtils.swift */; };
 		92E924FF276A193E002B57F3 /* AdMobAdaptersError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E924FE276A193E002B57F3 /* AdMobAdaptersError.swift */; };
 		92EB6DE52799FB4700470DEC /* PrebidAdMobNativeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB6DE42799FB4700470DEC /* PrebidAdMobNativeAdapter.swift */; };
-		92F4389E27688E8600FDC950 /* PrebidMobileAdMobAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F4389627688E8600FDC950 /* PrebidMobileAdMobAdapters.framework */; };
+		92F4389E27688E8600FDC950 /* VeonPrebidMobileAdMobAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F4389627688E8600FDC950 /* VeonPrebidMobileAdMobAdapters.framework */; };
 		92F438A427688E8600FDC950 /* PrebidMobileAdMobAdapters.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F4389827688E8600FDC950 /* PrebidMobileAdMobAdapters.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92F438BA276896FF00FDC950 /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F438B9276896FF00FDC950 /* PrebidMobile.framework */; };
-		C3E45723C24D15415F4FAB0C /* Pods_PrebidMobileGAMEventHandlers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC52FAF1C12304695E019A4D /* Pods_PrebidMobileGAMEventHandlers.framework */; };
-		D1059C00DE847D8091FB2541 /* Pods_PrebidMobileAdMobAdaptersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CB2A536AF6D4E751D46FBE /* Pods_PrebidMobileAdMobAdaptersTests.framework */; };
-		D2FEF30160712DAAB98913EC /* Pods_PrebidMobileMAXAdaptersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E3D686EF908BFEAF1DF154 /* Pods_PrebidMobileMAXAdaptersTests.framework */; };
+		93B214A1B6D2737E9D52C431 /* MockAdSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6593B4E69CB74C4BAB04B /* MockAdSource.swift */; };
+		940A1334CA629ABB4D19B052 /* Pods_VeonPrebidMultiAdLoaderGAMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1E8403594B7E22338F55DF /* Pods_VeonPrebidMultiAdLoaderGAMTests.framework */; };
+		9E25F2E9BFB4174F7918261A /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */; };
+		9F142780E773E34BFA84F6DF /* Pods_VeonPrebidMobileGAMEventHandlersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0BBEDD89689B1A9D87ADB0 /* Pods_VeonPrebidMobileGAMEventHandlersTests.framework */; };
+		A4CE90C360170756D80785A0 /* VeonYandexBannerSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1E9673454C012AF260021 /* VeonYandexBannerSourceTests.swift */; };
+		A5CB337079CBBC7959E0E1F9 /* SdkConfigStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA408DD8802F9A919C4B8D /* SdkConfigStoreTests.swift */; };
+		A801364E857F472720D7717D /* SdkConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570CB0BF5E941A713B8FB986 /* SdkConfigTests.swift */; };
+		A9DD4C21362350F6DBDB005E /* Pods_VeonPrebidMultiAdLoaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5816F00FDA765C02D8B4B607 /* Pods_VeonPrebidMultiAdLoaderTests.framework */; };
+		AC3621DC1334C0DDCE7C5DDA /* Pods_VeonPrebidMultiAdLoaderYandex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C5298E094A9BFBFE83AC13 /* Pods_VeonPrebidMultiAdLoaderYandex.framework */; };
+		ACCE9BCE37B44C052EBCAD8C /* Pods_VeonPrebidMobileAdMobAdaptersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E859BF9FFAFC98D478C91B /* Pods_VeonPrebidMobileAdMobAdaptersTests.framework */; };
+		B2B467A3A85CFA257D2517D7 /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92303E7C27FECEA100AC8E5C /* PrebidMobile.framework */; };
+		B44C02A56846AAA29A9ADA30 /* VeonPrebidRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */; };
+		B4E79032EE703AD53706FBA3 /* AnyVeonAdSourceLoadingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979D69CB9B022103045DEE8D /* AnyVeonAdSourceLoadingTests.swift */; };
+		B7377A665D6CCE8E8CA8F956 /* VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */; };
+		B79D844DD5C87A6204DF8EF5 /* Pods_VeonPrebidMobileAdMobAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E5E6B5ABB466386BA38A2E /* Pods_VeonPrebidMobileAdMobAdapters.framework */; };
+		C427DAA7D2DA939BC55104E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB87FA6E4E496579B399C0B /* Foundation.framework */; };
+		C4459698A51364DFAE037939 /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92303E7C27FECEA100AC8E5C /* PrebidMobile.framework */; };
+		C5EAD601CE96A1DB179FF84C /* Pods_VeonPrebidMultiAdLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25545C250E9C50A5196B828A /* Pods_VeonPrebidMultiAdLoader.framework */; };
+		CFEAFB3E4CFADD7A505D5EA1 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A9E6841A4D32A7493A8FF6 /* TestSupport.swift */; };
+		D18F4C16D1D4E21A6E584A41 /* VeonYandexAdSourceProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870293341DE8DCA7FD6DC6D2 /* VeonYandexAdSourceProviderTests.swift */; };
+		D535569435B0510B30BECD80 /* VeonAdRaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D4CD0EF97F412E4752444 /* VeonAdRaceTests.swift */; };
 		E5D79CAC2FADC40F00C0C44A /* GAMEventHandlerRequestConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D79CAB2FADC40F00C0C44A /* GAMEventHandlerRequestConfigurationTests.swift */; };
+		E9E9BAFF0ECE57661A47BF8C /* PrebidMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92303E7C27FECEA100AC8E5C /* PrebidMobile.framework */; };
+		E9F1DAE0F80F2CC80D799062 /* VeonMultiBannerAdLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5E40E821CB8CDFDFEF4BB /* VeonMultiBannerAdLoaderTests.swift */; };
+		EB70735A35B5754081116EB3 /* Pods_VeonPrebidMobileGAMEventHandlers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6888D66F77209AEAB682A185 /* Pods_VeonPrebidMobileGAMEventHandlers.framework */; };
+		EC3FB8D633BFE117FC9C6D74 /* VeonMultiAdLoaderErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54006F1BE888CBAE9B946CCD /* VeonMultiAdLoaderErrorTests.swift */; };
+		EFF2C935B065E00980F60325 /* MockSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB8D96705C55C265DEDAEC8 /* MockSources.swift */; };
+		FD3115B71FDD3D7FA5B93E3B /* Pods_VeonPrebidMobileMAXAdapters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E02545F2E2CBAB214F9C2AC /* Pods_VeonPrebidMobileMAXAdapters.framework */; };
+		FDEEE7D3230F5C6937B64C79 /* VeonYandexBannerSourceForwardingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C188124CA43087ABC9806D /* VeonYandexBannerSourceForwardingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0A823A7E7C5C4FC62AF9BE82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA947473057EF8B0070F592;
+			remoteInfo = PrebidMultiAdLoader;
+		};
+		24D6A546BD67610A3BE639E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9472E3057EF490070F592;
+			remoteInfo = PrebidRemoteConfig;
+		};
 		3405F94B250A555800268A77 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 34B64D5B24F7E41600FDD9F4;
 			remoteInfo = OpenXApolloGAMEventHandlers;
+		};
+		3AF80303448D77FAB74E587F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA947683057EFB20070F592;
+			remoteInfo = PrebidMultiAdLoaderGAM;
+		};
+		4F5C3F4E2409D1744935B639 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA947473057EF8B0070F592;
+			remoteInfo = PrebidMultiAdLoader;
+		};
+		5DFAE70498D811707ACEE9B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA947473057EF8B0070F592;
+			remoteInfo = PrebidMultiAdLoader;
+		};
+		6E37ECF57EA6C3CB969FB76B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9472E3057EF490070F592;
+			remoteInfo = PrebidRemoteConfig;
+		};
+		8D08AC5B4943B2D97B8A9B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA947473057EF8B0070F592;
+			remoteInfo = PrebidMultiAdLoader;
 		};
 		92C1346427FC6B4900F96387 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,13 +197,68 @@
 			remoteGlobalIDString = 92F4389527688E8600FDC950;
 			remoteInfo = PrebidMobileAdMobAdapters;
 		};
+		A091253672638316D7196E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9477D3057F07E0070F592;
+			remoteInfo = PrebidMultiAdLoaderYandex;
+		};
+		A403EF4A1D68B941ADE1BF74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9472E3057EF490070F592;
+			remoteInfo = PrebidRemoteConfig;
+		};
+		A4CEC7E11D4EB42AB53AE74E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA947473057EF8B0070F592;
+			remoteInfo = PrebidMultiAdLoader;
+		};
+		C4A74C9F25C9BEF72986A982 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9472E3057EF490070F592;
+			remoteInfo = PrebidRemoteConfig;
+		};
+		DBDD6470F362D5D96677F652 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9472E3057EF490070F592;
+			remoteInfo = PrebidRemoteConfig;
+		};
+		F4EA3972A20D201B0C172E5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34B64D4324F7D95800FDD9F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CA9472E3057EF490070F592;
+			remoteInfo = PrebidRemoteConfig;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0171D6F40C915E7761CDFB7F /* Pods-VeonPrebidMultiAdLoaderGAMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderGAMTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderGAMTests/Pods-VeonPrebidMultiAdLoaderGAMTests.release.xcconfig"; sourceTree = "<group>"; };
+		02B335EDDBD186D7FCB80E71 /* VeonAdSourceRegistryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonAdSourceRegistryTests.swift; sourceTree = "<group>"; };
+		03718886B9972335D275B35E /* Pods-VeonPrebidMultiAdLoaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderTests/Pods-VeonPrebidMultiAdLoaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0ADA408DD8802F9A919C4B8D /* SdkConfigStoreTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SdkConfigStoreTests.swift; sourceTree = "<group>"; };
+		0DBE6AB79DF2F1B270CFF8EF /* Pods-VeonPrebidMobileGAMEventHandlers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileGAMEventHandlers.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileGAMEventHandlers/Pods-VeonPrebidMobileGAMEventHandlers.release.xcconfig"; sourceTree = "<group>"; };
+		1169D359B5501A56F85925E8 /* Pods-VeonPrebidRemoteConfig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidRemoteConfig.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidRemoteConfig/Pods-VeonPrebidRemoteConfig.release.xcconfig"; sourceTree = "<group>"; };
+		15D25CABE825E10704B2FA74 /* Pods-VeonPrebidMobileGAMEventHandlers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileGAMEventHandlers.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileGAMEventHandlers/Pods-VeonPrebidMobileGAMEventHandlers.debug.xcconfig"; sourceTree = "<group>"; };
+		1B7C5FECF49CB4A0C21A8A92 /* Pods_VeonPrebidRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidRemoteConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E0F34BAB20AC296419E0E21 /* Pods_VeonPrebidMultiAdLoaderGAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoaderGAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20CBA101ACB700359B975E7A /* Pods-PrebidMultiAdLoaderGAMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderGAMTests.release.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderGAMTests/Pods-PrebidMultiAdLoaderGAMTests.release.xcconfig"; sourceTree = "<group>"; };
 		237DEA65BB4F321230D3A510 /* Pods-PrebidMobileMAXAdaptersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileMAXAdaptersTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests.debug.xcconfig"; sourceTree = "<group>"; };
-		240AB4FEB77E1AB79E9EC15A /* Pods_PrebidMobileAdMobAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileAdMobAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25545C250E9C50A5196B828A /* Pods_VeonPrebidMultiAdLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FD349FDAA47614A41267C3 /* EventRecorders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventRecorders.swift; sourceTree = "<group>"; };
+		2CE5E40E821CB8CDFDFEF4BB /* VeonMultiBannerAdLoaderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonMultiBannerAdLoaderTests.swift; sourceTree = "<group>"; };
+		3289D1CDCB9D377B626B5DAE /* Pods-PrebidMultiAdLoaderYandex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderYandex.release.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderYandex/Pods-PrebidMultiAdLoaderYandex.release.xcconfig"; sourceTree = "<group>"; };
 		329DD8224E4EC5A00AEA10F7 /* Pods-PrebidMobileMAXAdapters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileMAXAdapters.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMobileMAXAdapters/Pods-PrebidMobileMAXAdapters.debug.xcconfig"; sourceTree = "<group>"; };
-		3405F945250A555800268A77 /* PrebidMobileGAMEventHandlersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrebidMobileGAMEventHandlersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3405F945250A555800268A77 /* VeonPrebidMobileGAMEventHandlersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeonPrebidMobileGAMEventHandlersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3405F949250A555800268A77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3405F950250A55AE00268A77 /* GAMBannerViewWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMBannerViewWrapperTest.swift; sourceTree = "<group>"; };
 		344A7F08250B73FA00743A93 /* PropertyTestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTestModels.swift; sourceTree = "<group>"; };
@@ -110,14 +266,28 @@
 		344A7F0D250B749600743A93 /* GAMRequestWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMRequestWrapperTest.swift; sourceTree = "<group>"; };
 		344A7F13250B823F00743A93 /* GAMInterstitialAdWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMInterstitialAdWrapperTest.swift; sourceTree = "<group>"; };
 		344A7F19250B8E5400743A93 /* GADRewardedAdWrapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADRewardedAdWrapperTest.swift; sourceTree = "<group>"; };
-		34B64D5C24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrebidMobileGAMEventHandlers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B64D5C24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidMobileGAMEventHandlers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B64D5F24F7E41600FDD9F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39183ECBC4E402BC48B3691D /* Pods_PrebidMobileGAMEventHandlersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileGAMEventHandlersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3526F0486CEC4ECEC96C3D73 /* Pods-VeonPrebidMobileGAMEventHandlersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileGAMEventHandlersTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileGAMEventHandlersTests/Pods-VeonPrebidMobileGAMEventHandlersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39C49AC96F3CE476D7149906 /* Pods-VeonPrebidMobileGAMEventHandlersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileGAMEventHandlersTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileGAMEventHandlersTests/Pods-VeonPrebidMobileGAMEventHandlersTests.release.xcconfig"; sourceTree = "<group>"; };
+		3AB8D96705C55C265DEDAEC8 /* MockSources.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockSources.swift; sourceTree = "<group>"; };
+		3DAED9A6F25524BD4C4CF576 /* Pods-PrebidMultiAdLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoader.release.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoader/Pods-PrebidMultiAdLoader.release.xcconfig"; sourceTree = "<group>"; };
+		3DEA3D3F70FB96ECBA41255A /* VeonPrebidMultiAdLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeonPrebidMultiAdLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5B5A81FBAC47AD33C8A0BC /* Pods-VeonPrebidMobileMAXAdaptersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileMAXAdaptersTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileMAXAdaptersTests/Pods-VeonPrebidMobileMAXAdaptersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4022167DBAA0EB43B04ADD79 /* Pods-VeonPrebidMultiAdLoaderYandexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderYandexTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests.release.xcconfig"; sourceTree = "<group>"; };
 		42CE6323AC67980202BFDE74 /* Pods-PrebidMobileAdMobAdapters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileAdMobAdapters.release.xcconfig"; path = "Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters.release.xcconfig"; sourceTree = "<group>"; };
+		454E6D0F4093DB3FE8B0C9E7 /* VeonGAMBannerSourceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonGAMBannerSourceTests.swift; sourceTree = "<group>"; };
+		466DAFA6D1E3405CB098FB70 /* VeonYandexInterstitialSourceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonYandexInterstitialSourceTests.swift; sourceTree = "<group>"; };
+		4D87674EA96E0F79B8CC49A5 /* Pods-VeonPrebidMobileAdMobAdapters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileAdMobAdapters.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileAdMobAdapters/Pods-VeonPrebidMobileAdMobAdapters.debug.xcconfig"; sourceTree = "<group>"; };
+		4E21919CB986AC83F113FAA4 /* VeonMultiInterstitialAdLoaderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonMultiInterstitialAdLoaderTests.swift; sourceTree = "<group>"; };
+		50DFFEE2BEB6F4F291EF34FD /* Pods-PrebidMultiAdLoaderYandexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderYandexTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderYandexTests/Pods-PrebidMultiAdLoaderYandexTests.debug.xcconfig"; sourceTree = "<group>"; };
 		534C61672CB861930026119A /* PrebidAdMobRewardedAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebidAdMobRewardedAdapter.swift; sourceTree = "<group>"; };
 		53632B23290BC57A00139EF3 /* AdMobGMATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobGMATests.swift; sourceTree = "<group>"; };
 		53632B2B290BE17300139EF3 /* GMATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMATests.swift; sourceTree = "<group>"; };
 		53F2A57A2CB94FB3009B74CA /* GADReward+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GADReward+Extensions.swift"; sourceTree = "<group>"; };
+		54006F1BE888CBAE9B946CCD /* VeonMultiAdLoaderErrorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonMultiAdLoaderErrorTests.swift; sourceTree = "<group>"; };
+		570CB0BF5E941A713B8FB986 /* SdkConfigTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SdkConfigTests.swift; sourceTree = "<group>"; };
+		5816F00FDA765C02D8B4B607 /* Pods_VeonPrebidMultiAdLoaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58B193FE14C1F3D7E795F7AC /* Pods-PrebidMobileMAXAdapters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileMAXAdapters.release.xcconfig"; path = "Target Support Files/Pods-PrebidMobileMAXAdapters/Pods-PrebidMobileMAXAdapters.release.xcconfig"; sourceTree = "<group>"; };
 		5B36172526370A8700AFA1C2 /* GAMUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMUtils.swift; sourceTree = "<group>"; };
 		5B3617FB2638131A00AFA1C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -136,9 +306,32 @@
 		5BF8E780263C363800341EE4 /* GAMRequestWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMRequestWrapper.swift; sourceTree = "<group>"; };
 		5BF8E788263C3B4000341EE4 /* GADNativeAdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeAdWrapper.swift; sourceTree = "<group>"; };
 		5BF8E790263C400F00341EE4 /* GADCustomNativeAdWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADCustomNativeAdWrapper.swift; sourceTree = "<group>"; };
-		75CB2A536AF6D4E751D46FBE /* Pods_PrebidMobileAdMobAdaptersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileAdMobAdaptersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E02545F2E2CBAB214F9C2AC /* Pods_VeonPrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1E8403594B7E22338F55DF /* Pods_VeonPrebidMultiAdLoaderGAMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoaderGAMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629584482775F2D6A5DA0A13 /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639BF605F3B6D6FDA04277C1 /* Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderGAMTests/Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		639F3CC1A03924B3A4269CCF /* Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderGAM/Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig"; sourceTree = "<group>"; };
+		64F3D4872639BF34E66B3B06 /* Pods-PrebidRemoteConfig.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidRemoteConfig.release.xcconfig"; path = "Target Support Files/Pods-PrebidRemoteConfig/Pods-PrebidRemoteConfig.release.xcconfig"; sourceTree = "<group>"; };
+		6888D66F77209AEAB682A185 /* Pods_VeonPrebidMobileGAMEventHandlers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileGAMEventHandlers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidRemoteConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidMultiAdLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA947693057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidMultiAdLoaderGAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CA9477E3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidMultiAdLoaderYandex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73935351685606C7C8E593CF /* Pods-PrebidMultiAdLoaderGAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderGAM.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderGAM/Pods-PrebidMultiAdLoaderGAM.debug.xcconfig"; sourceTree = "<group>"; };
+		73BE69F927CE65A22F1F50C7 /* Pods-VeonPrebidMultiAdLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoader.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoader/Pods-VeonPrebidMultiAdLoader.release.xcconfig"; sourceTree = "<group>"; };
+		73F71C85ADE7BA5B9BC809F1 /* Pods-PrebidMultiAdLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoader.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoader/Pods-PrebidMultiAdLoader.debug.xcconfig"; sourceTree = "<group>"; };
+		74A9E6841A4D32A7493A8FF6 /* TestSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
+		74C188124CA43087ABC9806D /* VeonYandexBannerSourceForwardingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonYandexBannerSourceForwardingTests.swift; sourceTree = "<group>"; };
+		75510F4A41FED158DC7E89C4 /* Pods-VeonPrebidMobileAdMobAdaptersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileAdMobAdaptersTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileAdMobAdaptersTests/Pods-VeonPrebidMobileAdMobAdaptersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76BB8290A29A2BC8E3D58381 /* EventRecorders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventRecorders.swift; sourceTree = "<group>"; };
+		770C29D7A35CACB9D8077B36 /* Pods-VeonPrebidMobileMAXAdapters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileMAXAdapters.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileMAXAdapters/Pods-VeonPrebidMobileMAXAdapters.release.xcconfig"; sourceTree = "<group>"; };
+		7BCF48A2538579332D86E835 /* VeonGAMInterstitialSourceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonGAMInterstitialSourceTests.swift; sourceTree = "<group>"; };
+		870293341DE8DCA7FD6DC6D2 /* VeonYandexAdSourceProviderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonYandexAdSourceProviderTests.swift; sourceTree = "<group>"; };
+		8D674A5CE8FB277B9854E6BF /* Pods-VeonPrebidMultiAdLoaderYandex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderYandex.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderYandex/Pods-VeonPrebidMultiAdLoaderYandex.debug.xcconfig"; sourceTree = "<group>"; };
 		8E4C768ECDDB294B3CC3CF48 /* Pods-PrebidMobileMAXAdaptersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileMAXAdaptersTests.release.xcconfig"; path = "Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests.release.xcconfig"; sourceTree = "<group>"; };
+		9098BEC7FFC99EC721BC2B3E /* Pods-VeonPrebidMobileMAXAdaptersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileMAXAdaptersTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileMAXAdaptersTests/Pods-VeonPrebidMobileMAXAdaptersTests.release.xcconfig"; sourceTree = "<group>"; };
 		914C447D75BBE960CE43225D /* Pods-PrebidMobileGAMEventHandlers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileGAMEventHandlers.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers.debug.xcconfig"; sourceTree = "<group>"; };
+		917BA0D86F1611005BE2BEC8 /* Pods-PrebidMultiAdLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderTests.release.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderTests/Pods-PrebidMultiAdLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
 		92221CDC2804A0C3005DF671 /* PrebidMAXMediationAdapter+MAInterstitialAdapter+MARewardedAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrebidMAXMediationAdapter+MAInterstitialAdapter+MARewardedAdapter.swift"; sourceTree = "<group>"; };
 		92221CE22804B113005DF671 /* MAXMediationInterstitialUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAXMediationInterstitialUtils.swift; sourceTree = "<group>"; };
 		92221CE62804BC0B005DF671 /* MAXMediationRewardedlUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAXMediationRewardedlUtils.swift; sourceTree = "<group>"; };
@@ -160,9 +353,9 @@
 		9298652A280601F8007A2F34 /* MAXMediationNativeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAXMediationNativeUtils.swift; sourceTree = "<group>"; };
 		929D2638280450D300C61E8D /* PrebidMAXMediationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebidMAXMediationAdapter.swift; sourceTree = "<group>"; };
 		92A2380C27731B48000157AA /* AdMobUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobUtils.swift; sourceTree = "<group>"; };
-		92C1345B27FC6B4900F96387 /* PrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C1345B27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C1345D27FC6B4900F96387 /* PrebidMobileMAXAdapters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrebidMobileMAXAdapters.h; sourceTree = "<group>"; };
-		92C1346227FC6B4900F96387 /* PrebidMobileMAXAdaptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrebidMobileMAXAdaptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C1346227FC6B4900F96387 /* VeonPrebidMobileMAXAdaptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeonPrebidMobileMAXAdaptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C474EC2795B57E00C26E27 /* AdMobMediationRewardedUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobMediationRewardedUtils.swift; sourceTree = "<group>"; };
 		92C474F42795E1A600C26E27 /* PrebidAdMobMediationBaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebidAdMobMediationBaseAdapter.swift; sourceTree = "<group>"; };
 		92C7A868279AAEF1000D31CB /* AdMobMediationNativeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobMediationNativeUtils.swift; sourceTree = "<group>"; };
@@ -170,28 +363,104 @@
 		92E924FC276A0FD8002B57F3 /* AdMobMediationBannerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobMediationBannerUtils.swift; sourceTree = "<group>"; };
 		92E924FE276A193E002B57F3 /* AdMobAdaptersError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobAdaptersError.swift; sourceTree = "<group>"; };
 		92EB6DE42799FB4700470DEC /* PrebidAdMobNativeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrebidAdMobNativeAdapter.swift; sourceTree = "<group>"; };
-		92F4389627688E8600FDC950 /* PrebidMobileAdMobAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrebidMobileAdMobAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F4389627688E8600FDC950 /* VeonPrebidMobileAdMobAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VeonPrebidMobileAdMobAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F4389827688E8600FDC950 /* PrebidMobileAdMobAdapters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrebidMobileAdMobAdapters.h; sourceTree = "<group>"; };
-		92F4389D27688E8600FDC950 /* PrebidMobileAdMobAdaptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrebidMobileAdMobAdaptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F4389D27688E8600FDC950 /* VeonPrebidMobileAdMobAdaptersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeonPrebidMobileAdMobAdaptersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F438B9276896FF00FDC950 /* PrebidMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PrebidMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93CB1802D53C58A89E372B37 /* Pods-VeonPrebidMultiAdLoaderYandex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderYandex.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderYandex/Pods-VeonPrebidMultiAdLoaderYandex.release.xcconfig"; sourceTree = "<group>"; };
+		95EF0762CE4A948F42A9B401 /* VeonGAMBannerSourceForwardingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonGAMBannerSourceForwardingTests.swift; sourceTree = "<group>"; };
+		9695CB90093FAFAAEF1B884F /* Pods-PrebidMultiAdLoaderGAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderGAM.release.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderGAM/Pods-PrebidMultiAdLoaderGAM.release.xcconfig"; sourceTree = "<group>"; };
+		979D69CB9B022103045DEE8D /* AnyVeonAdSourceLoadingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnyVeonAdSourceLoadingTests.swift; sourceTree = "<group>"; };
+		97C5298E094A9BFBFE83AC13 /* Pods_VeonPrebidMultiAdLoaderYandex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoaderYandex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D58C5231BEDC27162AC3816 /* Pods-PrebidMobileAdMobAdaptersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileAdMobAdaptersTests.release.xcconfig"; path = "Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E2E8204E1C52CBA0D87C56C /* Pods-PrebidMobileAdMobAdapters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileAdMobAdapters.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters.debug.xcconfig"; sourceTree = "<group>"; };
-		A6E3D686EF908BFEAF1DF154 /* Pods_PrebidMobileMAXAdaptersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileMAXAdaptersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D018605E7CEA3B29DC916A73 /* Pods_PrebidMobileMAXAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileMAXAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E5320847EB7028CAC077682 /* VeonGAMAdSourceProviderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonGAMAdSourceProviderTests.swift; sourceTree = "<group>"; };
+		A507F608D9FB26BC993CECB0 /* Pods-VeonPrebidMultiAdLoaderGAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderGAM.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderGAM/Pods-VeonPrebidMultiAdLoaderGAM.debug.xcconfig"; sourceTree = "<group>"; };
+		B16573650E034F39E3C91E2A /* Pods-VeonPrebidMultiAdLoaderGAMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderGAMTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderGAMTests/Pods-VeonPrebidMultiAdLoaderGAMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B27D4CD0EF97F412E4752444 /* VeonAdRaceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonAdRaceTests.swift; sourceTree = "<group>"; };
+		B27DE5328D724183BC113312 /* Pods-VeonPrebidMobileAdMobAdapters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileAdMobAdapters.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileAdMobAdapters/Pods-VeonPrebidMobileAdMobAdapters.release.xcconfig"; sourceTree = "<group>"; };
+		B2C141ACE9D01CC30540E568 /* Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileMAXAdapters/Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig"; sourceTree = "<group>"; };
+		B4A84BD6B3A2873920B7EB45 /* Pods-VeonPrebidRemoteConfig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidRemoteConfig.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidRemoteConfig/Pods-VeonPrebidRemoteConfig.debug.xcconfig"; sourceTree = "<group>"; };
+		B5B43E9D40B9C57645421FA1 /* Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderTests/Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		C034887D040FB8978383A8CA /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A6593B4E69CB74C4BAB04B /* MockAdSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockAdSource.swift; sourceTree = "<group>"; };
+		CB0BBEDD89689B1A9D87ADB0 /* Pods_VeonPrebidMobileGAMEventHandlersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileGAMEventHandlersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB97B5783438127CFC911E2E /* Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD1568567C5E01CF455030F8 /* Pods-PrebidMultiAdLoaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderTests/Pods-PrebidMultiAdLoaderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B77165045D380B64491D0E /* Pods-PrebidMobileGAMEventHandlersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileGAMEventHandlersTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMobileGAMEventHandlersTests/Pods-PrebidMobileGAMEventHandlersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E5E4470A34CA6174F18CED /* Pods-VeonPrebidMobileAdMobAdaptersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMobileAdMobAdaptersTests.release.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMobileAdMobAdaptersTests/Pods-VeonPrebidMobileAdMobAdaptersTests.release.xcconfig"; sourceTree = "<group>"; };
+		D59D17897A9C401C0182A340 /* RemoteConfigHolderTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteConfigHolderTests.swift; sourceTree = "<group>"; };
+		D6941766406D87D4FCFBA83C /* Pods-VeonPrebidMultiAdLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeonPrebidMultiAdLoader.debug.xcconfig"; path = "Target Support Files/Pods-VeonPrebidMultiAdLoader/Pods-VeonPrebidMultiAdLoader.debug.xcconfig"; sourceTree = "<group>"; };
+		D6BBE668E49746DDC4861550 /* Pods-PrebidRemoteConfig.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidRemoteConfig.debug.xcconfig"; path = "Target Support Files/Pods-PrebidRemoteConfig/Pods-PrebidRemoteConfig.debug.xcconfig"; sourceTree = "<group>"; };
+		D83DDBDBB48B695C6E9C10B9 /* VeonGAMInterstitialSourceForwardingTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonGAMInterstitialSourceForwardingTests.swift; sourceTree = "<group>"; };
+		D9E1E9673454C012AF260021 /* VeonYandexBannerSourceTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonYandexBannerSourceTests.swift; sourceTree = "<group>"; };
+		DCD2206874106FDDD4467BBE /* Pods-PrebidMultiAdLoaderYandexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderYandexTests.release.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderYandexTests/Pods-PrebidMultiAdLoaderYandexTests.release.xcconfig"; sourceTree = "<group>"; };
+		DDA39332E6946A137DE39581 /* Pods_VeonPrebidMobileMAXAdaptersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileMAXAdaptersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE546C38DF00445F68277AAC /* VeonPrebidSourcesTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VeonPrebidSourcesTests.swift; sourceTree = "<group>"; };
+		DFB87FA6E4E496579B399C0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E5D79CAB2FADC40F00C0C44A /* GAMEventHandlerRequestConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAMEventHandlerRequestConfigurationTests.swift; sourceTree = "<group>"; };
-		EC52FAF1C12304695E019A4D /* Pods_PrebidMobileGAMEventHandlers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrebidMobileGAMEventHandlers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87FF19847A8550399F1E4DA /* Pods-PrebidMultiAdLoaderYandex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMultiAdLoaderYandex.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMultiAdLoaderYandex/Pods-PrebidMultiAdLoaderYandex.debug.xcconfig"; sourceTree = "<group>"; };
 		F06F98153B4FCC7F187B0A60 /* Pods-PrebidMobileGAMEventHandlers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileGAMEventHandlers.release.xcconfig"; path = "Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers.release.xcconfig"; sourceTree = "<group>"; };
+		F4E5E6B5ABB466386BA38A2E /* Pods_VeonPrebidMobileAdMobAdapters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileAdMobAdapters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F666DB80A4C4141B6F1270 /* Pods-PrebidMobileAdMobAdaptersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrebidMobileAdMobAdaptersTests.debug.xcconfig"; path = "Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F8E859BF9FFAFC98D478C91B /* Pods_VeonPrebidMobileAdMobAdaptersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMobileAdMobAdaptersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBABE371E3BF1A18D0EE7367 /* Pods_VeonPrebidMultiAdLoaderYandexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeonPrebidMultiAdLoaderYandexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6CA947303057EF490070F592 /* PrebidRemoteConfig */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = PrebidRemoteConfig;
+			sourceTree = "<group>";
+		};
+		6CA947493057EF8B0070F592 /* PrebidMultiAdLoader */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = PrebidMultiAdLoader;
+			sourceTree = "<group>";
+		};
+		6CA9476A3057EFB20070F592 /* PrebidMultiAdLoaderGAM */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = PrebidMultiAdLoaderGAM;
+			sourceTree = "<group>";
+		};
+		6CA9477F3057F07E0070F592 /* PrebidMultiAdLoaderYandex */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = PrebidMultiAdLoaderYandex;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3405F942250A555800268A77 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3405F94A250A555800268A77 /* PrebidMobileGAMEventHandlers.framework in Frameworks */,
-				12360E4989D626E58508B440 /* Pods_PrebidMobileGAMEventHandlersTests.framework in Frameworks */,
+				3405F94A250A555800268A77 /* VeonPrebidMobileGAMEventHandlers.framework in Frameworks */,
+				9F142780E773E34BFA84F6DF /* Pods_VeonPrebidMobileGAMEventHandlersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +469,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCCF2102732D1B10046CCFC /* PrebidMobile.framework in Frameworks */,
-				C3E45723C24D15415F4FAB0C /* Pods_PrebidMobileGAMEventHandlers.framework in Frameworks */,
+				EB70735A35B5754081116EB3 /* Pods_VeonPrebidMobileGAMEventHandlers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A805CD7683ECDFCC8B02701 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2DE68D95F33A999918B336 /* Foundation.framework in Frameworks */,
+				00FCE7188424910554E04B28 /* VeonPrebidMultiAdLoaderYandex.framework in Frameworks */,
+				51308679FC9395524F30A38A /* VeonPrebidMultiAdLoader.framework in Frameworks */,
+				02FF5650C82914C55917CE64 /* VeonPrebidRemoteConfig.framework in Frameworks */,
+				B2B467A3A85CFA257D2517D7 /* PrebidMobile.framework in Frameworks */,
+				160C02C37BC7DC3E8A7DADA4 /* Pods_VeonPrebidMultiAdLoaderYandexTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9472C3057EF490070F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390838408F46B33452D10CA3 /* PrebidMobile.framework in Frameworks */,
+				86646B3F72DFBC9678C5A968 /* Pods_VeonPrebidRemoteConfig.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947453057EF8B0070F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E25F2E9BFB4174F7918261A /* VeonPrebidRemoteConfig.framework in Frameworks */,
+				0D1BC48DC0A46F747F7A7289 /* PrebidMobile.framework in Frameworks */,
+				C5EAD601CE96A1DB179FF84C /* Pods_VeonPrebidMultiAdLoader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947663057EFB20070F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7377A665D6CCE8E8CA8F956 /* VeonPrebidMultiAdLoader.framework in Frameworks */,
+				0E3197FB91C0A3DCC7A5728D /* VeonPrebidRemoteConfig.framework in Frameworks */,
+				1EF30541AAC28F345C702345 /* Pods_VeonPrebidMultiAdLoaderGAM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9477B3057F07E0070F592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D49F1016D6068B130157276 /* VeonPrebidMultiAdLoader.framework in Frameworks */,
+				697FDD5F0D3996DD1673E6D6 /* VeonPrebidRemoteConfig.framework in Frameworks */,
+				AC3621DC1334C0DDCE7C5DDA /* Pods_VeonPrebidMultiAdLoaderYandex.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B50E63C253AB568EA048094 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C427DAA7D2DA939BC55104E3 /* Foundation.framework in Frameworks */,
+				72BEE7C0E5831417EC35DC80 /* VeonPrebidMultiAdLoader.framework in Frameworks */,
+				B44C02A56846AAA29A9ADA30 /* VeonPrebidRemoteConfig.framework in Frameworks */,
+				E9E9BAFF0ECE57661A47BF8C /* PrebidMobile.framework in Frameworks */,
+				A9DD4C21362350F6DBDB005E /* Pods_VeonPrebidMultiAdLoaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92303E7D27FECEA100AC8E5C /* PrebidMobile.framework in Frameworks */,
-				7B5C067F84362A5A09405CED /* Pods_PrebidMobileMAXAdapters.framework in Frameworks */,
+				FD3115B71FDD3D7FA5B93E3B /* Pods_VeonPrebidMobileMAXAdapters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +550,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92C1346327FC6B4900F96387 /* PrebidMobileMAXAdapters.framework in Frameworks */,
-				D2FEF30160712DAAB98913EC /* Pods_PrebidMobileMAXAdaptersTests.framework in Frameworks */,
+				92C1346327FC6B4900F96387 /* VeonPrebidMobileMAXAdapters.framework in Frameworks */,
+				19C46463536454E0F0F10D0C /* Pods_VeonPrebidMobileMAXAdaptersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F438BA276896FF00FDC950 /* PrebidMobile.framework in Frameworks */,
-				8B2137FFC451DE1AE4817851 /* Pods_PrebidMobileAdMobAdapters.framework in Frameworks */,
+				B79D844DD5C87A6204DF8EF5 /* Pods_VeonPrebidMobileAdMobAdapters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,14 +568,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92F4389E27688E8600FDC950 /* PrebidMobileAdMobAdapters.framework in Frameworks */,
-				D1059C00DE847D8091FB2541 /* Pods_PrebidMobileAdMobAdaptersTests.framework in Frameworks */,
+				92F4389E27688E8600FDC950 /* VeonPrebidMobileAdMobAdapters.framework in Frameworks */,
+				ACCE9BCE37B44C052EBCAD8C /* Pods_VeonPrebidMobileAdMobAdaptersTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA760B45CE651DF93A03586D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853DA147DA7729F85B3187DA /* Foundation.framework in Frameworks */,
+				67558FFA5CEFE34F4FB1DCE2 /* VeonPrebidMultiAdLoaderGAM.framework in Frameworks */,
+				5FABC5F867DFA62102369314 /* VeonPrebidMultiAdLoader.framework in Frameworks */,
+				0E962AE628CFA0627B51F7FD /* VeonPrebidRemoteConfig.framework in Frameworks */,
+				C4459698A51364DFAE037939 /* PrebidMobile.framework in Frameworks */,
+				940A1334CA629ABB4D19B052 /* Pods_VeonPrebidMultiAdLoaderGAMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B732AE38712B75740EE6585 /* PrebidMultiAdLoaderGAMTests */ = {
+			isa = PBXGroup;
+			children = (
+				27FD349FDAA47614A41267C3 /* EventRecorders.swift */,
+				9E5320847EB7028CAC077682 /* VeonGAMAdSourceProviderTests.swift */,
+				95EF0762CE4A948F42A9B401 /* VeonGAMBannerSourceForwardingTests.swift */,
+				454E6D0F4093DB3FE8B0C9E7 /* VeonGAMBannerSourceTests.swift */,
+				D83DDBDBB48B695C6E9C10B9 /* VeonGAMInterstitialSourceForwardingTests.swift */,
+				7BCF48A2538579332D86E835 /* VeonGAMInterstitialSourceTests.swift */,
+			);
+			path = PrebidMultiAdLoaderGAMTests;
+			sourceTree = "<group>";
+		};
 		3386E5027DFDA876BC9AC49B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,12 +609,20 @@
 				92F438B9276896FF00FDC950 /* PrebidMobile.framework */,
 				5BCCF20F2732D1B10046CCFC /* PrebidMobile.framework */,
 				5BCCF2082732C6340046CCFC /* PrebidMobile.framework */,
-				EC52FAF1C12304695E019A4D /* Pods_PrebidMobileGAMEventHandlers.framework */,
-				240AB4FEB77E1AB79E9EC15A /* Pods_PrebidMobileAdMobAdapters.framework */,
-				D018605E7CEA3B29DC916A73 /* Pods_PrebidMobileMAXAdapters.framework */,
-				75CB2A536AF6D4E751D46FBE /* Pods_PrebidMobileAdMobAdaptersTests.framework */,
-				39183ECBC4E402BC48B3691D /* Pods_PrebidMobileGAMEventHandlersTests.framework */,
-				A6E3D686EF908BFEAF1DF154 /* Pods_PrebidMobileMAXAdaptersTests.framework */,
+				8F7E250FDC1D308E7F0D4F7B /* iOS */,
+				F4E5E6B5ABB466386BA38A2E /* Pods_VeonPrebidMobileAdMobAdapters.framework */,
+				F8E859BF9FFAFC98D478C91B /* Pods_VeonPrebidMobileAdMobAdaptersTests.framework */,
+				6888D66F77209AEAB682A185 /* Pods_VeonPrebidMobileGAMEventHandlers.framework */,
+				CB0BBEDD89689B1A9D87ADB0 /* Pods_VeonPrebidMobileGAMEventHandlersTests.framework */,
+				5E02545F2E2CBAB214F9C2AC /* Pods_VeonPrebidMobileMAXAdapters.framework */,
+				DDA39332E6946A137DE39581 /* Pods_VeonPrebidMobileMAXAdaptersTests.framework */,
+				25545C250E9C50A5196B828A /* Pods_VeonPrebidMultiAdLoader.framework */,
+				1E0F34BAB20AC296419E0E21 /* Pods_VeonPrebidMultiAdLoaderGAM.framework */,
+				5F1E8403594B7E22338F55DF /* Pods_VeonPrebidMultiAdLoaderGAMTests.framework */,
+				5816F00FDA765C02D8B4B607 /* Pods_VeonPrebidMultiAdLoaderTests.framework */,
+				97C5298E094A9BFBFE83AC13 /* Pods_VeonPrebidMultiAdLoaderYandex.framework */,
+				FBABE371E3BF1A18D0EE7367 /* Pods_VeonPrebidMultiAdLoaderYandexTests.framework */,
+				1B7C5FECF49CB4A0C21A8A92 /* Pods_VeonPrebidRemoteConfig.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -305,6 +672,10 @@
 		34B64D4224F7D95800FDD9F4 = {
 			isa = PBXGroup;
 			children = (
+				6CA947303057EF490070F592 /* PrebidRemoteConfig */,
+				6CA947493057EF8B0070F592 /* PrebidMultiAdLoader */,
+				6CA9476A3057EFB20070F592 /* PrebidMultiAdLoaderGAM */,
+				6CA9477F3057F07E0070F592 /* PrebidMultiAdLoaderYandex */,
 				3386E5027DFDA876BC9AC49B /* Frameworks */,
 				C9E3CE99A87F745FB5BFAA17 /* Pods */,
 				92F4389727688E8600FDC950 /* PrebidMobileAdMobAdapters */,
@@ -313,18 +684,28 @@
 				3405F946250A555800268A77 /* PrebidMobileGAMEventHandlersTests */,
 				92C1345C27FC6B4900F96387 /* PrebidMobileMAXAdapters */,
 				34B64D4D24F7D95800FDD9F4 /* Products */,
+				BC218991AAC92902B889CF6D /* PrebidMultiAdLoaderTests */,
+				0B732AE38712B75740EE6585 /* PrebidMultiAdLoaderGAMTests */,
+				ECEC3F8B585CFDCC2EC60426 /* PrebidMultiAdLoaderYandexTests */,
 			);
 			sourceTree = "<group>";
 		};
 		34B64D4D24F7D95800FDD9F4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				34B64D5C24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers.framework */,
-				3405F945250A555800268A77 /* PrebidMobileGAMEventHandlersTests.xctest */,
-				92F4389627688E8600FDC950 /* PrebidMobileAdMobAdapters.framework */,
-				92F4389D27688E8600FDC950 /* PrebidMobileAdMobAdaptersTests.xctest */,
-				92C1345B27FC6B4900F96387 /* PrebidMobileMAXAdapters.framework */,
-				92C1346227FC6B4900F96387 /* PrebidMobileMAXAdaptersTests.xctest */,
+				34B64D5C24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers.framework */,
+				3405F945250A555800268A77 /* VeonPrebidMobileGAMEventHandlersTests.xctest */,
+				92F4389627688E8600FDC950 /* VeonPrebidMobileAdMobAdapters.framework */,
+				92F4389D27688E8600FDC950 /* VeonPrebidMobileAdMobAdaptersTests.xctest */,
+				92C1345B27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters.framework */,
+				92C1346227FC6B4900F96387 /* VeonPrebidMobileMAXAdaptersTests.xctest */,
+				6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */,
+				6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */,
+				6CA947693057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM.framework */,
+				6CA9477E3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex.framework */,
+				3DEA3D3F70FB96ECBA41255A /* VeonPrebidMultiAdLoaderTests.xctest */,
+				629584482775F2D6A5DA0A13 /* .xctest */,
+				C034887D040FB8978383A8CA /* .xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,6 +754,14 @@
 				53F2A57A2CB94FB3009B74CA /* GADReward+Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8F7E250FDC1D308E7F0D4F7B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DFB87FA6E4E496579B399C0B /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		927ADB28280583AF006EB8D5 /* Sources */ = {
@@ -442,6 +831,26 @@
 			path = PrebidMobileAdMobAdaptersTests;
 			sourceTree = "<group>";
 		};
+		BC218991AAC92902B889CF6D /* PrebidMultiAdLoaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				979D69CB9B022103045DEE8D /* AnyVeonAdSourceLoadingTests.swift */,
+				C6A6593B4E69CB74C4BAB04B /* MockAdSource.swift */,
+				3AB8D96705C55C265DEDAEC8 /* MockSources.swift */,
+				D59D17897A9C401C0182A340 /* RemoteConfigHolderTests.swift */,
+				0ADA408DD8802F9A919C4B8D /* SdkConfigStoreTests.swift */,
+				570CB0BF5E941A713B8FB986 /* SdkConfigTests.swift */,
+				74A9E6841A4D32A7493A8FF6 /* TestSupport.swift */,
+				B27D4CD0EF97F412E4752444 /* VeonAdRaceTests.swift */,
+				02B335EDDBD186D7FCB80E71 /* VeonAdSourceRegistryTests.swift */,
+				54006F1BE888CBAE9B946CCD /* VeonMultiAdLoaderErrorTests.swift */,
+				2CE5E40E821CB8CDFDFEF4BB /* VeonMultiBannerAdLoaderTests.swift */,
+				4E21919CB986AC83F113FAA4 /* VeonMultiInterstitialAdLoaderTests.swift */,
+				DE546C38DF00445F68277AAC /* VeonPrebidSourcesTests.swift */,
+			);
+			path = PrebidMultiAdLoaderTests;
+			sourceTree = "<group>";
+		};
 		C9E3CE99A87F745FB5BFAA17 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,9 +866,61 @@
 				58B193FE14C1F3D7E795F7AC /* Pods-PrebidMobileMAXAdapters.release.xcconfig */,
 				237DEA65BB4F321230D3A510 /* Pods-PrebidMobileMAXAdaptersTests.debug.xcconfig */,
 				8E4C768ECDDB294B3CC3CF48 /* Pods-PrebidMobileMAXAdaptersTests.release.xcconfig */,
+				73F71C85ADE7BA5B9BC809F1 /* Pods-PrebidMultiAdLoader.debug.xcconfig */,
+				3DAED9A6F25524BD4C4CF576 /* Pods-PrebidMultiAdLoader.release.xcconfig */,
+				73935351685606C7C8E593CF /* Pods-PrebidMultiAdLoaderGAM.debug.xcconfig */,
+				9695CB90093FAFAAEF1B884F /* Pods-PrebidMultiAdLoaderGAM.release.xcconfig */,
+				20CBA101ACB700359B975E7A /* Pods-PrebidMultiAdLoaderGAMTests.release.xcconfig */,
+				639BF605F3B6D6FDA04277C1 /* Pods-PrebidMultiAdLoaderGAMTests.debug.xcconfig */,
+				917BA0D86F1611005BE2BEC8 /* Pods-PrebidMultiAdLoaderTests.release.xcconfig */,
+				CD1568567C5E01CF455030F8 /* Pods-PrebidMultiAdLoaderTests.debug.xcconfig */,
+				E87FF19847A8550399F1E4DA /* Pods-PrebidMultiAdLoaderYandex.debug.xcconfig */,
+				3289D1CDCB9D377B626B5DAE /* Pods-PrebidMultiAdLoaderYandex.release.xcconfig */,
+				DCD2206874106FDDD4467BBE /* Pods-PrebidMultiAdLoaderYandexTests.release.xcconfig */,
+				50DFFEE2BEB6F4F291EF34FD /* Pods-PrebidMultiAdLoaderYandexTests.debug.xcconfig */,
+				D6BBE668E49746DDC4861550 /* Pods-PrebidRemoteConfig.debug.xcconfig */,
+				64F3D4872639BF34E66B3B06 /* Pods-PrebidRemoteConfig.release.xcconfig */,
+				4D87674EA96E0F79B8CC49A5 /* Pods-VeonPrebidMobileAdMobAdapters.debug.xcconfig */,
+				B27DE5328D724183BC113312 /* Pods-VeonPrebidMobileAdMobAdapters.release.xcconfig */,
+				75510F4A41FED158DC7E89C4 /* Pods-VeonPrebidMobileAdMobAdaptersTests.debug.xcconfig */,
+				D1E5E4470A34CA6174F18CED /* Pods-VeonPrebidMobileAdMobAdaptersTests.release.xcconfig */,
+				15D25CABE825E10704B2FA74 /* Pods-VeonPrebidMobileGAMEventHandlers.debug.xcconfig */,
+				0DBE6AB79DF2F1B270CFF8EF /* Pods-VeonPrebidMobileGAMEventHandlers.release.xcconfig */,
+				3526F0486CEC4ECEC96C3D73 /* Pods-VeonPrebidMobileGAMEventHandlersTests.debug.xcconfig */,
+				39C49AC96F3CE476D7149906 /* Pods-VeonPrebidMobileGAMEventHandlersTests.release.xcconfig */,
+				B2C141ACE9D01CC30540E568 /* Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig */,
+				770C29D7A35CACB9D8077B36 /* Pods-VeonPrebidMobileMAXAdapters.release.xcconfig */,
+				3E5B5A81FBAC47AD33C8A0BC /* Pods-VeonPrebidMobileMAXAdaptersTests.debug.xcconfig */,
+				9098BEC7FFC99EC721BC2B3E /* Pods-VeonPrebidMobileMAXAdaptersTests.release.xcconfig */,
+				D6941766406D87D4FCFBA83C /* Pods-VeonPrebidMultiAdLoader.debug.xcconfig */,
+				73BE69F927CE65A22F1F50C7 /* Pods-VeonPrebidMultiAdLoader.release.xcconfig */,
+				A507F608D9FB26BC993CECB0 /* Pods-VeonPrebidMultiAdLoaderGAM.debug.xcconfig */,
+				639F3CC1A03924B3A4269CCF /* Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig */,
+				0171D6F40C915E7761CDFB7F /* Pods-VeonPrebidMultiAdLoaderGAMTests.release.xcconfig */,
+				B16573650E034F39E3C91E2A /* Pods-VeonPrebidMultiAdLoaderGAMTests.debug.xcconfig */,
+				B5B43E9D40B9C57645421FA1 /* Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig */,
+				03718886B9972335D275B35E /* Pods-VeonPrebidMultiAdLoaderTests.debug.xcconfig */,
+				8D674A5CE8FB277B9854E6BF /* Pods-VeonPrebidMultiAdLoaderYandex.debug.xcconfig */,
+				93CB1802D53C58A89E372B37 /* Pods-VeonPrebidMultiAdLoaderYandex.release.xcconfig */,
+				4022167DBAA0EB43B04ADD79 /* Pods-VeonPrebidMultiAdLoaderYandexTests.release.xcconfig */,
+				CB97B5783438127CFC911E2E /* Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig */,
+				B4A84BD6B3A2873920B7EB45 /* Pods-VeonPrebidRemoteConfig.debug.xcconfig */,
+				1169D359B5501A56F85925E8 /* Pods-VeonPrebidRemoteConfig.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		ECEC3F8B585CFDCC2EC60426 /* PrebidMultiAdLoaderYandexTests */ = {
+			isa = PBXGroup;
+			children = (
+				76BB8290A29A2BC8E3D58381 /* EventRecorders.swift */,
+				870293341DE8DCA7FD6DC6D2 /* VeonYandexAdSourceProviderTests.swift */,
+				74C188124CA43087ABC9806D /* VeonYandexBannerSourceForwardingTests.swift */,
+				D9E1E9673454C012AF260021 /* VeonYandexBannerSourceTests.swift */,
+				466DAFA6D1E3405CB098FB70 /* VeonYandexInterstitialSourceTests.swift */,
+			);
+			path = PrebidMultiAdLoaderYandexTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +931,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6967802642A56A0042372E /* PrebidMobileGAMEventHandlers.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9472A3057EF490070F592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947433057EF8B0070F592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947643057EFB20070F592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947793057F07E0070F592 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,9 +981,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3405F944250A555800268A77 /* PrebidMobileGAMEventHandlersTests */ = {
+		3405F944250A555800268A77 /* VeonPrebidMobileGAMEventHandlersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3405F94F250A555800268A77 /* Build configuration list for PBXNativeTarget "PrebidMobileGAMEventHandlersTests" */;
+			buildConfigurationList = 3405F94F250A555800268A77 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileGAMEventHandlersTests" */;
 			buildPhases = (
 				8838AB1D42241AECB9FED65F /* [CP] Check Pods Manifest.lock */,
 				3405F941250A555800268A77 /* Sources */,
@@ -507,14 +996,14 @@
 			dependencies = (
 				3405F94C250A555800268A77 /* PBXTargetDependency */,
 			);
-			name = PrebidMobileGAMEventHandlersTests;
+			name = VeonPrebidMobileGAMEventHandlersTests;
 			productName = OpenXApolloGAMEventHandlersTests;
-			productReference = 3405F945250A555800268A77 /* PrebidMobileGAMEventHandlersTests.xctest */;
+			productReference = 3405F945250A555800268A77 /* VeonPrebidMobileGAMEventHandlersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		34B64D5B24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers */ = {
+		34B64D5B24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34B64D6124F7E41600FDD9F4 /* Build configuration list for PBXNativeTarget "PrebidMobileGAMEventHandlers" */;
+			buildConfigurationList = 34B64D6124F7E41600FDD9F4 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileGAMEventHandlers" */;
 			buildPhases = (
 				7DCB1F16C9EAAFFED77C483D /* [CP] Check Pods Manifest.lock */,
 				34B64D5724F7E41600FDD9F4 /* Headers */,
@@ -527,14 +1016,174 @@
 			);
 			dependencies = (
 			);
-			name = PrebidMobileGAMEventHandlers;
+			name = VeonPrebidMobileGAMEventHandlers;
 			productName = OpenXApolloGAMEventHandlers;
-			productReference = 34B64D5C24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers.framework */;
+			productReference = 34B64D5C24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92C1345A27FC6B4900F96387 /* PrebidMobileMAXAdapters */ = {
+		3BD99068B290EA3F51FD7656 /* VeonPrebidMultiAdLoaderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C1346E27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "PrebidMobileMAXAdapters" */;
+			buildConfigurationList = 685F7B73FBDF8969EA2602EB /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderTests" */;
+			buildPhases = (
+				F2691D53560A9662CEBF6FBA /* [CP] Check Pods Manifest.lock */,
+				4F604D7B97227EBD7B813933 /* Sources */,
+				8B50E63C253AB568EA048094 /* Frameworks */,
+				B13A27A103AD536519A5C86B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09920CB6C0116C019DE57FDE /* PBXTargetDependency */,
+				7BAA29AF386F58DC10965E3C /* PBXTargetDependency */,
+			);
+			name = VeonPrebidMultiAdLoaderTests;
+			productName = PrebidMultiAdLoaderTests;
+			productReference = 3DEA3D3F70FB96ECBA41255A /* VeonPrebidMultiAdLoaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		50904CF24A1854EB45100F65 /* VeonPrebidMultiAdLoaderYandexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0206C607E72B299593BEBBDD /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderYandexTests" */;
+			buildPhases = (
+				CCA94CFB0F073C00125A1825 /* [CP] Check Pods Manifest.lock */,
+				3A45D945579EDAEA96D017CE /* Sources */,
+				4A805CD7683ECDFCC8B02701 /* Frameworks */,
+				176D7F53959C337D55B1139C /* Resources */,
+				BC5A19C8561D3ECF4D4E08ED /* [CP] Embed Pods Frameworks */,
+				984678A2E0B61F49B826EE9D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5E0C8498ED38C99B79426BC /* PBXTargetDependency */,
+				4C07B4D444742F6D6D4CFF8A /* PBXTargetDependency */,
+				A491CA1B25D1F4E694C69A69 /* PBXTargetDependency */,
+			);
+			name = VeonPrebidMultiAdLoaderYandexTests;
+			productName = PrebidMultiAdLoaderYandexTests;
+			productReference = C034887D040FB8978383A8CA /* .xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		659817A23178EE27E9D01A36 /* VeonPrebidMultiAdLoaderGAMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EE61A24F15624155B8C89F3 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderGAMTests" */;
+			buildPhases = (
+				6AF267CFE1BAA4F8E398D137 /* [CP] Check Pods Manifest.lock */,
+				0A20E0C4D3164881A6B89456 /* Sources */,
+				BA760B45CE651DF93A03586D /* Frameworks */,
+				623AB10E1D5166091D0191E3 /* Resources */,
+				AB4B02D5C06FDA74F5FC3E86 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE3B276E0159342858B2AF3E /* PBXTargetDependency */,
+				A718C9F8ED57CD7672DF1F81 /* PBXTargetDependency */,
+				47A9DDEF2F9F250A3E128956 /* PBXTargetDependency */,
+			);
+			name = VeonPrebidMultiAdLoaderGAMTests;
+			productName = PrebidMultiAdLoaderGAMTests;
+			productReference = 629584482775F2D6A5DA0A13 /* .xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CA947373057EF490070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidRemoteConfig" */;
+			buildPhases = (
+				B689B3E92562439F46DAD334 /* [CP] Check Pods Manifest.lock */,
+				6CA9472A3057EF490070F592 /* Headers */,
+				6CA9472B3057EF490070F592 /* Sources */,
+				6CA9472C3057EF490070F592 /* Frameworks */,
+				6CA9472D3057EF490070F592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6CA947303057EF490070F592 /* PrebidRemoteConfig */,
+			);
+			name = VeonPrebidRemoteConfig;
+			productName = PrebidRemoteConfig;
+			productReference = 6CA9472F3057EF490070F592 /* VeonPrebidRemoteConfig.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CA9474E3057EF8B0070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoader" */;
+			buildPhases = (
+				D80715F58C8335876BD6CCCB /* [CP] Check Pods Manifest.lock */,
+				6CA947433057EF8B0070F592 /* Headers */,
+				6CA947443057EF8B0070F592 /* Sources */,
+				6CA947453057EF8B0070F592 /* Frameworks */,
+				6CA947463057EF8B0070F592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73B08874C448B44EE296F040 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6CA947493057EF8B0070F592 /* PrebidMultiAdLoader */,
+			);
+			name = VeonPrebidMultiAdLoader;
+			productName = PrebidMultiAdLoader;
+			productReference = 6CA947483057EF8B0070F592 /* VeonPrebidMultiAdLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CA947683057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CA9476F3057EFB20070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderGAM" */;
+			buildPhases = (
+				0C73E77E9986B96393B30578 /* [CP] Check Pods Manifest.lock */,
+				6CA947643057EFB20070F592 /* Headers */,
+				6CA947653057EFB20070F592 /* Sources */,
+				6CA947663057EFB20070F592 /* Frameworks */,
+				6CA947673057EFB20070F592 /* Resources */,
+				0030EF046ED31DF168F58735 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EE06B8E66BB4F9A06295777 /* PBXTargetDependency */,
+				B232EFE6B3054D5B2C4B4412 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6CA9476A3057EFB20070F592 /* PrebidMultiAdLoaderGAM */,
+			);
+			name = VeonPrebidMultiAdLoaderGAM;
+			productName = PrebidMultiAdLoaderGAM;
+			productReference = 6CA947693057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CA9477D3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CA947843057F07E0070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderYandex" */;
+			buildPhases = (
+				6538A29137504EFDBBFF5803 /* [CP] Check Pods Manifest.lock */,
+				6CA947793057F07E0070F592 /* Headers */,
+				6CA9477A3057F07E0070F592 /* Sources */,
+				6CA9477B3057F07E0070F592 /* Frameworks */,
+				6CA9477C3057F07E0070F592 /* Resources */,
+				22CB5ACD5E9EBCBA4019048F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77C03B08A66B9CF72D7775F2 /* PBXTargetDependency */,
+				88C6415FADA1DE3F66D26037 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6CA9477F3057F07E0070F592 /* PrebidMultiAdLoaderYandex */,
+			);
+			name = VeonPrebidMultiAdLoaderYandex;
+			productName = PrebidMultiAdLoaderYandex;
+			productReference = 6CA9477E3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		92C1345A27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C1346E27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileMAXAdapters" */;
 			buildPhases = (
 				A499796FC33A7657B4DE9616 /* [CP] Check Pods Manifest.lock */,
 				92C1345627FC6B4900F96387 /* Headers */,
@@ -546,14 +1195,14 @@
 			);
 			dependencies = (
 			);
-			name = PrebidMobileMAXAdapters;
+			name = VeonPrebidMobileMAXAdapters;
 			productName = PrebidMobileMAXAdapters;
-			productReference = 92C1345B27FC6B4900F96387 /* PrebidMobileMAXAdapters.framework */;
+			productReference = 92C1345B27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92C1346127FC6B4900F96387 /* PrebidMobileMAXAdaptersTests */ = {
+		92C1346127FC6B4900F96387 /* VeonPrebidMobileMAXAdaptersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92C1346F27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "PrebidMobileMAXAdaptersTests" */;
+			buildConfigurationList = 92C1346F27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileMAXAdaptersTests" */;
 			buildPhases = (
 				192FD2F0E8F8D468066A88EB /* [CP] Check Pods Manifest.lock */,
 				92C1345E27FC6B4900F96387 /* Sources */,
@@ -566,14 +1215,14 @@
 			dependencies = (
 				92C1346527FC6B4900F96387 /* PBXTargetDependency */,
 			);
-			name = PrebidMobileMAXAdaptersTests;
+			name = VeonPrebidMobileMAXAdaptersTests;
 			productName = PrebidMobileMAXAdaptersTests;
-			productReference = 92C1346227FC6B4900F96387 /* PrebidMobileMAXAdaptersTests.xctest */;
+			productReference = 92C1346227FC6B4900F96387 /* VeonPrebidMobileMAXAdaptersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		92F4389527688E8600FDC950 /* PrebidMobileAdMobAdapters */ = {
+		92F4389527688E8600FDC950 /* VeonPrebidMobileAdMobAdapters */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92F438A927688E8600FDC950 /* Build configuration list for PBXNativeTarget "PrebidMobileAdMobAdapters" */;
+			buildConfigurationList = 92F438A927688E8600FDC950 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileAdMobAdapters" */;
 			buildPhases = (
 				216171EE9032F33017A2E075 /* [CP] Check Pods Manifest.lock */,
 				92F4389127688E8600FDC950 /* Headers */,
@@ -586,14 +1235,14 @@
 			);
 			dependencies = (
 			);
-			name = PrebidMobileAdMobAdapters;
+			name = VeonPrebidMobileAdMobAdapters;
 			productName = PrebidMobileAdMobAdapters;
-			productReference = 92F4389627688E8600FDC950 /* PrebidMobileAdMobAdapters.framework */;
+			productReference = 92F4389627688E8600FDC950 /* VeonPrebidMobileAdMobAdapters.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92F4389C27688E8600FDC950 /* PrebidMobileAdMobAdaptersTests */ = {
+		92F4389C27688E8600FDC950 /* VeonPrebidMobileAdMobAdaptersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92F438AA27688E8600FDC950 /* Build configuration list for PBXNativeTarget "PrebidMobileAdMobAdaptersTests" */;
+			buildConfigurationList = 92F438AA27688E8600FDC950 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileAdMobAdaptersTests" */;
 			buildPhases = (
 				8AFBF605BE00FE056230B437 /* [CP] Check Pods Manifest.lock */,
 				92F4389927688E8600FDC950 /* Sources */,
@@ -606,9 +1255,9 @@
 			dependencies = (
 				92F438A027688E8600FDC950 /* PBXTargetDependency */,
 			);
-			name = PrebidMobileAdMobAdaptersTests;
+			name = VeonPrebidMobileAdMobAdaptersTests;
 			productName = PrebidMobileAdMobAdaptersTests;
-			productReference = 92F4389D27688E8600FDC950 /* PrebidMobileAdMobAdaptersTests.xctest */;
+			productReference = 92F4389D27688E8600FDC950 /* VeonPrebidMobileAdMobAdaptersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -617,7 +1266,7 @@
 		34B64D4324F7D95800FDD9F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = Prebid;
 				TargetAttributes = {
@@ -628,6 +1277,18 @@
 					34B64D5B24F7E41600FDD9F4 = {
 						CreatedOnToolsVersion = 11.6;
 						LastSwiftMigration = 1240;
+					};
+					6CA9472E3057EF490070F592 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					6CA947473057EF8B0070F592 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					6CA947683057EFB20070F592 = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					6CA9477D3057F07E0070F592 = {
+						CreatedOnToolsVersion = 26.5;
 					};
 					92C1345A27FC6B4900F96387 = {
 						CreatedOnToolsVersion = 13.3;
@@ -659,17 +1320,31 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				34B64D5B24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers */,
-				3405F944250A555800268A77 /* PrebidMobileGAMEventHandlersTests */,
-				92F4389527688E8600FDC950 /* PrebidMobileAdMobAdapters */,
-				92F4389C27688E8600FDC950 /* PrebidMobileAdMobAdaptersTests */,
-				92C1345A27FC6B4900F96387 /* PrebidMobileMAXAdapters */,
-				92C1346127FC6B4900F96387 /* PrebidMobileMAXAdaptersTests */,
+				34B64D5B24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers */,
+				3405F944250A555800268A77 /* VeonPrebidMobileGAMEventHandlersTests */,
+				92F4389527688E8600FDC950 /* VeonPrebidMobileAdMobAdapters */,
+				92F4389C27688E8600FDC950 /* VeonPrebidMobileAdMobAdaptersTests */,
+				92C1345A27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters */,
+				92C1346127FC6B4900F96387 /* VeonPrebidMobileMAXAdaptersTests */,
+				6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */,
+				6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */,
+				6CA947683057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM */,
+				6CA9477D3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex */,
+				3BD99068B290EA3F51FD7656 /* VeonPrebidMultiAdLoaderTests */,
+				659817A23178EE27E9D01A36 /* VeonPrebidMultiAdLoaderGAMTests */,
+				50904CF24A1854EB45100F65 /* VeonPrebidMultiAdLoaderYandexTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		176D7F53959C337D55B1139C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3405F943250A555800268A77 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -678,6 +1353,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34B64D5A24F7E41600FDD9F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		623AB10E1D5166091D0191E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9472D3057EF490070F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947463057EF8B0070F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947673057EFB20070F592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9477C3057F07E0070F592 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -712,24 +1422,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B13A27A103AD536519A5C86B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0030EF046ED31DF168F58735 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderGAM/Pods-VeonPrebidMultiAdLoaderGAM-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderGAM/Pods-VeonPrebidMultiAdLoaderGAM-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderGAM/Pods-VeonPrebidMultiAdLoaderGAM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C73E77E9986B96393B30578 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMultiAdLoaderGAM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0F2E4000714DE877BC16434C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileMAXAdaptersTests/Pods-VeonPrebidMobileMAXAdaptersTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileMAXAdaptersTests/Pods-VeonPrebidMobileMAXAdaptersTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileMAXAdaptersTests/Pods-PrebidMobileMAXAdaptersTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileMAXAdaptersTests/Pods-VeonPrebidMobileMAXAdaptersTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		192FD2F0E8F8D468066A88EB /* [CP] Check Pods Manifest.lock */ = {
@@ -747,7 +1503,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobileMAXAdaptersTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMobileMAXAdaptersTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -760,15 +1516,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileAdMobAdapters/Pods-VeonPrebidMobileAdMobAdapters-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileAdMobAdapters/Pods-VeonPrebidMobileAdMobAdapters-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdapters/Pods-PrebidMobileAdMobAdapters-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileAdMobAdapters/Pods-VeonPrebidMobileAdMobAdapters-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2046B5F297CBFC798CBB8F9E /* [CP] Copy Pods Resources */ = {
@@ -777,15 +1533,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileAdMobAdaptersTests/Pods-VeonPrebidMobileAdMobAdaptersTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileAdMobAdaptersTests/Pods-VeonPrebidMobileAdMobAdaptersTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileAdMobAdaptersTests/Pods-PrebidMobileAdMobAdaptersTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileAdMobAdaptersTests/Pods-VeonPrebidMobileAdMobAdaptersTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		216171EE9032F33017A2E075 /* [CP] Check Pods Manifest.lock */ = {
@@ -803,7 +1559,68 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobileAdMobAdapters-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMobileAdMobAdapters-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22CB5ACD5E9EBCBA4019048F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandex/Pods-VeonPrebidMultiAdLoaderYandex-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandex/Pods-VeonPrebidMultiAdLoaderYandex-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandex/Pods-VeonPrebidMultiAdLoaderYandex-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6538A29137504EFDBBFF5803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMultiAdLoaderYandex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AF267CFE1BAA4F8E398D137 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMultiAdLoaderGAMTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -825,7 +1642,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobileGAMEventHandlers-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMobileGAMEventHandlers-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -847,7 +1664,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobileGAMEventHandlersTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMobileGAMEventHandlersTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -869,11 +1686,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobileAdMobAdaptersTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMobileAdMobAdaptersTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		984678A2E0B61F49B826EE9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A499796FC33A7657B4DE9616 /* [CP] Check Pods Manifest.lock */ = {
@@ -891,7 +1725,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PrebidMobileMAXAdapters-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMobileMAXAdapters-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -904,15 +1738,115 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileGAMEventHandlers/Pods-VeonPrebidMobileGAMEventHandlers-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileGAMEventHandlers/Pods-VeonPrebidMobileGAMEventHandlers-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlers/Pods-PrebidMobileGAMEventHandlers-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileGAMEventHandlers/Pods-VeonPrebidMobileGAMEventHandlers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB4B02D5C06FDA74F5FC3E86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderGAMTests/Pods-VeonPrebidMultiAdLoaderGAMTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderGAMTests/Pods-VeonPrebidMultiAdLoaderGAMTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderGAMTests/Pods-VeonPrebidMultiAdLoaderGAMTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B689B3E92562439F46DAD334 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidRemoteConfig-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC5A19C8561D3ECF4D4E08ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMultiAdLoaderYandexTests/Pods-VeonPrebidMultiAdLoaderYandexTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCA94CFB0F073C00125A1825 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMultiAdLoaderYandexTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D80715F58C8335876BD6CCCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMultiAdLoader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2E9FCC899DBFB74D5A21EAE /* [CP] Copy Pods Resources */ = {
@@ -921,20 +1855,55 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlersTests/Pods-PrebidMobileGAMEventHandlersTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileGAMEventHandlersTests/Pods-VeonPrebidMobileGAMEventHandlersTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlersTests/Pods-PrebidMobileGAMEventHandlersTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileGAMEventHandlersTests/Pods-VeonPrebidMobileGAMEventHandlersTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrebidMobileGAMEventHandlersTests/Pods-PrebidMobileGAMEventHandlersTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeonPrebidMobileGAMEventHandlersTests/Pods-VeonPrebidMobileGAMEventHandlersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2691D53560A9662CEBF6FBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeonPrebidMultiAdLoaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0A20E0C4D3164881A6B89456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04AB0F4CC0A327E8098EFDB0 /* EventRecorders.swift in Sources */,
+				682F011491E4D06DD62120C4 /* VeonGAMAdSourceProviderTests.swift in Sources */,
+				727418FBC8BCA6328B04BBE9 /* VeonGAMBannerSourceForwardingTests.swift in Sources */,
+				5D32D9EFF4E32FECE7FA3780 /* VeonGAMBannerSourceTests.swift in Sources */,
+				4C93838CF3211140178217F8 /* VeonGAMInterstitialSourceForwardingTests.swift in Sources */,
+				6DD96ECA11DA763D003C1FBF /* VeonGAMInterstitialSourceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3405F941250A555800268A77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -969,6 +1938,66 @@
 				53F2A57B2CB94FBE009B74CA /* GADReward+Extensions.swift in Sources */,
 				5B6967702642993B0042372E /* GAMEventHandlerError.swift in Sources */,
 				5BF8E779263C291300341EE4 /* GAMBannerViewWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A45D945579EDAEA96D017CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3024FA94DEC5638D24170573 /* EventRecorders.swift in Sources */,
+				D18F4C16D1D4E21A6E584A41 /* VeonYandexAdSourceProviderTests.swift in Sources */,
+				FDEEE7D3230F5C6937B64C79 /* VeonYandexBannerSourceForwardingTests.swift in Sources */,
+				A4CE90C360170756D80785A0 /* VeonYandexBannerSourceTests.swift in Sources */,
+				5E44B00A6CC8271FC2DD43A8 /* VeonYandexInterstitialSourceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F604D7B97227EBD7B813933 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E79032EE703AD53706FBA3 /* AnyVeonAdSourceLoadingTests.swift in Sources */,
+				93B214A1B6D2737E9D52C431 /* MockAdSource.swift in Sources */,
+				EFF2C935B065E00980F60325 /* MockSources.swift in Sources */,
+				435261A0F6BBE836506C1B2A /* RemoteConfigHolderTests.swift in Sources */,
+				A5CB337079CBBC7959E0E1F9 /* SdkConfigStoreTests.swift in Sources */,
+				A801364E857F472720D7717D /* SdkConfigTests.swift in Sources */,
+				CFEAFB3E4CFADD7A505D5EA1 /* TestSupport.swift in Sources */,
+				D535569435B0510B30BECD80 /* VeonAdRaceTests.swift in Sources */,
+				06577568DC728D15308B5BA8 /* VeonAdSourceRegistryTests.swift in Sources */,
+				EC3FB8D633BFE117FC9C6D74 /* VeonMultiAdLoaderErrorTests.swift in Sources */,
+				E9F1DAE0F80F2CC80D799062 /* VeonMultiBannerAdLoaderTests.swift in Sources */,
+				19B489BF807F6A7D1B30F521 /* VeonMultiInterstitialAdLoaderTests.swift in Sources */,
+				101503C29F54609B136C9392 /* VeonPrebidSourcesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9472B3057EF490070F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947443057EF8B0070F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA947653057EFB20070F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CA9477A3057F07E0070F592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,27 +2059,119 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		09920CB6C0116C019DE57FDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoader;
+			target = 6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */;
+			targetProxy = A4CEC7E11D4EB42AB53AE74E /* PBXContainerItemProxy */;
+		};
+		0EE06B8E66BB4F9A06295777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoader;
+			target = 6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */;
+			targetProxy = 4F5C3F4E2409D1744935B639 /* PBXContainerItemProxy */;
+		};
 		3405F94C250A555800268A77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 34B64D5B24F7E41600FDD9F4 /* PrebidMobileGAMEventHandlers */;
+			target = 34B64D5B24F7E41600FDD9F4 /* VeonPrebidMobileGAMEventHandlers */;
 			targetProxy = 3405F94B250A555800268A77 /* PBXContainerItemProxy */;
+		};
+		47A9DDEF2F9F250A3E128956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidRemoteConfig;
+			target = 6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */;
+			targetProxy = 24D6A546BD67610A3BE639E8 /* PBXContainerItemProxy */;
+		};
+		4C07B4D444742F6D6D4CFF8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoader;
+			target = 6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */;
+			targetProxy = 8D08AC5B4943B2D97B8A9B75 /* PBXContainerItemProxy */;
+		};
+		73B08874C448B44EE296F040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidRemoteConfig;
+			target = 6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */;
+			targetProxy = A403EF4A1D68B941ADE1BF74 /* PBXContainerItemProxy */;
+		};
+		77C03B08A66B9CF72D7775F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoader;
+			target = 6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */;
+			targetProxy = 5DFAE70498D811707ACEE9B0 /* PBXContainerItemProxy */;
+		};
+		7BAA29AF386F58DC10965E3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidRemoteConfig;
+			target = 6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */;
+			targetProxy = C4A74C9F25C9BEF72986A982 /* PBXContainerItemProxy */;
+		};
+		88C6415FADA1DE3F66D26037 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidRemoteConfig;
+			target = 6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */;
+			targetProxy = 6E37ECF57EA6C3CB969FB76B /* PBXContainerItemProxy */;
 		};
 		92C1346527FC6B4900F96387 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92C1345A27FC6B4900F96387 /* PrebidMobileMAXAdapters */;
+			target = 92C1345A27FC6B4900F96387 /* VeonPrebidMobileMAXAdapters */;
 			targetProxy = 92C1346427FC6B4900F96387 /* PBXContainerItemProxy */;
 		};
 		92F438A027688E8600FDC950 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92F4389527688E8600FDC950 /* PrebidMobileAdMobAdapters */;
+			target = 92F4389527688E8600FDC950 /* VeonPrebidMobileAdMobAdapters */;
 			targetProxy = 92F4389F27688E8600FDC950 /* PBXContainerItemProxy */;
+		};
+		A491CA1B25D1F4E694C69A69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidRemoteConfig;
+			target = 6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */;
+			targetProxy = F4EA3972A20D201B0C172E5A /* PBXContainerItemProxy */;
+		};
+		A718C9F8ED57CD7672DF1F81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoader;
+			target = 6CA947473057EF8B0070F592 /* VeonPrebidMultiAdLoader */;
+			targetProxy = 0A823A7E7C5C4FC62AF9BE82 /* PBXContainerItemProxy */;
+		};
+		B232EFE6B3054D5B2C4B4412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidRemoteConfig;
+			target = 6CA9472E3057EF490070F592 /* VeonPrebidRemoteConfig */;
+			targetProxy = DBDD6470F362D5D96677F652 /* PBXContainerItemProxy */;
+		};
+		D5E0C8498ED38C99B79426BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoaderYandex;
+			target = 6CA9477D3057F07E0070F592 /* VeonPrebidMultiAdLoaderYandex */;
+			targetProxy = A091253672638316D7196E4C /* PBXContainerItemProxy */;
+		};
+		FE3B276E0159342858B2AF3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PrebidMultiAdLoaderGAM;
+			target = 6CA947683057EFB20070F592 /* VeonPrebidMultiAdLoaderGAM */;
+			targetProxy = 3AF80303448D77FAB74E587F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		32B586017B187EE18C565D11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB97B5783438127CFC911E2E /* Pods-VeonPrebidMultiAdLoaderYandexTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.VeonPrebidMultiAdLoaderYandexTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
 		3405F94D250A555800268A77 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1B77165045D380B64491D0E /* Pods-PrebidMobileGAMEventHandlersTests.debug.xcconfig */;
+			baseConfigurationReference = 3526F0486CEC4ECEC96C3D73 /* Pods-VeonPrebidMobileGAMEventHandlersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
@@ -1078,7 +2199,7 @@
 		};
 		3405F94E250A555800268A77 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9258904A9C1DF637C07F290B /* Pods-PrebidMobileGAMEventHandlersTests.release.xcconfig */;
+			baseConfigurationReference = 39C49AC96F3CE476D7149906 /* Pods-VeonPrebidMobileGAMEventHandlersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
@@ -1227,7 +2348,7 @@
 		};
 		34B64D6224F7E41600FDD9F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 914C447D75BBE960CE43225D /* Pods-PrebidMobileGAMEventHandlers.debug.xcconfig */;
+			baseConfigurationReference = 15D25CABE825E10704B2FA74 /* Pods-VeonPrebidMobileGAMEventHandlers.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1263,7 +2384,7 @@
 		};
 		34B64D6324F7E41600FDD9F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F06F98153B4FCC7F187B0A60 /* Pods-PrebidMobileGAMEventHandlers.release.xcconfig */;
+			baseConfigurationReference = 0DBE6AB79DF2F1B270CFF8EF /* Pods-VeonPrebidMobileGAMEventHandlers.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1295,9 +2416,418 @@
 			};
 			name = Release;
 		};
+		45F16D7E72F23C051218E822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03718886B9972335D275B35E /* Pods-VeonPrebidMultiAdLoaderTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.VeonPrebidMultiAdLoaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4F5ECAC288068EBA70A60975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B16573650E034F39E3C91E2A /* Pods-VeonPrebidMultiAdLoaderGAMTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.VeonPrebidMultiAdLoaderGAMTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		64FAEF4E83FCE48750AF396C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0171D6F40C915E7761CDFB7F /* Pods-VeonPrebidMultiAdLoaderGAMTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.VeonPrebidMultiAdLoaderGAMTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CA947353057EF490070F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A84BD6B3A2873920B7EB45 /* Pods-VeonPrebidRemoteConfig.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidRemoteConfig;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CA947363057EF490070F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1169D359B5501A56F85925E8 /* Pods-VeonPrebidRemoteConfig.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidRemoteConfig;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CA9474F3057EF8B0070F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6941766406D87D4FCFBA83C /* Pods-VeonPrebidMultiAdLoader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidMultiAdLoader;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CA947503057EF8B0070F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73BE69F927CE65A22F1F50C7 /* Pods-VeonPrebidMultiAdLoader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidMultiAdLoader;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CA947703057EFB20070F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A507F608D9FB26BC993CECB0 /* Pods-VeonPrebidMultiAdLoaderGAM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidMultiAdLoaderGAM;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CA947713057EFB20070F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639F3CC1A03924B3A4269CCF /* Pods-VeonPrebidMultiAdLoaderGAM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidMultiAdLoaderGAM;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CA947853057F07E0070F592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D674A5CE8FB277B9854E6BF /* Pods-VeonPrebidMultiAdLoaderYandex.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidMultiAdLoaderYandex;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CA947863057F07E0070F592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93CB1802D53C58A89E372B37 /* Pods-VeonPrebidMultiAdLoaderYandex.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CNZP6M7A2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Prebid. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = Veon.PrebidMultiAdLoaderYandex;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		788028928CE9C8E5C2415222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4022167DBAA0EB43B04ADD79 /* Pods-VeonPrebidMultiAdLoaderYandexTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.VeonPrebidMultiAdLoaderYandexTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		92C1346A27FC6B4900F96387 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 329DD8224E4EC5A00AEA10F7 /* Pods-PrebidMobileMAXAdapters.debug.xcconfig */;
+			baseConfigurationReference = B2C141ACE9D01CC30540E568 /* Pods-VeonPrebidMobileMAXAdapters.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1332,7 +2862,7 @@
 		};
 		92C1346B27FC6B4900F96387 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58B193FE14C1F3D7E795F7AC /* Pods-PrebidMobileMAXAdapters.release.xcconfig */;
+			baseConfigurationReference = 770C29D7A35CACB9D8077B36 /* Pods-VeonPrebidMobileMAXAdapters.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1366,7 +2896,7 @@
 		};
 		92C1346C27FC6B4900F96387 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 237DEA65BB4F321230D3A510 /* Pods-PrebidMobileMAXAdaptersTests.debug.xcconfig */;
+			baseConfigurationReference = 3E5B5A81FBAC47AD33C8A0BC /* Pods-VeonPrebidMobileMAXAdaptersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1388,7 +2918,7 @@
 		};
 		92C1346D27FC6B4900F96387 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E4C768ECDDB294B3CC3CF48 /* Pods-PrebidMobileMAXAdaptersTests.release.xcconfig */;
+			baseConfigurationReference = 9098BEC7FFC99EC721BC2B3E /* Pods-VeonPrebidMobileMAXAdaptersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1409,7 +2939,7 @@
 		};
 		92F438A527688E8600FDC950 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E2E8204E1C52CBA0D87C56C /* Pods-PrebidMobileAdMobAdapters.debug.xcconfig */;
+			baseConfigurationReference = 4D87674EA96E0F79B8CC49A5 /* Pods-VeonPrebidMobileAdMobAdapters.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1444,7 +2974,7 @@
 		};
 		92F438A627688E8600FDC950 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42CE6323AC67980202BFDE74 /* Pods-PrebidMobileAdMobAdapters.release.xcconfig */;
+			baseConfigurationReference = B27DE5328D724183BC113312 /* Pods-VeonPrebidMobileAdMobAdapters.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1478,7 +3008,7 @@
 		};
 		92F438A727688E8600FDC950 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7F666DB80A4C4141B6F1270 /* Pods-PrebidMobileAdMobAdaptersTests.debug.xcconfig */;
+			baseConfigurationReference = 75510F4A41FED158DC7E89C4 /* Pods-VeonPrebidMobileAdMobAdaptersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1506,7 +3036,7 @@
 		};
 		92F438A827688E8600FDC950 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D58C5231BEDC27162AC3816 /* Pods-PrebidMobileAdMobAdaptersTests.release.xcconfig */;
+			baseConfigurationReference = D1E5E4470A34CA6174F18CED /* Pods-VeonPrebidMobileAdMobAdaptersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1531,10 +3061,43 @@
 			};
 			name = Release;
 		};
+		9A80F008E0E507B8283E8B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5B43E9D40B9C57645421FA1 /* Pods-VeonPrebidMultiAdLoaderTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.prebid.VeonPrebidMultiAdLoaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3405F94F250A555800268A77 /* Build configuration list for PBXNativeTarget "PrebidMobileGAMEventHandlersTests" */ = {
+		0206C607E72B299593BEBBDD /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderYandexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				788028928CE9C8E5C2415222 /* Release */,
+				32B586017B187EE18C565D11 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EE61A24F15624155B8C89F3 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderGAMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64FAEF4E83FCE48750AF396C /* Release */,
+				4F5ECAC288068EBA70A60975 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3405F94F250A555800268A77 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileGAMEventHandlersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3405F94D250A555800268A77 /* Debug */,
@@ -1552,7 +3115,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34B64D6124F7E41600FDD9F4 /* Build configuration list for PBXNativeTarget "PrebidMobileGAMEventHandlers" */ = {
+		34B64D6124F7E41600FDD9F4 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileGAMEventHandlers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				34B64D6224F7E41600FDD9F4 /* Debug */,
@@ -1561,7 +3124,52 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C1346E27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "PrebidMobileMAXAdapters" */ = {
+		685F7B73FBDF8969EA2602EB /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A80F008E0E507B8283E8B00 /* Release */,
+				45F16D7E72F23C051218E822 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CA947373057EF490070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidRemoteConfig" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CA947353057EF490070F592 /* Debug */,
+				6CA947363057EF490070F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CA9474E3057EF8B0070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CA9474F3057EF8B0070F592 /* Debug */,
+				6CA947503057EF8B0070F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CA9476F3057EFB20070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderGAM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CA947703057EFB20070F592 /* Debug */,
+				6CA947713057EFB20070F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CA947843057F07E0070F592 /* Build configuration list for PBXNativeTarget "VeonPrebidMultiAdLoaderYandex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CA947853057F07E0070F592 /* Debug */,
+				6CA947863057F07E0070F592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C1346E27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileMAXAdapters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C1346A27FC6B4900F96387 /* Debug */,
@@ -1570,7 +3178,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92C1346F27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "PrebidMobileMAXAdaptersTests" */ = {
+		92C1346F27FC6B4900F96387 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileMAXAdaptersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92C1346C27FC6B4900F96387 /* Debug */,
@@ -1579,7 +3187,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92F438A927688E8600FDC950 /* Build configuration list for PBXNativeTarget "PrebidMobileAdMobAdapters" */ = {
+		92F438A927688E8600FDC950 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileAdMobAdapters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92F438A527688E8600FDC950 /* Debug */,
@@ -1588,7 +3196,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92F438AA27688E8600FDC950 /* Build configuration list for PBXNativeTarget "PrebidMobileAdMobAdaptersTests" */ = {
+		92F438AA27688E8600FDC950 /* Build configuration list for PBXNativeTarget "VeonPrebidMobileAdMobAdaptersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92F438A727688E8600FDC950 /* Debug */,
