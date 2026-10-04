@@ -17,13 +17,13 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  XCODE_VERSION: "16.4.0"
+  XCODE_VERSION: "26.0.0"
 
 jobs:
   build:
     name: Build PrebidMobile Frameworks
     if: ${{ !github.event.pull_request.draft }}
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
       - name: Checkout
