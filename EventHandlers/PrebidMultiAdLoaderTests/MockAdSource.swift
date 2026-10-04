@@ -6,13 +6,8 @@
 //
 
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
 
 /// Short aliases for the `SdkType` cases used across the tests.
 enum TestSdk {

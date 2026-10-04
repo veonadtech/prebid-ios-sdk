@@ -6,13 +6,8 @@
 //
 
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-@testable import PrebidRemoteConfig
-#endif
 
 final class VeonMultiAdLoaderErrorTests: XCTestCase {
 

@@ -7,13 +7,8 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-@testable import PrebidRemoteConfig
-#endif
 
 /// The built-in Prebid sources, exercised only on the paths that never touch the Prebid SDK
 /// (missing config id, destroy before load, nothing loaded yet).

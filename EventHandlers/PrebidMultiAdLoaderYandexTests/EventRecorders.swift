@@ -5,13 +5,8 @@
 //
 
 import Foundation
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
 
 /// Stands in for the loader's private event forwarder and records what a banner source forwards.
 final class BannerEventRecorder: VeonBannerEventForwarding {

@@ -7,15 +7,9 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoaderGAM)
-@testable import VeonPrebidMultiAdLoaderGAM
 @testable import VeonPrebidMultiAdLoader
-import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoaderGAM
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
+@testable import VeonPrebidRemoteConfig
+@testable import VeonPrebidMultiAdLoaderGAM
 
 /// Paths of `VeonGAMBannerSource` that never reach the Google Mobile Ads SDK.
 @MainActor

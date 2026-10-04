@@ -92,6 +92,13 @@ public final class VeonMultiBannerAdLoader {
         let priorityOrder = SdkConfigStore.priorityOrder
         totalCount = priorityOrder.filter { sources[$0] != nil }.count
         failedCount = 0
+        
+        // if no source can take part in the race, report failure immediately
+        // instead of starting a race that will never produce any callbacks.
+        guard totalCount > 0 else {
+            delegate?.bannerLoaderDidFailAll(self)
+            return
+        }
 
         let race = VeonAdRace(priorityOrder: priorityOrder, sources: sources)
         race.onLoaded = { [weak self] view, sdk in

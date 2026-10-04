@@ -7,15 +7,9 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoaderYandex)
 @testable import VeonPrebidMultiAdLoaderYandex
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoaderYandex
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
 
 /// `register()` must make `.yandex` available to both loaders with sources that offer the
 /// capabilities the loaders rely on.

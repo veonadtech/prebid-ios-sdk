@@ -6,11 +6,8 @@
 //
 
 import XCTest
-#if canImport(VeonPrebidRemoteConfig)
+@testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
-#else
-@testable import PrebidRemoteConfig
-#endif
 
 /// `RemoteConfigHolder.shared` is a process-wide singleton whose `rawData` can only be
 /// written by `load(from:)` and never cleared, so every test loads the body it needs first

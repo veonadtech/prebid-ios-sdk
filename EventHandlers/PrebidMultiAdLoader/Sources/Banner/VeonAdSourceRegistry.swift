@@ -54,6 +54,12 @@ public final class VeonAdSourceRegistry {
         lock.lock(); defer { lock.unlock() }
         interstitialFactories[sdk] = factory
     }
+    
+    func removeAll() {
+        lock.lock(); defer { lock.unlock() }
+        bannerFactories.removeAll()
+        interstitialFactories.removeAll()
+    }
 
     @MainActor
     func makeBannerSource(

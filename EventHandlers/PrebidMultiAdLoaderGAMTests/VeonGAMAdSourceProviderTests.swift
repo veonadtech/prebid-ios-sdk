@@ -7,15 +7,9 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoaderGAM)
-@testable import VeonPrebidMultiAdLoaderGAM
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoaderGAM
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
+@testable import VeonPrebidMultiAdLoaderGAM
 
 /// `register()` must make `.gam` available to both loaders with sources that offer the
 /// capabilities the loaders rely on (event forwarding, being the loaded interstitial).

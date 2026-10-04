@@ -12,15 +12,9 @@
 import YandexMobileAds
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoaderYandex)
 @testable import VeonPrebidMultiAdLoaderYandex
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoaderYandex
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
 
 @MainActor
 final class VeonYandexBannerSourceForwardingTests: XCTestCase {

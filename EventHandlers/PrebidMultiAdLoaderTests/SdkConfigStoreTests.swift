@@ -6,11 +6,8 @@
 //
 
 import XCTest
-#if canImport(VeonPrebidRemoteConfig)
+@testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
-#else
-@testable import PrebidRemoteConfig
-#endif
 
 /// Every test loads its own config first — see `RemoteConfigHolderTests` for why.
 final class SdkConfigStoreTests: XCTestCase {

@@ -7,13 +7,8 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-@testable import PrebidRemoteConfig
-#endif
 
 /// Non-isolated box used to collect objects created inside registry factories
 /// (factories are plain, non-actor-isolated closures).

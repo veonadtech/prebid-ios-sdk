@@ -6,13 +6,8 @@
 //
 
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
 
 /// The type-erasing wrapper must behave exactly like the source it wraps:
 /// `VeonAdRace` only ever talks to the wrapper.

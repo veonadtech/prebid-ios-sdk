@@ -12,15 +12,8 @@
 import GoogleMobileAds
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoaderGAM)
-@testable import VeonPrebidMultiAdLoaderGAM
 @testable import VeonPrebidMultiAdLoader
-import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoaderGAM
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
+@testable import VeonPrebidRemoteConfig
 
 private final class StubFullScreenAd: NSObject, FullScreenPresentingAd {
     weak var fullScreenContentDelegate: (any FullScreenContentDelegate)?

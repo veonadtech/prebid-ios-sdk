@@ -7,13 +7,8 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-@testable import PrebidRemoteConfig
-#endif
 
 /// End-to-end behaviour of `VeonMultiInterstitialAdLoader` with GAM and Yandex replaced by mocks.
 /// As in the banner tests, `configId: nil` makes the built-in Prebid source fail synchronously.

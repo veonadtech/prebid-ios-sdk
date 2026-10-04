@@ -7,13 +7,8 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
-import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
+@testable import VeonPrebidRemoteConfig
 
 /// `VeonAdSourceRegistry.shared` is a process-wide singleton without a reset
 /// API, so every test registers (and therefore overrides) exactly what it

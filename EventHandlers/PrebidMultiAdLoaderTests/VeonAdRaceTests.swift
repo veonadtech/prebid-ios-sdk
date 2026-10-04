@@ -6,13 +6,8 @@
 //
 
 import XCTest
-#if canImport(VeonPrebidMultiAdLoader)
 @testable import VeonPrebidMultiAdLoader
-import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
+@testable import VeonPrebidRemoteConfig
 
 /// Behaviour of the priority race: the first source *in priority order* that
 /// has loaded wins, regardless of which source finishes first.

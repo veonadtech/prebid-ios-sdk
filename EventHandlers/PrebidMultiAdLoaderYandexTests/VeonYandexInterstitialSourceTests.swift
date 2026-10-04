@@ -7,15 +7,9 @@
 
 import UIKit
 import XCTest
-#if canImport(VeonPrebidMultiAdLoaderYandex)
 @testable import VeonPrebidMultiAdLoaderYandex
 @testable import VeonPrebidMultiAdLoader
 import VeonPrebidRemoteConfig
-#else
-@testable import PrebidMultiAdLoaderYandex
-@testable import PrebidMultiAdLoader
-import PrebidRemoteConfig
-#endif
 
 /// Paths of `VeonYandexInterstitialSource` that never reach the Yandex Mobile Ads SDK
 /// (the SDK loader is a `lazy var` and is only created by a real `load()`).
