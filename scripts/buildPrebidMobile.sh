@@ -95,6 +95,18 @@ if [ ${#missing_schemes[@]} -ne 0 ]; then
 	exit 1
 fi
 
+# Print the tail of the build log straight to stdout on failure, so the actual
+# xcodebuild error is visible directly in the CI job output instead of only being
+# mentioned by path (which otherwise requires separately downloading a log artifact,
+# if one is even uploaded by the workflow).
+print_log_failure() {
+	local what="$1"
+	echo -e "${RED}Error building ${what} — check log ${LOG_FILE_FRAMEWORK_ABSOLUTE}${NC}"
+	echo -e "${RED}--- last 150 lines of ${LOG_FILE_FRAMEWORK} ---${NC}"
+	tail -n 150 "$LOG_FILE_FRAMEWORK" || true
+	echo -e "${RED}--- end of log excerpt ---${NC}"
+}
+
 # Schemes whose transitive CocoaPods dependencies need BUILD_LIBRARY_FOR_DISTRIBUTION=NO
 # on specific Pods targets (see the Podfile's post_install hook) to avoid an ABI mismatch
 # against a prebuilt vendor .xcframework. A command-line `BUILD_LIBRARY_FOR_DISTRIBUTION=YES`
@@ -141,7 +153,7 @@ do
 	-sdk "iphoneos" \
 	-derivedDataPath $XCODE_BUILD_DIR \
 	-archivePath "$XCODE_ARCHIVE_DIR/${schemes[$n]}.xcarchive" \
-	> "$LOG_FILE_FRAMEWORK" 2>&1 || { echo -e "${RED}Error in build check log "$LOG_FILE_FRAMEWORK_ABSOLUTE"${NC}"; exit 1;}
+	> "$LOG_FILE_FRAMEWORK" 2>&1 || { print_log_failure "${schemes[$n]} (device)"; exit 1;}
  
     echo "Find Framework ${schemes[$n]} for device"
     find "$XCODE_ARCHIVE_DIR" -type d,f
@@ -161,7 +173,7 @@ do
 	-arch arm64 \
 	-derivedDataPath $XCODE_BUILD_DIR \
 	-archivePath "$XCODE_ARCHIVE_DIR/${schemes[$n]}$POSTFIX_SIMULATOR.xcarchive" \
-	> "$LOG_FILE_FRAMEWORK" 2>&1 || { echo -e "${RED}Error in build check log "$LOG_FILE_FRAMEWORK_ABSOLUTE"${NC}"; exit 1;}
+	> "$LOG_FILE_FRAMEWORK" 2>&1 || { print_log_failure "${schemes[$n]} (simulator)"; exit 1;}
  
     echo "Find Framework ${schemes[$n]} for simulator"
     find "$XCODE_ARCHIVE_DIR" -type d,f
