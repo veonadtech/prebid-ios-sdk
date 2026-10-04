@@ -95,9 +95,37 @@ if [ ${#missing_schemes[@]} -ne 0 ]; then
 	exit 1
 fi
 
+# Schemes whose transitive CocoaPods dependencies need BUILD_LIBRARY_FOR_DISTRIBUTION=NO
+# on specific Pods targets (see the Podfile's post_install hook) to avoid an ABI mismatch
+# against a prebuilt vendor .xcframework. A command-line `BUILD_LIBRARY_FOR_DISTRIBUTION=YES`
+# passed to xcodebuild has the HIGHEST precedence and silently overrides that per-target
+# xcconfig override for every target in the build graph, including transitively-linked Pods
+# targets — so for these schemes we omit the flag on the command line entirely and rely on
+# BUILD_LIBRARY_FOR_DISTRIBUTION already being set to YES on the scheme's own target in
+# EventHandlers.xcodeproj (verified separately), which is unaffected by the Podfile hook.
+NO_CMDLINE_LIBRARY_EVOLUTION_SCHEMES=(
+	"VeonPrebidMultiAdLoaderYandex"
+)
+
+scheme_needs_cmdline_library_evolution_flag() {
+	local scheme="$1"
+	for excluded in "${NO_CMDLINE_LIBRARY_EVOLUTION_SCHEMES[@]}"; do
+		if [ "$scheme" == "$excluded" ]; then
+			return 1
+		fi
+	done
+	return 0
+}
+
 for(( n=0; n<${#schemes[@]}; n++ ))
 do
-	
+	LIBRARY_EVOLUTION_FLAG=()
+	if scheme_needs_cmdline_library_evolution_flag "${schemes[$n]}"; then
+		LIBRARY_EVOLUTION_FLAG=(BUILD_LIBRARY_FOR_DISTRIBUTION=YES)
+	else
+		echo -e "${GREEN} - ${schemes[$n]}: omitting BUILD_LIBRARY_FOR_DISTRIBUTION from the command line (see Podfile post_install hook)${NC}"
+	fi
+
 	# Build the framework for device and for simulator 
 	echo -e "\n${GREEN} - Archiving ${schemes[$n]} for device${NC}"
 
@@ -105,7 +133,7 @@ do
 	only_active_arch=NO \
 	defines_module=YES \
 	SKIP_INSTALL=NO \
-	BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+	"${LIBRARY_EVOLUTION_FLAG[@]}" \
 	-workspace PrebidMobile.xcworkspace \
 	-scheme "Lib-${schemes[$n]}" \
 	-configuration Release \
@@ -124,7 +152,7 @@ do
 	only_active_arch=NO \
 	defines_module=YES \
 	SKIP_INSTALL=NO \
-	BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+	"${LIBRARY_EVOLUTION_FLAG[@]}" \
 	-workspace PrebidMobile.xcworkspace \
 	-scheme "Lib-${schemes[$n]}" \
 	-configuration Release \
