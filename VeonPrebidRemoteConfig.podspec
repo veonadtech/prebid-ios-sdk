@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VeonPrebidRemoteConfig"
-  s.version          = "0.2.0"
+  s.version          = "0.5.0"
   s.summary          = "Shared remote config plumbing for Veon Prebid iOS SDK feature modules."
   s.module_name      = "VeonPrebidRemoteConfig"
   s.description      = "Adds a configURL parameter to Prebid.initializeSDK and stores the raw response " \

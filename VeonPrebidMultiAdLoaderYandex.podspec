@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VeonPrebidMultiAdLoaderYandex"
-  s.version          = "0.2.0"
+  s.version          = "0.5.0"
   s.summary          = "Yandex sources for VeonPrebidMultiAdLoader. Optional — only add if you want Yandex in the race."
   s.module_name      = "VeonPrebidMultiAdLoaderYandex"
   s.description      = "Registers a Yandex banner/interstitial source with VeonAdSourceRegistry. Call " \
