@@ -83,7 +83,7 @@ PODS:
   - AppMetricaSynchronization (6.7.0):
     - AppMetricaLogSwift (= 6.7.0)
   - Eureka (5.5.0)
-  - Google-Mobile-Ads-SDK (13.10.0):
+  - Google-Mobile-Ads-SDK (13.11.0):
     - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleAds-IMA-iOS-SDK (3.27.4)
   - GoogleUserMessagingPlatform (3.1.0)
@@ -170,7 +170,7 @@ SPEC CHECKSUMS:
   AppMetricaStorageUtils: c1148b73b0376dceaa2519817283e01523d488a2
   AppMetricaSynchronization: 95008c50199fe81d3cb3ea989a1c32f3588dcfef
   Eureka: 1c18c7fcd8f772cc2ca42d6be36292dffa77eecb
-  Google-Mobile-Ads-SDK: 8e764c4990ef82c2727fd32e0c4143817b443603
+  Google-Mobile-Ads-SDK: 09d0868abe43b9f851b7b340a245679f0eafc96c
   GoogleAds-IMA-iOS-SDK: 1c696013d47bc3cafa48b7de9c8196941bd3105b
   GoogleUserMessagingPlatform: befe603da6501006420c206222acd449bba45a9c
   KSCrash: 8c4464fd5da7de520f2ce4a00fdf63f169a80f18
