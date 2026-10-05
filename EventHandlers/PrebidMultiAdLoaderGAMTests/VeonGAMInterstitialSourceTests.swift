@@ -9,6 +9,7 @@ import UIKit
 import XCTest
 @testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
+@testable import VeonPrebidMultiAdLoaderGAM
 
 /// Paths of `VeonGAMInterstitialSource` that never reach the Google Mobile Ads SDK.
 @MainActor

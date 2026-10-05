@@ -14,6 +14,7 @@ import UIKit
 import XCTest
 @testable import VeonPrebidMultiAdLoader
 @testable import VeonPrebidRemoteConfig
+@testable import VeonPrebidMultiAdLoaderGAM
 
 private final class StubFullScreenAd: NSObject, FullScreenPresentingAd {
     weak var fullScreenContentDelegate: (any FullScreenContentDelegate)?
