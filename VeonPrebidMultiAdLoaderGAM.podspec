@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
   s.source_files = 'EventHandlers/PrebidMultiAdLoaderGAM/Sources/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMultiAdLoader', '>= 0.2.0'
-  s.dependency 'VeonPrebidRemoteConfig', '>= 0.2.0'
+  s.dependency 'VeonPrebidMultiAdLoader', '>= 0.5.0'
+  s.dependency 'VeonPrebidRemoteConfig', '>= 0.5.0'
   s.dependency 'Google-Mobile-Ads-SDK', '>= 13.6.0'
 
   s.pod_target_xcconfig = {
