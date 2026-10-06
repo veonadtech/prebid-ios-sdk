@@ -120,7 +120,7 @@ public class PrebidConstants: NSObject {
         """
     }
     
-    public static let PREBID_VERSION                                                        = "0.5.0"
+    public static let PREBID_VERSION                                                        = "0.5.2"
     public static let SDK_NAME                                                              = "Veon-prebid-sdk"
     
     public static let DOMAIN_KEY                                                            = "domain"
