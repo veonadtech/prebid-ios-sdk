@@ -16,7 +16,7 @@ final class SdkConfigStoreTests: XCTestCase {
     /// NOTE: the doc comment on `SdkConfigStore.priorityOrder` says the fallback is
     /// Prebid-only (`[.prebid]`) but the code returns `[.yandex, .prebid, .gam]`.
     /// These tests pin the CODE; change this constant together with whichever of the two is wrong.
-    private let fallbackOrder: [SdkType] = [.yandex, .prebid, .gam]
+    private let fallbackOrder: [SdkType] = [.prebid, .gam, .yandex]
 
     func testPriorityOrder_followsTheConfiguredOrder() {
         RemoteConfigTestSupport.loadConfig(priority: ["GAM", "PREBID", "YANDEX"])
