@@ -29,7 +29,7 @@ public enum SdkConfigStore {
     /// modules degrade to "just use Prebid" rather than doing nothing.
     public static var priorityOrder: [SdkType] {
         guard let config, !config.priority.isEmpty else {
-            return [.yandex, .prebid, .gam]
+            return [.prebid, .gam, .yandex]
         }
         
         return config.priority
