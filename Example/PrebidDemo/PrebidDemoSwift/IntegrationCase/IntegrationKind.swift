@@ -22,6 +22,7 @@ enum IntegrationKind: CustomStringConvertible, CaseIterable {
     case inApp
     case adMob
     case max
+    case multiAdLoader
     
     var description: String {
         switch self {
@@ -35,6 +36,8 @@ enum IntegrationKind: CustomStringConvertible, CaseIterable {
             return "AdMob"
         case .max:
             return "MAX"
+        case .multiAdLoader:
+            return "Multi Ad"
         }
     }
 }

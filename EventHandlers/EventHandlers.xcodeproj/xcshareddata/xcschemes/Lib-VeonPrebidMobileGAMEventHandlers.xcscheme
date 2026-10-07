@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92C1345A27FC6B4900F96387"
-               BuildableName = "PrebidMobileMAXAdapters.framework"
-               BlueprintName = "PrebidMobileMAXAdapters"
+               BlueprintIdentifier = "34B64D5B24F7E41600FDD9F4"
+               BuildableName = "VeonPrebidMobileGAMEventHandlers.framework"
+               BlueprintName = "VeonPrebidMobileGAMEventHandlers"
                ReferencedContainer = "container:EventHandlers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92C1345A27FC6B4900F96387"
-            BuildableName = "PrebidMobileMAXAdapters.framework"
-            BlueprintName = "PrebidMobileMAXAdapters"
+            BlueprintIdentifier = "34B64D5B24F7E41600FDD9F4"
+            BuildableName = "VeonPrebidMobileGAMEventHandlers.framework"
+            BlueprintName = "VeonPrebidMobileGAMEventHandlers"
             ReferencedContainer = "container:EventHandlers.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  XCODE_VERSION: "26.0.0"
+  XCODE_VERSION: "26.3.0"
 
 jobs:
   build:
@@ -45,7 +45,7 @@ jobs:
   unit-test-pr:
     name: Run Quick Unit Tests for Frameworks
     if: ${{!github.event.pull_request.draft && !(contains(github.head_ref, 'bump-to') || contains(toJson(github.event.pull_request.labels), 'run-full-tests'))}}
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
       - name: Checkout
@@ -60,7 +60,7 @@ jobs:
   unit-test-full:
     name: Run All Unit Tests for Frameworks
     if: ${{!github.event.pull_request.draft && (contains(github.head_ref, 'bump-to') || contains(toJson(github.event.pull_request.labels), 'run-full-tests'))}}
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
       - name: Checkout
@@ -75,7 +75,7 @@ jobs:
   unit-test-adapters:
     name: Run Unit Tests for Adapters
     if: ${{!github.event.pull_request.draft}}
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
       - name: Checkout
@@ -102,7 +102,7 @@ jobs:
   run-swift-demo-ui-tests:
     name: Run Smoke UI Tests - Swift Demo App
     if: ${{!github.event.pull_request.draft && (contains(github.head_ref, 'bump-to') || contains(toJson(github.event.pull_request.labels), 'run-full-tests'))}}
-    runs-on: macos-15
+    runs-on: macos-26
 
     steps:
       - name: Checkout
@@ -116,7 +116,7 @@ jobs:
   run-swift-demo-integration-tests:
     name: Run Integration Tests - Swift Demo App
     if: ${{!github.event.pull_request.draft && (contains(github.head_ref, 'bump-to') || contains(toJson(github.event.pull_request.labels), 'run-full-tests'))}}
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
       - name: Checkout
         uses: actions/checkout@v4

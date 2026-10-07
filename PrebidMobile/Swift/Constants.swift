@@ -120,8 +120,8 @@ public class PrebidConstants: NSObject {
         """
     }
     
-    public static let PREBID_VERSION                                                        = "3.3.4"
-    public static let SDK_NAME                                                              = "prebid-mobile-sdk"
+    public static let PREBID_VERSION                                                        = "0.5.2"
+    public static let SDK_NAME                                                              = "Veon-prebid-sdk"
     
     public static let DOMAIN_KEY                                                            = "domain"
     public static let PBM_TRANSACTION_STATE_KEY                                             = "ts"

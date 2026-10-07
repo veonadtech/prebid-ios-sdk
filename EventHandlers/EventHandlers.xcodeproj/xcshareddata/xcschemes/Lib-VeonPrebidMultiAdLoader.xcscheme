@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1640"
+   LastUpgradeVersion = "2650"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES"
-      buildArchitectures = "Automatic">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -15,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "34B64D5B24F7E41600FDD9F4"
-               BuildableName = "PrebidMobileGAMEventHandlers.framework"
-               BlueprintName = "PrebidMobileGAMEventHandlers"
+               BlueprintIdentifier = "6CA947473057EF8B0070F592"
+               BuildableName = "VeonPrebidMultiAdLoader.framework"
+               BlueprintName = "VeonPrebidMultiAdLoader"
                ReferencedContainer = "container:EventHandlers.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,15 +46,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "34B64D5B24F7E41600FDD9F4"
-            BuildableName = "PrebidMobileGAMEventHandlers.framework"
-            BlueprintName = "PrebidMobileGAMEventHandlers"
-            ReferencedContainer = "container:EventHandlers.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
