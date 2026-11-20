@@ -45,8 +45,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .upToNextMajor(from: "13.0.0")),
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .upToNextMajor(from: "13.0.0")),
-        .package(url: "https://github.com/veonadtech/prebid-ios-sdk.git", .upToNextMajor(from: "0.2.0")),
-        .package(url: "https://github.com/yandexmobile/yandex-ads-sdk-ios.git", upToNextMinor(from: "8.4.0")),
+        .package(url: "https://github.com/veonadtech/prebid-ios-sdk.git", .upToNextMajor(from: "0.5.3")),
+        .package(url: "https://github.com/yandexmobile/yandex-ads-sdk-ios.git", .upToNextMinor(from: "8.4.0")),
     ],
     targets: [
         .target(

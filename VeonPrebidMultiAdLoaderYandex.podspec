@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VeonPrebidMultiAdLoaderYandex"
-  s.version          = "0.5.0"
+  s.version          = "0.5.3"
   s.summary          = "Yandex sources for VeonPrebidMultiAdLoader. Optional — only add if you want Yandex in the race."
   s.module_name      = "VeonPrebidMultiAdLoaderYandex"
   s.description      = "Registers a Yandex banner/interstitial source with VeonAdSourceRegistry. Call " \
@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
   s.source_files = 'EventHandlers/PrebidMultiAdLoaderYandex/Sources/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMultiAdLoader', '>= 0.5.0'
-  s.dependency 'VeonPrebidRemoteConfig', '>= 0.5.0'
+  s.dependency 'VeonPrebidMultiAdLoader', '>= 0.5.3'
+  s.dependency 'VeonPrebidRemoteConfig', '>= 0.5.3'
   s.dependency 'YandexMobileAds', '8.4.0'
 
   s.pod_target_xcconfig = {

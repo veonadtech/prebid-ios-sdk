@@ -1,4 +1,9 @@
 # CHANGELOG
+
+## 0.5.3
+# Changed
+* Added support for the interstitial ad format in rewarded mode
+
 ## 0.5.2
 # Changed
 * Default priority list changed
