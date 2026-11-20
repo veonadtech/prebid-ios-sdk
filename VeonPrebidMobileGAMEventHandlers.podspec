@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "VeonPrebidMobileGAMEventHandlers"
-  s.version      = "0.5.0"
+  s.version      = "0.5.3"
   s.summary      = "The bridge between PrebidMobile SDK and GMA SDK."
 
   s.module_name = "VeonPrebidMobileGAMEventHandlers"
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.source_files = 'EventHandlers/PrebidMobileGAMEventHandlers/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMobile', '>= 0.5.0'
+  s.dependency 'VeonPrebidMobile', '>= 0.5.3'
   s.dependency 'Google-Mobile-Ads-SDK', '>= 13.6.0'
 
   s.pod_target_xcconfig = {
