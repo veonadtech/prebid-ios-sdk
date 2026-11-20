@@ -320,6 +320,14 @@ class PluginRendererFactoryTest: XCTestCase {
         XCTAssertTrue(mockRenderer.lastInterstitialAdConfiguration?.adConfiguration.isRewarded == true)
     }
 
+    func testRewardedInterstitialLoader_BannerBidWithoutRewardedConfig_DisablesRewardedRendering() {
+        assertRewardedRenderingFlag(for: .banner, expected: false)
+    }
+
+    func testRewardedInterstitialLoader_VideoBidWithoutRewardedConfig_KeepsRewardedRendering() {
+        assertRewardedRenderingFlag(for: .video, expected: true)
+    }
+
     func testCreateInterstitialController_WithVideoAdFormats_SetsAdFormats() {
         let mockRenderer = MockTrackingPluginRenderer(name: "CustomRenderer", version: "2.0")
         let mockController = MockInterstitialController()
@@ -405,6 +413,39 @@ class PluginRendererFactoryTest: XCTestCase {
 // MARK: - Helpers
 
 extension PluginRendererFactoryTest {
+
+    func assertRewardedRenderingFlag(for format: AdFormat, expected: Bool) {
+        let renderer = MockTrackingPluginRenderer(name: "CustomRenderer", version: "2.0")
+        renderer.interstitialControllerToReturn = MockInterstitialController()
+        pluginRegister.registerPlugin(renderer)
+
+        let bid = makeBid(rendererName: renderer.name, rendererVersion: renderer.version)
+        bid.bid.ext?.prebid?.type = format.stringEquivalent
+        XCTAssertNil(bid.rewardedConfig)
+        XCTAssertEqual(bid.adFormat?.rawValue, format.rawValue)
+
+        let eventHandler = InterstitialEventHandlerStandalone()
+        let rewardedAdUnit = BaseRewardedAdUnit(
+            configID: "rewarded-test",
+            minSizePerc: nil,
+            eventHandler: eventHandler
+        )
+        XCTAssertTrue(rewardedAdUnit.adUnitConfig.adConfiguration.isRewarded)
+
+        let loader = InterstitialAdLoader(delegate: rewardedAdUnit, eventHandler: eventHandler)
+        let controllerCreated = expectation(description: "Renderer received interstitial configuration")
+        loader.createPrebidAd(
+            with: bid,
+            adUnitConfig: rewardedAdUnit.adUnitConfig,
+            adObjectSaver: { _ in controllerCreated.fulfill() },
+            loadMethodInvoker: { _ in }
+        )
+        wait(for: [controllerCreated], timeout: 2)
+
+        XCTAssertTrue(renderer.createInterstitialControllerCalled)
+        XCTAssertEqual(renderer.lastInterstitialAdConfiguration?.adConfiguration.isRewarded, expected)
+        XCTAssertTrue(rewardedAdUnit.adUnitConfig.adConfiguration.isRewarded)
+    }
 
     func makeBid(
         rendererName: String? = nil,
