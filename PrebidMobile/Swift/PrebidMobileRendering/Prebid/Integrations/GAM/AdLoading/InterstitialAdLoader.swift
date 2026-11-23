@@ -102,9 +102,18 @@ final class InterstitialAdLoader: NSObject, AdLoaderProtocol, InterstitialContro
     private func createController(with bid: Bid, adUnitConfig: AdUnitConfig) -> PrebidMobileInterstitialControllerProtocol? {
         guard let delegate else { return nil }
 
+        // Rewarded inventory can win a regular display interstitial. That
+        // creative must be closable immediately; video bids keep their
+        // rewarded close rules even without optional rwdd metadata.
+        let renderingConfig = adUnitConfig.copy() as! AdUnitConfig
+        let isRegularDisplay = bid.adFormat?.rawValue == AdFormat.banner.rawValue
+            && bid.rewardedConfig == nil
+        renderingConfig.adConfiguration.isRewarded =
+            adUnitConfig.adConfiguration.isRewarded && !isRegularDisplay
+
         return PluginRendererFactory.createInterstitialController(
             bid: bid,
-            adConfiguration: adUnitConfig,
+            adConfiguration: renderingConfig,
             loadingDelegate: self,
             interactionDelegate: delegate
         )

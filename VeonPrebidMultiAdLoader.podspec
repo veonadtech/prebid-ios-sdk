@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VeonPrebidMultiAdLoader"
-  s.version          = "0.5.0"
+  s.version          = "0.5.3"
   s.summary          = "Priority-based ad mediation race engine for Veon Prebid iOS SDK (Prebid-only core)."
   s.module_name      = "VeonPrebidMultiAdLoader"
   s.description      = "Core race engine + Prebid banner/interstitial source + VeonAdSourceRegistry, the " \
@@ -23,8 +23,8 @@ Pod::Spec.new do |s|
   s.source_files = 'EventHandlers/PrebidMultiAdLoader/Sources/**/*.{h,m,swift}'
   s.static_framework = true
 
-  s.dependency 'VeonPrebidMobile', '>= 0.5.0'
-  s.dependency 'VeonPrebidRemoteConfig', '>= 0.5.0'
+  s.dependency 'VeonPrebidMobile', '>= 0.5.3'
+  s.dependency 'VeonPrebidRemoteConfig', '>= 0.5.3'
 
   s.pod_target_xcconfig = {
     'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES',
